@@ -11,7 +11,7 @@ namespace PixelCrew
     {
         [SerializeField] private Hero _hero;
 
-        public void OnMovement(InputAction.CallbackContext context)
+        public void OnMovement(InputAction.CallbackContext context)  // Считывание кнопки и задание направления
         {
             var direction = context.ReadValue<Vector2>();
             _hero.SetDirection(direction);
