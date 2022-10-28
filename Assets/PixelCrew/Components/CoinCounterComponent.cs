@@ -9,12 +9,16 @@ namespace PixelCrew.Components
     {
         [SerializeField] private GameObject _coinToCount;
         [SerializeField] private int _coinValue;
-        [SerializeField] private Hero _hero;
+        private Hero _hero;
+
+        private void Start()
+        {
+            _hero = FindObjectOfType<Hero>();
+        }
 
         public void CountCoin()
         {
             _hero.CoinPickUp(_coinValue);
-            Debug.Log($"Total coins: {_hero._sumOfCoins}");
         }
 
     }
