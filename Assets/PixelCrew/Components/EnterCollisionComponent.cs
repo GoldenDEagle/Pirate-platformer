@@ -14,10 +14,10 @@ namespace PixelCrew.Components
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag(_tag))
-            {
-                _action?.Invoke(other.gameObject);
-            }
+                if (other.gameObject.CompareTag(_tag))
+                {
+                    _action?.Invoke(other.gameObject);
+                }
         }
 
         [Serializable]

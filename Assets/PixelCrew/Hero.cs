@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEditor.Animations;
 using PixelCrew.Components;
+using PixelCrew.Utils;
 
 namespace PixelCrew
 {
@@ -11,31 +13,48 @@ namespace PixelCrew
     {
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpspeed;
+        [SerializeField] private int _damage;
         [SerializeField] private float _damageJumpspeed;
+        [SerializeField] private float _slamDownVelocity;
         [SerializeField] private LayerCheck _groundCheck;
         [SerializeField] private float _interactionRadius;
         [SerializeField] private LayerMask _interactionLayer;
+        [SerializeField] private LayerMask _groundLayer;
 
-        private Collider2D[] _interactionResult = new Collider2D[1];
+        [SerializeField] private AnimatorController _armed;
+        [SerializeField] private AnimatorController _disarmed;
+
+        [SerializeField] private CheckCircleOverlap _attackRange;
+
+        [Space] [Header("Particles")]
+        [SerializeField] private SpawnComponent _footStepParticles;
+        [SerializeField] private SpawnComponent _jumpDustParticles;
+        [SerializeField] private SpawnComponent _slamDownParticles;
+        [SerializeField] private SpawnComponent _attack1Particles;
+        [SerializeField] private ParticleSystem _hitParticles;
+
+        private readonly Collider2D[] _interactionResult = new Collider2D[1];
         private Vector2 _direction;
         private Rigidbody2D _rigidbody;
         private Animator _animator;
-        private SpriteRenderer _sprite;
         private bool _isGrounded;
+        private bool _isJumping;
         private bool _allowDoubleJump;
 
         private static readonly int IsGroundKey = Animator.StringToHash("is-ground");
         private static readonly int IsRunning = Animator.StringToHash("is-running");                // Переменные для навигации по анимациям
         private static readonly int VerticalVelocity = Animator.StringToHash("vertical-velocity");
         private static readonly int Hit = Animator.StringToHash("hit");
+        private static readonly int AttackKey = Animator.StringToHash("attack");
 
         private int _sumOfCoins;
+
+        private bool _isArmed;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();       // Подключение компонентов из Юнити
             _animator = GetComponent<Animator>();
-            _sprite = GetComponent<SpriteRenderer>();
         }
 
         public void SetDirection(Vector2 direction)
@@ -53,13 +72,13 @@ namespace PixelCrew
             var xVelocity = _direction.x * _speed;   // Определение скорости x и y в каждый апдейт
             var yVelocity = CalculateYVelocity();
             _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
-            
+
 
             _animator.SetBool(IsGroundKey, _isGrounded);
             _animator.SetBool(IsRunning, _direction.x != 0);                // Задание параметров для перехода анимаций
             _animator.SetFloat(VerticalVelocity, _rigidbody.velocity.y);
 
-            UpdateSpriteDirection(); 
+            UpdateSpriteDirection();
 
         }
 
@@ -68,13 +87,18 @@ namespace PixelCrew
             var yVelocity = _rigidbody.velocity.y;
             var isJumpPressing = _direction.y > 0;
 
-            if (_isGrounded) _allowDoubleJump = true;
+            if (_isGrounded)
+            {
+                _isJumping = false;
+                _allowDoubleJump = true;
+            }
 
             if (isJumpPressing)
             {
+                _isJumping = true;
                 yVelocity = CalculateJumpVelocity(yVelocity);
             }
-            else if (_rigidbody.velocity.y > 0)
+            else if (_rigidbody.velocity.y > 0 && _isJumping)
             {
                 yVelocity *= 0.5f;
             }
@@ -90,9 +114,12 @@ namespace PixelCrew
             if (_isGrounded)
             {
                 yVelocity += _jumpspeed;
-            } else if (_allowDoubleJump)
+                _jumpDustParticles.Spawn();
+            }
+            else if (_allowDoubleJump)
             {
                 yVelocity = _jumpspeed;
+                _jumpDustParticles.Spawn();
                 _allowDoubleJump = false;
             }
 
@@ -103,11 +130,11 @@ namespace PixelCrew
         {
             if (_direction.x > 0)
             {
-                _sprite.flipX = false;
+                transform.localScale = Vector3.one;
             }
             else if (_direction.x < 0)
             {
-                _sprite.flipX = true;
+                transform.localScale = new Vector3(-1, 1, 1);
             }
         }
 
@@ -129,8 +156,27 @@ namespace PixelCrew
 
         public void TakeDamage()  // Получение урона
         {
+            _isJumping = false;
             _animator.SetTrigger(Hit);
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpspeed);
+
+            if (_sumOfCoins > 0)
+            {
+                SpawnCoins();
+            }
+        }
+
+        private void SpawnCoins()
+        {
+            var coinsToDispose = Mathf.Min(_sumOfCoins, 5);
+            _sumOfCoins -= coinsToDispose;
+
+            var burst = _hitParticles.emission.GetBurst(0);
+            burst.count = coinsToDispose;
+            _hitParticles.emission.SetBurst(0, burst);
+
+            _hitParticles.gameObject.SetActive(true);
+            _hitParticles.Play();
         }
 
         public void Interact()
@@ -150,6 +196,55 @@ namespace PixelCrew
                 }
             }
         }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.IsInLayer(_groundLayer))
+            {
+                var contact = other.contacts[0];
+                if (contact.relativeVelocity.y >= _slamDownVelocity)
+                {
+                    _slamDownParticles.Spawn();
+                }
+            }
+        }
+
+        public void SpawnFootDust()
+        {
+            _footStepParticles.Spawn();
+        }
+
+        public void SpawnAttack1Particles()
+        {
+            _attack1Particles.Spawn();
+        }
+
+        public void Attack()
+        {
+            if (!_isArmed) return;
+
+            _animator.SetTrigger(AttackKey);
+        }
+
+        public void OnAttack()
+        {
+            var gos = _attackRange.GetObjectsInRange();
+            foreach (var go in gos)
+            {
+                var hp = go.GetComponent<HealthComponent>();
+                if (hp != null && go.CompareTag("Enemy"))
+                {
+                    hp.ModifyHealth(-_damage);
+                }
+            }
+        }
+
+        public void ArmHero()
+        {
+            _isArmed = true;
+            _animator.runtimeAnimatorController = _armed;
+        }
+
 
     }
 }
