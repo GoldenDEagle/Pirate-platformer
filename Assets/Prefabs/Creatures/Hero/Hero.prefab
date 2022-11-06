@@ -5046,7 +5046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8521669546322667176}
   - component: {fileID: 8521669546322667178}
-  - component: {fileID: 8521669546322667179}
+  - component: {fileID: 517940429}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -5084,7 +5084,7 @@ CircleCollider2D:
   m_Offset: {x: 0.000207901, y: -0.16157937}
   serializedVersion: 2
   m_Radius: 0.21657753
---- !u!114 &8521669546322667179
+--- !u!114 &517940429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5096,10 +5096,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f091c7e1e49364eba014a6b0221efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _groundLayer:
+  _layer:
     serializedVersion: 2
     m_Bits: 256
-  IsTouchingLayer: 1
+  _isTouchingLayer: 0
 --- !u!1 &8521669546337685388
 GameObject:
   m_ObjectHideFlags: 0
@@ -5117,6 +5117,7 @@ GameObject:
   - component: {fileID: 8521669546337685426}
   - component: {fileID: 8521669546337685428}
   - component: {fileID: 270357017}
+  - component: {fileID: 1599631511}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -5221,26 +5222,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  _jumpspeed: 15
+  _jumpSpeed: 15
   _damage: 1
-  _damageJumpspeed: 10
-  _slamDownVelocity: 15
-  _groundCheck: {fileID: 8521669546322667179}
-  _interactionRadius: 0.8
-  _interactionLayer:
-    serializedVersion: 2
-    m_Bits: 1024
+  _damageVelocity: 15
+  _groundCheck: {fileID: 517940429}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  _attackRange: {fileID: 1103343695}
+  _particles: {fileID: 1599631511}
+  _interactionLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  _slamDownVelocity: 15
+  _interactionRadius: 0.8
   _armed: {fileID: 9100000, guid: a2d4bc880d94a0b4096b22452e25cad4, type: 2}
   _disarmed: {fileID: 9100000, guid: 045ed353177f5fc4fa587d0f69eb73b9, type: 2}
-  _attackRange: {fileID: 1103343695}
-  _footStepParticles: {fileID: 8521669545343519828}
-  _jumpDustParticles: {fileID: 512357895}
-  _slamDownParticles: {fileID: 613564704}
-  _attack1Particles: {fileID: 1309582957}
   _hitParticles: {fileID: 1863843261}
+  _session: {fileID: 0}
 --- !u!114 &8521669546337685427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5446,3 +5445,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1599631511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521669546337685388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379a92ddf1254d448bf3347056cfffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawners:
+  - Id: Run
+    Component: {fileID: 8521669545343519828}
+  - Id: Jump
+    Component: {fileID: 512357895}
+  - Id: SlamDown
+    Component: {fileID: 613564704}
+  - Id: Attack1
+    Component: {fileID: 1309582957}

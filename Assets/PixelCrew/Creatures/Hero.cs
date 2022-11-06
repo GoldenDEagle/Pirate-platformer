@@ -10,50 +10,27 @@ using PixelCrew.Model;
 namespace PixelCrew.Creatures
 {
 
-    public class Hero : MonoBehaviour
+    public class Hero : Creature
     {
-        [SerializeField] private float _speed;
-        [SerializeField] private float _jumpspeed;
-        [SerializeField] private int _damage;
-        [SerializeField] private float _damageJumpspeed;
-        [SerializeField] private float _slamDownVelocity;
-        [SerializeField] private LayerCheck _groundCheck;
-        [SerializeField] private float _interactionRadius;
         [SerializeField] private LayerMask _interactionLayer;
-        [SerializeField] private LayerMask _groundLayer;
+        
+        [SerializeField] private float _slamDownVelocity;
+        [SerializeField] private float _interactionRadius;
 
         [SerializeField] private AnimatorController _armed;
         [SerializeField] private AnimatorController _disarmed;
 
-        [SerializeField] private CheckCircleOverlap _attackRange;
-
         [Space] [Header("Particles")]
-        [SerializeField] private SpawnComponent _footStepParticles;
-        [SerializeField] private SpawnComponent _jumpDustParticles;
-        [SerializeField] private SpawnComponent _slamDownParticles;
-        [SerializeField] private SpawnComponent _attack1Particles;
         [SerializeField] private ParticleSystem _hitParticles;
 
         private readonly Collider2D[] _interactionResult = new Collider2D[1];
-        private Vector2 _direction;
-        private Rigidbody2D _rigidbody;
-        private Animator _animator;
-        private bool _isGrounded;
-        private bool _isJumping;
         private bool _allowDoubleJump;
-
-        private static readonly int IsGroundKey = Animator.StringToHash("is-ground");
-        private static readonly int IsRunning = Animator.StringToHash("is-running");                // Переменные для навигации по анимациям
-        private static readonly int VerticalVelocity = Animator.StringToHash("vertical-velocity");
-        private static readonly int Hit = Animator.StringToHash("hit");
-        private static readonly int AttackKey = Animator.StringToHash("attack");
 
         public GameSession _session;
 
-        private void Awake()
+        protected override void Awake()
         {
-            _rigidbody = GetComponent<Rigidbody2D>();       // Подключение компонентов из Юнити
-            _animator = GetComponent<Animator>();
+            base.Awake();
         }
 
         private void Start()
@@ -65,96 +42,35 @@ namespace PixelCrew.Creatures
             UpdateHeroWeapon();
         }
 
-        public void SetDirection(Vector2 direction)
+        protected override void Update()
         {
-            _direction = direction;
+            base.Update();
         }
 
-        private void Update()
+        protected override float CalculateYVelocity()  // Рассчет вертикальной скорости
         {
-            _isGrounded = IsGrounded();
-        }
+            var isJumpPressing = Direction.y > 0;
 
-        private void FixedUpdate()
-        {
-            var xVelocity = _direction.x * _speed;   // Определение скорости x и y в каждый апдейт
-            var yVelocity = CalculateYVelocity();
-            _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
-
-
-            _animator.SetBool(IsGroundKey, _isGrounded);
-            _animator.SetBool(IsRunning, _direction.x != 0);                // Задание параметров для перехода анимаций
-            _animator.SetFloat(VerticalVelocity, _rigidbody.velocity.y);
-
-            UpdateSpriteDirection();
-
-        }
-
-        private float CalculateYVelocity()  // Рассчет вертикальной скорости
-        {
-            var yVelocity = _rigidbody.velocity.y;
-            var isJumpPressing = _direction.y > 0;
-
-            if (_isGrounded)
+            if (IsGrounded)
             {
-                _isJumping = false;
                 _allowDoubleJump = true;
             }
 
-            if (isJumpPressing)
-            {
-                _isJumping = true;
-                yVelocity = CalculateJumpVelocity(yVelocity);
-            }
-            else if (_rigidbody.velocity.y > 0 && _isJumping)
-            {
-                yVelocity *= 0.5f;
-            }
-
-            return yVelocity;
+            return base.CalculateYVelocity();
         }
 
-        private float CalculateJumpVelocity(float yVelocity)   // Рассчет скорости прыжка(обычный и дабл)
+        protected override float CalculateJumpVelocity(float yVelocity)   // Рассчет скорости прыжка(обычный и дабл)
         {
-            var isFalling = _rigidbody.velocity.y <= 0.001f;
-            if (!isFalling) return yVelocity;
-
-            if (_isGrounded)
+            if (!IsGrounded && _allowDoubleJump)
             {
-                yVelocity += _jumpspeed;
-                _jumpDustParticles.Spawn();
-            }
-            else if (_allowDoubleJump)
-            {
-                yVelocity = _jumpspeed;
-                _jumpDustParticles.Spawn();
+                _particles.Spawn("Jump");
                 _allowDoubleJump = false;
+                return _jumpSpeed;
             }
 
-            return yVelocity;
+            return base.CalculateJumpVelocity(yVelocity);
         }
 
-        private void UpdateSpriteDirection()   // Функция смены направления спрайта
-        {
-            if (_direction.x > 0)
-            {
-                transform.localScale = Vector3.one;
-            }
-            else if (_direction.x < 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-        }
-
-        private bool IsGrounded()
-        {
-            return _groundCheck.IsTouchingLayer;
-        }
-
-        public void SaySomething()
-        {
-            Debug.Log("Something!");
-        }
 
         public void CoinPickUp(int coinValue)  // Подсчет монет
         {
@@ -167,12 +83,9 @@ namespace PixelCrew.Creatures
             _session.Data.Hp = currentHealth;
         }
 
-        public void TakeDamage()  // Получение урона
+        public override void TakeDamage()  // Получение урона
         {
-            _isJumping = false;
-            _animator.SetTrigger(Hit);
-            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpspeed);
-
+            base.TakeDamage();
             if (_session.Data.Coins > 0)
             {
                 SpawnCoins();
@@ -217,51 +130,28 @@ namespace PixelCrew.Creatures
                 var contact = other.contacts[0];
                 if (contact.relativeVelocity.y >= _slamDownVelocity)    // Относительная скорость при контакте с землей
                 {
-                    _slamDownParticles.Spawn();
+                    _particles.Spawn("SlamDown");
                 }
             }
         }
 
-        public void SpawnFootDust()
-        {
-            _footStepParticles.Spawn();
-        }
-
-        public void SpawnAttack1Particles()
-        {
-            _attack1Particles.Spawn();
-        }
-
-        public void Attack()    // Анимация атаки
+        public override void Attack()    // Анимация атаки
         {
             if (!_session.Data.IsArmed) return;
 
-            _animator.SetTrigger(AttackKey);
-        }
-
-        public void OnDoAttack()    // Нанесение урона
-        {
-            var gos = _attackRange.GetObjectsInRange();
-            foreach (var go in gos)
-            {
-                var hp = go.GetComponent<HealthComponent>();
-                if (hp != null && go.CompareTag("Enemy"))
-                {
-                    hp.ModifyHealth(-_damage);
-                }
-            }
+            base.Attack();
         }
 
         public void ArmHero()
         {
             _session.Data.IsArmed = true;
             UpdateHeroWeapon();
-            _animator.runtimeAnimatorController = _armed;
+            Animator.runtimeAnimatorController = _armed;
         }
 
         private void UpdateHeroWeapon()
         {
-            _animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
+            Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
         }
 
     }
