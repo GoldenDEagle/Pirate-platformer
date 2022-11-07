@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - Ground
-  - Props
+  - Hero
   - Interactables
   - Trash
   - 
@@ -57,4 +58,7 @@ TagManager:
     locked: 0
   - name: Creatures
     uniqueID: 1913859797
+    locked: 0
+  - name: Dialog
+    uniqueID: 3558538865
     locked: 0

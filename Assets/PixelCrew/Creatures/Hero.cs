@@ -12,7 +12,7 @@ namespace PixelCrew.Creatures
 
     public class Hero : Creature
     {
-        [SerializeField] private LayerMask _interactionLayer;
+        [SerializeField] CheckCircleOverlap _interactionCheck;
         
         [SerializeField] private float _slamDownVelocity;
         [SerializeField] private float _interactionRadius;
@@ -23,7 +23,6 @@ namespace PixelCrew.Creatures
         [Space] [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
 
-        private readonly Collider2D[] _interactionResult = new Collider2D[1];
         private bool _allowDoubleJump;
 
         public GameSession _session;
@@ -107,20 +106,7 @@ namespace PixelCrew.Creatures
 
         public void Interact()
         {
-            var size = Physics2D.OverlapCircleNonAlloc(  // Массив пересечений с объектами InteractableComponent
-                transform.position,
-                _interactionRadius,
-                _interactionResult,
-                _interactionLayer);
-
-            for (int i = 0; i < size; i++)
-            {
-                var interactable = _interactionResult[i].GetComponent<InteractableComponent>();
-                if (interactable != null)
-                {
-                    interactable.Interact();  // Интеракшн
-                }
-            }
+            _interactionCheck.Check();
         }
 
         private void OnCollisionEnter2D(Collision2D other)

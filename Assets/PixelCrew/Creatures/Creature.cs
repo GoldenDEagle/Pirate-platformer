@@ -9,9 +9,10 @@ namespace PixelCrew.Creatures
     public class Creature : MonoBehaviour
     {
         [Header("Params")]
+        [SerializeField] private bool _invertScale;
         [SerializeField] private float _speed;
         [SerializeField] protected float _jumpSpeed;
-        [SerializeField] private int _damage;
+        //[SerializeField] private int _damage;
         [SerializeField] private float _damageVelocity;
 
         [Header("Checkers")]
@@ -100,13 +101,14 @@ namespace PixelCrew.Creatures
 
         private void UpdateSpriteDirection()   // Функция смены направления спрайта
         {
+            var multiplier = _invertScale ? -1 : 1;
             if (Direction.x > 0)
             {
-                transform.localScale = Vector3.one;
+                transform.localScale = new Vector3(multiplier, 1, 1);
             }
             else if (Direction.x < 0)
             {
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-1 * multiplier, 1, 1);
             }
         }
 
@@ -124,15 +126,7 @@ namespace PixelCrew.Creatures
 
         public void OnDoAttack()    // Нанесение урона
         {
-            var gos = _attackRange.GetObjectsInRange();
-            foreach (var go in gos)
-            {
-                var hp = go.GetComponent<HealthComponent>();
-                if (hp != null && go.CompareTag("Enemy"))
-                {
-                    hp.ModifyHealth(-_damage);
-                }
-            }
+            _attackRange.Check();
         }
 
     }

@@ -83,7 +83,7 @@ AnimationClip:
   m_Events:
   - time: 0.1
     functionName: Spawn
-    data: RunS
+    data: Run
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
