@@ -18,6 +18,7 @@ namespace PixelCrew.Creatures
         [Header("Checkers")]
         [SerializeField] private LayerCheck _groundCheck;
         [SerializeField] protected LayerMask _groundLayer;
+        [SerializeField] protected LayerCheck _platformCheck;
         [SerializeField] private CheckCircleOverlap _attackRange;
         [SerializeField] protected SpawnListComponent _particles;
 
@@ -60,7 +61,7 @@ namespace PixelCrew.Creatures
             Animator.SetBool(IsRunning, Direction.x != 0);                // Задание параметров для перехода анимаций
             Animator.SetFloat(VerticalVelocity, Rigidbody.velocity.y);
 
-            UpdateSpriteDirection();
+            UpdateSpriteDirection(Direction);
         }
 
         protected virtual float CalculateYVelocity()  // Рассчет вертикальной скорости
@@ -99,14 +100,14 @@ namespace PixelCrew.Creatures
             return yVelocity;
         }
 
-        private void UpdateSpriteDirection()   // Функция смены направления спрайта
+        public void UpdateSpriteDirection(Vector2 direction)   // Функция смены направления спрайта
         {
             var multiplier = _invertScale ? -1 : 1;
-            if (Direction.x > 0)
+            if (direction.x > 0)
             {
                 transform.localScale = new Vector3(multiplier, 1, 1);
             }
-            else if (Direction.x < 0)
+            else if (direction.x < 0)
             {
                 transform.localScale = new Vector3(-1 * multiplier, 1, 1);
             }
@@ -127,6 +128,12 @@ namespace PixelCrew.Creatures
         public void OnDoAttack()    // Нанесение урона
         {
             _attackRange.Check();
+            _particles.Spawn("Attack1");
+        }
+
+        public bool IsPlatformAhead()
+        {
+            return _platformCheck.IsTouchingLayer;
         }
 
     }

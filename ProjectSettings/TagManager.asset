@@ -50,6 +50,9 @@ TagManager:
   - name: Decoration
     uniqueID: 72438295
     locked: 0
+  - name: Tilemap
+    uniqueID: 3678060249
+    locked: 0
   - name: Level
     uniqueID: 2117154429
     locked: 0

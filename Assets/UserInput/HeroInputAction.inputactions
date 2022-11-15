@@ -6,14 +6,6 @@
             "id": "7806e780-9f9b-445d-8748-b608cc4c1f38",
             "actions": [
                 {
-                    "name": "SaySomething",
-                    "type": "Button",
-                    "id": "b0a6faf9-e281-4ec1-b462-fe8b7161902e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Movement",
                     "type": "Value",
                     "id": "08f28218-ebfa-4c59-82dc-18dc55eae414",
@@ -36,20 +28,25 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "7dc21808-f1d8-4c69-b622-4cf0a585aeeb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MegaThrow",
+                    "type": "Button",
+                    "id": "bc07b7f8-38b9-44bf-a218-5e2365782f62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "21212d94-2917-477a-b2f2-cf03b82479ea",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SaySomething",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2D Vector",
                     "id": "3450fc69-6c3d-4043-b684-e8d8290fe9d2",
@@ -124,6 +121,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "277c2fbc-ba2c-4e73-b4dc-6e0f3f8a5f82",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8ba2f27-8859-4d6f-b4ae-aa1535d3f387",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "Hold(duration=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MegaThrow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

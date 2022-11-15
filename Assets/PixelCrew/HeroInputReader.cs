@@ -7,7 +7,6 @@ using PixelCrew.Creatures;
 
 namespace PixelCrew
 {
-
     public class HeroInputReader : MonoBehaviour
     {
         [SerializeField] private Hero _hero;
@@ -31,6 +30,22 @@ namespace PixelCrew
             if (context.canceled)
             {
                 _hero.Attack();
+            }
+        }
+
+        public void OnThrow(InputAction.CallbackContext context)
+        {
+            if (context.canceled)
+            {
+                _hero.Throw();
+            }
+        }
+
+        public void OnMegaThrow(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                _hero.MegaThrow();
             }
         }
 
