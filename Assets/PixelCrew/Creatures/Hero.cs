@@ -22,12 +22,19 @@ namespace PixelCrew.Creatures
         [SerializeField] private AnimatorController _armed;
         [SerializeField] private AnimatorController _disarmed;
 
+        [Space]
+        [Header("MegaThrow")]
+        [SerializeField] private Cooldown _megaThrowCooldown;
+        [SerializeField] private int _megaThrowCount;
+        [SerializeField] private float _megaThrowInterval;
+
         [Space] [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
 
         private static readonly int ThrowKey = Animator.StringToHash("throw");
 
         private bool _allowDoubleJump;
+        private bool _megaThrow;
 
         public GameSession _session;
 
@@ -146,41 +153,50 @@ namespace PixelCrew.Creatures
 
         public void OnDoThrow()
         {
-            _particles.Spawn("Throw");
+            if (_megaThrow)
+            {
+                var swordsToThrow = Mathf.Min(_megaThrowCount, _session.Data.Swords - 1);
+                StartCoroutine(MegaThrowRoutine(swordsToThrow));
+            }
+            else
+            {
+                Throw();
+            }
+
+            _megaThrow = false;
         }
         
         public void Throw()
         {
-            if (_throwCooldown.IsReady && _session.Data.Swords > 1)
-            {
-                Animator.SetTrigger(ThrowKey);
-                _session.Data.Swords -= 1;
-                _throwCooldown.Reset();
-            }
+            _session.Data.Swords -= 1;
+            _particles.Spawn("Throw");
+
         }
 
-        [ContextMenu("MegaThrow")]
-        public void MegaThrow()
-        {
-            if (_throwCooldown.IsReady && _session.Data.Swords > 1)
-            {
-                StartCoroutine(MegaThrowRoutine());
-            }
-        }
-
-        private IEnumerator MegaThrowRoutine()
+        private IEnumerator MegaThrowRoutine(int swordsToThrow)
         {
             {
-                var swordsToThrow = Mathf.Min(_session.Data.Swords - 1, 3);
-                _session.Data.Swords -= swordsToThrow;
                 for (int i = 1; i <= swordsToThrow; i++)
                 {
-                    Animator.SetTrigger(ThrowKey);
-                    yield return new WaitForSeconds(0.2f);
+                    Throw();
+                    yield return new WaitForSeconds(_megaThrowInterval);
                 }
-                _throwCooldown.Reset();
             }
         }
 
+        public void StartThrowing()
+        {
+            _megaThrowCooldown.Reset();
+        }
+
+        public void PerformThrowing()
+        {
+            if (!_throwCooldown.IsReady || _session.Data.Swords <= 1) return;
+
+            if (_megaThrowCooldown.IsReady) _megaThrow = true;
+
+            Animator.SetTrigger(ThrowKey);
+            _throwCooldown.Reset();
+        }
     }
 }

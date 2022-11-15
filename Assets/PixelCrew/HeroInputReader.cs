@@ -35,17 +35,14 @@ namespace PixelCrew
 
         public void OnThrow(InputAction.CallbackContext context)
         {
+            if (context.started)
+            {
+                _hero.StartThrowing();
+            }
+
             if (context.canceled)
             {
-                _hero.Throw();
-            }
-        }
-
-        public void OnMegaThrow(InputAction.CallbackContext context)
-        {
-            if (context.performed)
-            {
-                _hero.MegaThrow();
+                _hero.PerformThrowing();
             }
         }
 

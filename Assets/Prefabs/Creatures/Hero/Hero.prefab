@@ -5385,7 +5385,6 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  _platformCheck: {fileID: 0}
   _attackRange: {fileID: 1103343695}
   _particles: {fileID: 1599631511}
   _interactionCheck: {fileID: 2067199012}
@@ -5395,6 +5394,10 @@ MonoBehaviour:
     _value: 0.8
   _armed: {fileID: 9100000, guid: a2d4bc880d94a0b4096b22452e25cad4, type: 2}
   _disarmed: {fileID: 9100000, guid: 045ed353177f5fc4fa587d0f69eb73b9, type: 2}
+  _megaThrowCooldown:
+    _value: 1
+  _megaThrowCount: 3
+  _megaThrowInterval: 0.2
   _hitParticles: {fileID: 1863843261}
   _session: {fileID: 0}
 --- !u!114 &8521669546337685427

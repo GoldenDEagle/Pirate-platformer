@@ -36,14 +36,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "MegaThrow",
-                    "type": "Button",
-                    "id": "bc07b7f8-38b9-44bf-a218-5e2365782f62",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -132,17 +124,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Throw",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d8ba2f27-8859-4d6f-b4ae-aa1535d3f387",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "Hold(duration=1)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MegaThrow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
