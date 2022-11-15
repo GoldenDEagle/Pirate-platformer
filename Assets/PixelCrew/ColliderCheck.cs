@@ -4,13 +4,9 @@ using UnityEngine;
 
 namespace PixelCrew
 {
-    public class ColliderCheck : MonoBehaviour
+    public class ColliderCheck : LayerCheck
     {
-        [SerializeField] private LayerMask _layer;
-        [SerializeField] private bool _isTouchingLayer;
         private Collider2D _collider;
-
-        public bool IsTouchingLayer => _isTouchingLayer;
 
         private void Awake()
         {

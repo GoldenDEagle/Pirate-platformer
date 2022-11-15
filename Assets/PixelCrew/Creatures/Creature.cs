@@ -18,7 +18,6 @@ namespace PixelCrew.Creatures
         [Header("Checkers")]
         [SerializeField] private ColliderCheck _groundCheck;
         [SerializeField] protected LayerMask _groundLayer;
-        [SerializeField] protected ColliderCheck _platformCheck;
         [SerializeField] private CheckCircleOverlap _attackRange;
         [SerializeField] protected SpawnListComponent _particles;
 
@@ -129,11 +128,6 @@ namespace PixelCrew.Creatures
         {
             _attackRange.Check();
             _particles.Spawn("Attack1");
-        }
-
-        public bool IsPlatformAhead()
-        {
-            return _platformCheck.IsTouchingLayer;
         }
 
     }
