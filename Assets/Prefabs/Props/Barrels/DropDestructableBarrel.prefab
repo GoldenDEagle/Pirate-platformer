@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b502e3b3291c1114cbfdca0185d67073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _count: 5
+  _count: 10
   _drop:
   - Drop: {fileID: 8695493061587356836, guid: 3515a44235df2f640942a277622edbf7, type: 3}
-    Probability: 85
+    Probability: 80
   - Drop: {fileID: 6505551831587563772, guid: f5c0fef5caaca444fa9f1125f584b4a0, type: 3}
-    Probability: 15
+    Probability: 20
   _onDropCalculated:
     m_PersistentCalls:
       m_Calls:
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2117154429
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 231a3326cd3d38e429bbcb78caa7e09a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -38,7 +38,7 @@ namespace PixelCrew.Components
                 foreach (var dropData in sortedDrop)
                 {
                     current += dropData.Probability;
-                    if (dropData.Probability >= random)
+                    if (current >= random)
                     {
                         itemsToDrop[itemCount] = dropData.Drop;
                         itemCount++;
