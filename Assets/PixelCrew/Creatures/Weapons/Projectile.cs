@@ -4,20 +4,14 @@ using UnityEngine;
 
 namespace PixelCrew.Creatures.Weapons
 {
-    public class Projectile : MonoBehaviour
+    public class Projectile : BaseProjectile
     {
-        [SerializeField] private float _speed;
-
-        private Rigidbody2D _rigidbody;
-        private int _direction;
-
-        private void Start()
+        protected override void Start()
         {
-            _direction = transform.lossyScale.x > 0 ? 1 : -1;
-            _rigidbody = GetComponent<Rigidbody2D>();
+            base.Start();
 
-            var force = new Vector2(_direction * _speed, 0);        // Движение для dynamic rigidbody
-            _rigidbody.AddForce(force, ForceMode2D.Impulse);
+            var force = new Vector2(Direction * Speed, 0);        // Движение для dynamic rigidbody
+            Rigidbody.AddForce(force, ForceMode2D.Impulse);
         }
 
         //private void FixedUpdate()

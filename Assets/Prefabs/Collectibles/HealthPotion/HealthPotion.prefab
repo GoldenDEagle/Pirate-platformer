@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1549155493492883300}
   - component: {fileID: 1549155493492883301}
   - component: {fileID: 1549155493492883302}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HealthPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2117154429
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3714227102187029162, guid: b675318881e76c340bc4bbf141c9b938,
     type: 3}

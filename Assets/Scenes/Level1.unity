@@ -262,6 +262,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -1034,6 +1037,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6354648319797814794, guid: 58d340b2af402664a8df95043bbc2c46,
+        type: 3}
+      propertyPath: _randomize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_RootOrder
@@ -1042,7 +1050,7 @@ PrefabInstance:
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24
+      value: -28.5
       objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
@@ -2125,6 +2133,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6354648319797814794, guid: 58d340b2af402664a8df95043bbc2c46,
+        type: 3}
+      propertyPath: _randomize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_RootOrder
@@ -7526,7 +7539,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1913859797
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -8220,6 +8233,7 @@ MonoBehaviour:
   _data:
     Coins: 0
     Hp: 5
+    Swords: 0
     IsArmed: 0
 --- !u!4 &1134383025
 Transform:
@@ -8857,6 +8871,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6354648319797814794, guid: 58d340b2af402664a8df95043bbc2c46,
+        type: 3}
+      propertyPath: _randomize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_RootOrder
@@ -9041,6 +9060,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6354648319797814794, guid: 58d340b2af402664a8df95043bbc2c46,
+        type: 3}
+      propertyPath: _randomize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_RootOrder
@@ -9601,7 +9625,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2117154429
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -13289,6 +13313,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6354648319797814794, guid: 58d340b2af402664a8df95043bbc2c46,
+        type: 3}
+      propertyPath: _randomize
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_RootOrder
@@ -14342,6 +14371,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6354648319797814794, guid: 58d340b2af402664a8df95043bbc2c46,
+        type: 3}
+      propertyPath: _randomize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_RootOrder

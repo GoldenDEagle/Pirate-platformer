@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 8962595241807959832}
   - component: {fileID: 6315228240710664452}
   - component: {fileID: 3056458188815540776}
-  - component: {fileID: 868263634069533303}
-  m_Layer: 0
+  - component: {fileID: 6354648319797814794}
+  - component: {fileID: -1947831118460836378}
+  m_Layer: 14
   m_Name: CoinSilver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +99,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.019239455, y: 0.019239485}
@@ -186,7 +187,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8962595241807959830}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -194,12 +195,12 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 38280e8b5f923a44ead7d67f9f46e89b, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &868263634069533303
+--- !u!114 &6354648319797814794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,16 +209,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 8962595241807959830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 677441d711485a24f84bde3c9430508f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9045dbf2aa695fd4f82b989fd02bce36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 5
+  _amplitude: 0.2
+--- !u!114 &-1947831118460836378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962595241807959830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad46e175a7d86f4c81c2503cd8b716b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
+  _layer:
+    serializedVersion: 2
+    m_Bits: 33280
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8962595241807959832}
-        m_MethodName: CountCoin
-        m_Mode: 1
+      - m_Target: {fileID: 8962595241807959835}
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -237,9 +255,9 @@ MonoBehaviour:
           m_StringArgument: pickup
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8962595241807959835}
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 8962595241807959832}
+        m_MethodName: CountCoin
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
