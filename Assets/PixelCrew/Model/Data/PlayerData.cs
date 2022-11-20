@@ -2,12 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrew.Model.Data;
+
 
 namespace PixelCrew.Model
 {
     [Serializable]
     public class PlayerData
     {
+        [SerializeField] private InventoryData _inventory;
+
         public int Coins;
         public int Hp;
         public int Swords;

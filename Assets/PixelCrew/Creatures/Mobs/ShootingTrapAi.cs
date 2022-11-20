@@ -54,7 +54,7 @@ namespace PixelCrew.Creatures.Mobs
             _animator.SetTrigger(MeleeKey);
         }
 
-        private void RangeAttack()
+        public void RangeAttack()
         {
             _rangeCooldown.Reset();
             _animator.SetTrigger(RangeKey);
