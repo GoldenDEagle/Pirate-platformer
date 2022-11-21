@@ -182,7 +182,7 @@ MonoBehaviour:
   _radius: 0.25
   _mask:
     serializedVersion: 2
-    m_Bits: 11575
+    m_Bits: 77111
   _tags:
   - Enemy
   _onOverlap:
@@ -5252,7 +5252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 73984
   _isTouchingLayer: 0
 --- !u!1 &8521669546337685388
 GameObject:

@@ -8,6 +8,7 @@ namespace PixelCrew.Creatures.Mobs
     public class ShootingTrapAi : MonoBehaviour
     {
         [SerializeField] private LayerCheck _vision;
+        [SerializeField] private bool _soloMode;
 
         [Header("Melee")] 
         [SerializeField] private Cooldown _meleeCooldown;
@@ -30,7 +31,7 @@ namespace PixelCrew.Creatures.Mobs
 
         private void Update()
         {
-            if (_vision.IsTouchingLayer)
+            if (_vision.IsTouchingLayer && _soloMode)
             {
                 if (_meleeCanAttack.IsTouchingLayer)
                 {
