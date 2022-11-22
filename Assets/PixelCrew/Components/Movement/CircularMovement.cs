@@ -11,40 +11,54 @@ namespace PixelCrew.Components.Movement
 
         private Rigidbody2D[] _rigidbody;
         private float _delta;
-        private Vector2[] currentPos;
+        private Vector2[] _positions;
 
         private void Awake()
         {
-            _rigidbody = GetComponentsInChildren<Rigidbody2D>();
+            UpdateContent();
             _delta = (2 * Mathf.PI) / _rigidbody.Length;
-
+            _positions = new Vector2[_rigidbody.Length];
         }
 
-        private void Start()
+        private void UpdateContent()
         {
-            currentPos = new Vector2[_rigidbody.Length];
-            for (int i = 0; i < _rigidbody.Length; i++)
-            {
-                currentPos[i] = _rigidbody[i].position;
-                currentPos[i].y = transform.position.y + Mathf.Sin(_delta * i) * _radius;
-                currentPos[i].x = transform.position.x + Mathf.Cos(_delta * i) * _radius;
-                _rigidbody[i].MovePosition(currentPos[i]);
-            }
+            _rigidbody = GetComponentsInChildren<Rigidbody2D>();
         }
 
         private void Update()
         {
+            CalculatePositions();
+            var areAllDead = true;
             for (int i = 0; i < _rigidbody.Length; i++)
             {
                 if (_rigidbody[i] == null) continue;
-                currentPos[i] = _rigidbody[i].position;
-                currentPos[i].y = transform.position.y + Mathf.Sin(Time.time * _speed + _delta * i) * _radius;
-                currentPos[i].x = transform.position.x + Mathf.Cos(Time.time * _speed + _delta * i) * _radius;
-                _rigidbody[i].MovePosition(currentPos[i]);
+                else
+                {
+                    _rigidbody[i].MovePosition(_positions[i]);
+                    areAllDead = false;
+                }
+            }
+
+            if (areAllDead)
+            {
+                enabled = false;
+                Destroy(gameObject, 1f);
+            }
+        }
+
+        private void CalculatePositions()
+        {
+            for (int i = 0; i < _rigidbody.Length; i++)
+            {
+                if (_rigidbody[i] == null) continue;
+                _positions[i] = _rigidbody[i].position;
+                _positions[i].y = transform.position.y + Mathf.Sin(Time.time * _speed + _delta * i) * _radius;
+                _positions[i].x = transform.position.x + Mathf.Cos(Time.time * _speed + _delta * i) * _radius;
             }
         }
 
 #if UNITY_EDITOR
+
         private void OnDrawGizmos()
         {
             UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, _radius);

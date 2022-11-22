@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using PixelCrew.Utils;
 
@@ -20,6 +21,12 @@ namespace PixelCrew.Creatures.Mobs
 
         private void Update()
         {
+            if (_traps.All(x => x == null))
+            {
+                enabled = false;
+                Destroy(gameObject, 1f);
+            }
+
             if (_vision.IsTouchingLayer && _attackCooldown.IsReady)
             {
                 StartCoroutine(AttackSequence());

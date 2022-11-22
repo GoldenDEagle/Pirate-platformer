@@ -36,6 +36,7 @@ namespace PixelCrew.Creatures
         private bool _allowDoubleJump;
         private bool _megaThrow;
 
+        private HealthComponent _health;
         public GameSession _session;
 
         private int CoinCount => _session.Data.Inventory.Count("Coin");
@@ -49,11 +50,11 @@ namespace PixelCrew.Creatures
         private void Start()
         {
             _session = FindObjectOfType<GameSession>();
-            var health = GetComponent<HealthComponent>();
+            _health = GetComponent<HealthComponent>();
 
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
 
-            health.SetHealth(_session.Data.Hp);
+            _health.SetHealth(_session.Data.Hp);
             UpdateHeroWeapon();
         }
 
@@ -99,8 +100,12 @@ namespace PixelCrew.Creatures
 
         public void UseItem(string id)
         {
-            _session.Data.Inventory.Remove(id, 1);
-            if (id == "HealthPotion") _session.Data.Hp += 3;  // hp potion restoration value
+            var itemCount = _session.Data.Inventory.Count(id);
+            if (itemCount > 0)
+            {
+                _session.Data.Inventory.Remove(id, 1);
+                if (id == "HealthPotion") _health.ModifyHealth(3);  // hp potion restoration value
+            }
         }
 
         public void OnHealthChanged(int currentHealth)
