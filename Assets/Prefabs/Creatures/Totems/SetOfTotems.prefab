@@ -106,6 +106,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TotemHead2
       objectReference: {fileID: 0}
+    - target: {fileID: 4529021976600679573, guid: 4a365b4dcc824b0439778a772343becb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4529021976600679574, guid: 4a365b4dcc824b0439778a772343becb,
         type: 3}
       propertyPath: m_RootOrder
@@ -181,6 +186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TotemHead1
       objectReference: {fileID: 0}
+    - target: {fileID: 4529021976600679573, guid: c36d0ba404df40845a28b3a03cf2312e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4529021976600679574, guid: c36d0ba404df40845a28b3a03cf2312e,
         type: 3}
       propertyPath: m_RootOrder
@@ -255,6 +265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TotemHead3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529021976600679573, guid: 3dba37b8216f965429cbadf5018a68a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4529021976600679574, guid: 3dba37b8216f965429cbadf5018a68a7,
         type: 3}

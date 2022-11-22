@@ -38,9 +38,9 @@ MonoBehaviour:
           m_StringArgument: pickup
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8695493061587356842}
-        m_MethodName: CountCoin
-        m_Mode: 1
+      - m_Target: {fileID: 8793665591986659762}
+        m_MethodName: Add
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -152,18 +152,6 @@ CircleCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 345950598934830002}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8695493061587356842 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8962595241807959832, guid: 58d340b2af402664a8df95043bbc2c46,
-    type: 3}
-  m_PrefabInstance: {fileID: 345950598934830002}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8695493061587356836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c1762bff45c93c4bbdaa1794221e183, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6010373233332394678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6315228240710664452, guid: 58d340b2af402664a8df95043bbc2c46,
@@ -174,5 +162,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c9a7a6e799faf14c901369a1d30d287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8793665591986659762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9134549636129274368, guid: 58d340b2af402664a8df95043bbc2c46,
+    type: 3}
+  m_PrefabInstance: {fileID: 345950598934830002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695493061587356836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab05551825a8c44d95944c0f1b327a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

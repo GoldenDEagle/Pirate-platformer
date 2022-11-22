@@ -38,6 +38,9 @@ namespace PixelCrew.Creatures
 
         public GameSession _session;
 
+        private int CoinCount => _session.Data.Inventory.Count("Coin");
+        private int SwordCount => _session.Data.Inventory.Count("Sword");
+
         protected override void Awake()
         {
             base.Awake();
@@ -48,8 +51,16 @@ namespace PixelCrew.Creatures
             _session = FindObjectOfType<GameSession>();
             var health = GetComponent<HealthComponent>();
 
+            _session.Data.Inventory.OnChanged += OnInventoryChanged;
+
             health.SetHealth(_session.Data.Hp);
             UpdateHeroWeapon();
+        }
+
+        private void OnInventoryChanged(string id, int value)
+        {
+            if (id == "Sword")
+                UpdateHeroWeapon();
         }
 
         protected override void Update()
@@ -81,11 +92,15 @@ namespace PixelCrew.Creatures
             return base.CalculateJumpVelocity(yVelocity);
         }
 
-
-        public void CoinPickUp(int coinValue)  // Подсчет монет
+        public void AddToInventory(string id, int value)
         {
-            _session.Data.Coins += coinValue;
-            Debug.Log($"Total coins: {_session.Data.Coins}");
+            _session.Data.Inventory.Add(id, value);
+        }
+
+        public void UseItem(string id)
+        {
+            _session.Data.Inventory.Remove(id, 1);
+            if (id == "HealthPotion") _session.Data.Hp += 3;  // hp potion restoration value
         }
 
         public void OnHealthChanged(int currentHealth)
@@ -96,7 +111,7 @@ namespace PixelCrew.Creatures
         public override void TakeDamage()  // Получение урона
         {
             base.TakeDamage();
-            if (_session.Data.Coins > 0)
+            if (CoinCount > 0)
             {
                 SpawnCoins();
             }
@@ -104,8 +119,8 @@ namespace PixelCrew.Creatures
 
         private void SpawnCoins()
         {
-            var coinsToDispose = Mathf.Min(_session.Data.Coins, 5);
-            _session.Data.Coins -= coinsToDispose;
+            var coinsToDispose = Mathf.Min(CoinCount, 5);
+            _session.Data.Inventory.Remove("Coin", coinsToDispose);
 
             var burst = _hitParticles.emission.GetBurst(0);
             burst.count = coinsToDispose;
@@ -134,28 +149,21 @@ namespace PixelCrew.Creatures
 
         public override void Attack()    // Анимация атаки
         {
-            if (!_session.Data.IsArmed) return;
+            if (SwordCount <= 0) return;
 
             base.Attack();
         }
 
-        public void ArmHero()
-        {
-            _session.Data.IsArmed = true;
-            UpdateHeroWeapon();
-            _session.Data.Swords += 1;
-        }
-
         private void UpdateHeroWeapon()
         {
-            Animator.runtimeAnimatorController = _session.Data.IsArmed ? _armed : _disarmed;
+            Animator.runtimeAnimatorController = SwordCount > 0 ? _armed : _disarmed;
         }
 
         public void OnDoThrow()
         {
             if (_megaThrow)
             {
-                var swordsToThrow = Mathf.Min(_megaThrowCount, _session.Data.Swords - 1);
+                var swordsToThrow = Mathf.Min(_megaThrowCount, SwordCount - 1);
                 StartCoroutine(MegaThrowRoutine(swordsToThrow));
             }
             else
@@ -168,7 +176,7 @@ namespace PixelCrew.Creatures
         
         public void Throw()
         {
-            _session.Data.Swords -= 1;
+            _session.Data.Inventory.Remove("Sword", 1);
             _particles.Spawn("Throw");
 
         }
@@ -191,12 +199,17 @@ namespace PixelCrew.Creatures
 
         public void PerformThrowing()
         {
-            if (!_throwCooldown.IsReady || _session.Data.Swords <= 1) return;
+            if (!_throwCooldown.IsReady || SwordCount <= 1) return;
 
             if (_megaThrowCooldown.IsReady) _megaThrow = true;
 
             Animator.SetTrigger(ThrowKey);
             _throwCooldown.Reset();
+        }
+
+        private void OnDestroy()
+        {
+            _session.Data.Inventory.OnChanged -= OnInventoryChanged;
         }
     }
 }

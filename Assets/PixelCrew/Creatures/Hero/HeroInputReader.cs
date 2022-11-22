@@ -46,6 +46,14 @@ namespace PixelCrew
             }
         }
 
+        public void OnUseItem(InputAction.CallbackContext context)
+        {
+            if (context.canceled)
+            {
+                _hero.UseItem("HealthPotion");
+            }
+        }
+
     }
 
 }

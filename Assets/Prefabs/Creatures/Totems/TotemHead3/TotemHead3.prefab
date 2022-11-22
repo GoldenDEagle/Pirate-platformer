@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 1433690314016158885}
   - component: {fileID: 1038130095}
   - component: {fileID: 7763052660959943622}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: TotemHead3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vision: {fileID: 4529021975871569424}
+  _soloMode: 0
   _meleeCooldown:
     _value: 2
   _meleeAttack: {fileID: 4529021976135892312}

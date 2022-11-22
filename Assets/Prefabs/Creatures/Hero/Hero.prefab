@@ -5216,7 +5216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8521669546322667177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8521669546337685390}
@@ -5384,7 +5384,7 @@ MonoBehaviour:
   _groundCheck: {fileID: 517940429}
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 65792
   _attackRange: {fileID: 1103343695}
   _particles: {fileID: 1599631511}
   _interactionCheck: {fileID: 2067199012}
@@ -5486,6 +5486,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7dc21808-f1d8-4c69-b622-4cf0a585aeeb
     m_ActionName: Hero/Throw[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8521669546337685425}
+        m_MethodName: OnUseItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7bd28e2a-2199-4073-9a51-b80057a29d50
+    m_ActionName: Hero/UseItem[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Hero

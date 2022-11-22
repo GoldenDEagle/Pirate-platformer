@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1549155493492883299}
   - component: {fileID: 1549155493492883300}
   - component: {fileID: 1549155493492883301}
-  - component: {fileID: 1549155493492883302}
+  - component: {fileID: 1549155494798124738}
   m_Layer: 14
   m_Name: HealthPotion
   m_TagString: Untagged
@@ -149,8 +149,8 @@ MonoBehaviour:
           m_StringArgument: pick-up
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1549155493492883302}
-        m_MethodName: ModifyHealth
+      - m_Target: {fileID: 1549155494798124738}
+        m_MethodName: Add
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -187,7 +187,7 @@ CircleCollider2D:
   m_Offset: {x: 0.014053345, y: -0.101881996}
   serializedVersion: 2
   m_Radius: 0.2280121
---- !u!114 &1549155493492883302
+--- !u!114 &1549155494798124738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,7 +196,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549155493492883295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a81fbb2ae30d2fa4e90e2e9c07d72e46, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ab05551825a8c44d95944c0f1b327a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hpChange: 5
+  _id: HealthPotion
+  _count: 1

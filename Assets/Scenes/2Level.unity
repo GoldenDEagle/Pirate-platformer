@@ -159,10 +159,7 @@ MonoBehaviour:
   _data:
     _inventory:
       _inventory: []
-    Coins: 0
     Hp: 4
-    Swords: 0
-    IsArmed: 0
 --- !u!4 &98907928
 Transform:
   m_ObjectHideFlags: 0
@@ -396,7 +393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438525594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.34, y: -1.107, z: -10}
+  m_LocalPosition: {x: 13.16, y: -0.110000014, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 289800294}
@@ -1474,12 +1471,12 @@ PrefabInstance:
     - target: {fileID: 8521669546337685390, guid: ecdfa298277564e4ca03760673446fc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.29
+      value: 13.21
       objectReference: {fileID: 0}
     - target: {fileID: 8521669546337685390, guid: ecdfa298277564e4ca03760673446fc3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.607
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 8521669546337685390, guid: ecdfa298277564e4ca03760673446fc3,
         type: 3}
@@ -3324,7 +3321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606301121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.34, y: -1.107, z: -10}
+  m_LocalPosition: {x: 13.16, y: -0.110000014, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1398259187}

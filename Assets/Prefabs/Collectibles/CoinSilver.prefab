@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8962595241807959829}
   - component: {fileID: 8962595241807959835}
   - component: {fileID: 8962595241807959833}
-  - component: {fileID: 8962595241807959832}
   - component: {fileID: 6315228240710664452}
   - component: {fileID: 3056458188815540776}
   - component: {fileID: 6354648319797814794}
   - component: {fileID: -1947831118460836378}
+  - component: {fileID: 9134549636129274368}
   m_Layer: 14
   m_Name: CoinSilver
   m_TagString: Untagged
@@ -118,20 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 8962595241807959830}
---- !u!114 &8962595241807959832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8962595241807959830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c1762bff45c93c4bbdaa1794221e183, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _coinToCount: {fileID: 8962595241807959830}
-  _coinValue: 1
 --- !u!114 &6315228240710664452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _frequency: 5
   _amplitude: 0.2
+  _randomize: 0
 --- !u!114 &-1947831118460836378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,9 +242,9 @@ MonoBehaviour:
           m_StringArgument: pickup
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8962595241807959832}
-        m_MethodName: CountCoin
-        m_Mode: 1
+      - m_Target: {fileID: 9134549636129274368}
+        m_MethodName: Add
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -266,3 +253,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9134549636129274368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962595241807959830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab05551825a8c44d95944c0f1b327a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: Coin
+  _count: 1

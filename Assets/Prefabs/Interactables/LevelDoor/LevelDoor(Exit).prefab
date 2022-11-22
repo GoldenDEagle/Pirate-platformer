@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5262669442165016500}
   - component: {fileID: 5262669442165016499}
   - component: {fileID: 5262669443139973338}
+  - component: {fileID: 958605153}
   m_Layer: 10
   m_Name: LevelDoor(Exit)
   m_TagString: Interactable
@@ -160,6 +161,51 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 958605153}
+        m_MethodName: Check
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5262669443139973338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262669442165016511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c6f96c190326d4f90cb4777f60001f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: 2Level
+--- !u!114 &958605153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262669442165016511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8515ee71e54efc41b063bc585696ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _required:
+  - Id: Coin
+    Value: 3
+  - Id: Key
+    Value: 1
+  _removeAfterUse: 1
+  _onSuccess:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 5262669442165016498}
         m_MethodName: SetClip
         m_Mode: 5
@@ -182,16 +228,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5262669443139973338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5262669442165016511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c6f96c190326d4f90cb4777f60001f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sceneName: 2Level
+  _onFail:
+    m_PersistentCalls:
+      m_Calls: []
