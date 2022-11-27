@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrew.Components;
+using PixelCrew.Components.Audio;
 using PixelCrew.Model;
 
 namespace PixelCrew.Creatures
@@ -24,6 +25,7 @@ namespace PixelCrew.Creatures
         protected Vector2 Direction;
         protected Rigidbody2D Rigidbody;
         protected Animator Animator;
+        protected PlaySoundsComponent Sounds;
         protected bool IsGrounded;
         private bool _isJumping;
         
@@ -37,6 +39,7 @@ namespace PixelCrew.Creatures
         {
             Rigidbody = GetComponent<Rigidbody2D>();       // Подключение компонентов из Юнити
             Animator = GetComponent<Animator>();
+            Sounds = GetComponent<PlaySoundsComponent>();
         }
 
         public void SetDirection(Vector2 direction)
@@ -88,15 +91,21 @@ namespace PixelCrew.Creatures
             return yVelocity;
         }
 
-        protected virtual float CalculateJumpVelocity(float yVelocity)   // Рассчет скорости прыжка(обычный и дабл)
+        protected virtual float CalculateJumpVelocity(float yVelocity)   // Рассчет скорости прыжка
         {
             if (IsGrounded)
             {
                 yVelocity += _jumpSpeed;
-                _particles.Spawn("Jump");
+                DoJumpVfx();
             }
 
             return yVelocity;
+        }
+
+        protected void DoJumpVfx()
+        {
+            _particles.Spawn("Jump");
+            Sounds.Play("Jump");
         }
 
         public void UpdateSpriteDirection(Vector2 direction)   // Функция смены направления спрайта
@@ -122,12 +131,18 @@ namespace PixelCrew.Creatures
         public virtual void Attack()    // Анимация атаки
         {
             Animator.SetTrigger(AttackKey);
+            Sounds.Play("Melee");
         }
 
         public void OnDoAttack()    // Нанесение урона
         {
             _attackRange.Check();
             _particles.Spawn("Attack1");
+        }
+
+        public void DoJump()
+        {
+            Direction.y = 1f;
         }
 
     }

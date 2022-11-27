@@ -71,8 +71,6 @@ namespace PixelCrew.Creatures
 
         protected override float CalculateYVelocity()  // Рассчет вертикальной скорости
         {
-            var isJumpPressing = Direction.y > 0;
-
             if (IsGrounded)
             {
                 _allowDoubleJump = true;
@@ -85,7 +83,7 @@ namespace PixelCrew.Creatures
         {
             if (!IsGrounded && _allowDoubleJump)
             {
-                _particles.Spawn("Jump");
+                DoJumpVfx();
                 _allowDoubleJump = false;
                 return _jumpSpeed;
             }
@@ -181,6 +179,7 @@ namespace PixelCrew.Creatures
         
         public void Throw()
         {
+            Sounds.Play("Range");
             _session.Data.Inventory.Remove("Sword", 1);
             _particles.Spawn("Throw");
 

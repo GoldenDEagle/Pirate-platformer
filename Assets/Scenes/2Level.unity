@@ -189,7 +189,7 @@ PrefabInstance:
     - target: {fileID: 4038551713695232108, guid: 24a646dc399490f479e18dbf0c62be74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4038551713695232108, guid: 24a646dc399490f479e18dbf0c62be74,
         type: 3}
@@ -339,7 +339,6 @@ GameObject:
   m_Component:
   - component: {fileID: 438525600}
   - component: {fileID: 438525599}
-  - component: {fileID: 438525598}
   - component: {fileID: 438525597}
   - component: {fileID: 438525596}
   m_Layer: 0
@@ -403,14 +402,6 @@ MonoBehaviour:
   m_CropFrameX: 1
   m_CropFrameY: 1
   m_StretchFill: 0
---- !u!81 &438525598
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438525594}
-  m_Enabled: 1
 --- !u!20 &438525599
 Camera:
   m_ObjectHideFlags: 0
@@ -3402,7 +3393,7 @@ PrefabInstance:
     - target: {fileID: 8521669546337685388, guid: 3568b97a263cf6e4c844581efa450d41,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8521669546337685390, guid: 3568b97a263cf6e4c844581efa450d41,
         type: 3}
