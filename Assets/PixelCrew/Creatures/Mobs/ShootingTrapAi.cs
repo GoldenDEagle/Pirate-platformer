@@ -23,10 +23,12 @@ namespace PixelCrew.Creatures.Mobs
         private static readonly int RangeKey = Animator.StringToHash("range");
 
         private Animator _animator;
+        private AudioSource _audio;
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
+            _audio = GetComponent<AudioSource>();
         }
 
         private void Update()
@@ -59,6 +61,7 @@ namespace PixelCrew.Creatures.Mobs
         {
             _rangeCooldown.Reset();
             _animator.SetTrigger(RangeKey);
+            _audio.Play();
         }
 
         public void OnMeleeAttack()

@@ -4,6 +4,7 @@ using UnityEngine;
 using PixelCrew.Components;
 using PixelCrew.Components.Audio;
 using PixelCrew.Model;
+using PixelCrew.Utils;
 
 namespace PixelCrew.Creatures
 {
@@ -15,6 +16,8 @@ namespace PixelCrew.Creatures
         [SerializeField] protected float _jumpSpeed;
         //[SerializeField] private int _damage;
         [SerializeField] private float _damageVelocity;
+        [SerializeField] protected float _slamDownVelocity;
+        [SerializeField] protected bool _stunningSlam;
 
         [Header("Checkers")]
         [SerializeField] private ColliderCheck _groundCheck;
@@ -25,21 +28,31 @@ namespace PixelCrew.Creatures
         protected Vector2 Direction;
         protected Rigidbody2D Rigidbody;
         protected Animator Animator;
+        protected StunComponent Stunner;
         protected PlaySoundsComponent Sounds;
         protected bool IsGrounded;
         private bool _isJumping;
-        
+        private bool _isStunning;
+        private float xVelocity;
+        private float yVelocity;
+
+        public bool StunningSlam => _stunningSlam;
+        public float Speed => _speed;
+
+
         private static readonly int IsGroundKey = Animator.StringToHash("is-ground");
         private static readonly int IsRunning = Animator.StringToHash("is-running");                // Переменные для навигации по анимациям
         private static readonly int VerticalVelocity = Animator.StringToHash("vertical-velocity");
         private static readonly int Hit = Animator.StringToHash("hit");
         private static readonly int AttackKey = Animator.StringToHash("attack");
+        private static readonly int SlamdownKey = Animator.StringToHash("slamdown");
 
         protected virtual void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();       // Подключение компонентов из Юнити
             Animator = GetComponent<Animator>();
             Sounds = GetComponent<PlaySoundsComponent>();
+            _isStunning = TryGetComponent<StunComponent>(out Stunner);
         }
 
         public void SetDirection(Vector2 direction)
@@ -54,8 +67,8 @@ namespace PixelCrew.Creatures
 
         private void FixedUpdate()
         {
-            var xVelocity = Direction.x * _speed;   // Определение скорости x и y в каждый апдейт
-            var yVelocity = CalculateYVelocity();
+            xVelocity = Direction.x * _speed;   // Определение скорости x и y в каждый апдейт
+            yVelocity = CalculateYVelocity();
             Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
 
 
@@ -64,6 +77,25 @@ namespace PixelCrew.Creatures
             Animator.SetFloat(VerticalVelocity, Rigidbody.velocity.y);
 
             UpdateSpriteDirection(Direction);
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.IsInLayer(_groundLayer))
+            {
+                var contact = other.contacts[0];
+                if (contact.relativeVelocity.y >= _slamDownVelocity)    // Относительная скорость при контакте с землей
+                {
+                    Animator.SetTrigger(SlamdownKey);
+                    _particles.Spawn("SlamDown"); 
+
+                    if (_stunningSlam && _isStunning)
+                    {
+                        Stunner.StunInArea();
+                        Sounds.Play("Slam");
+                    }
+                }
+            }
         }
 
         protected virtual float CalculateYVelocity()  // Рассчет вертикальной скорости
@@ -131,19 +163,18 @@ namespace PixelCrew.Creatures
         public virtual void Attack()    // Анимация атаки
         {
             Animator.SetTrigger(AttackKey);
-            Sounds.Play("Melee");
         }
 
         public void OnDoAttack()    // Нанесение урона
         {
             _attackRange.Check();
             _particles.Spawn("Attack1");
+            Sounds.Play("Melee");
         }
 
-        public void DoJump()
+        public void JumpOnTarget()
         {
-            Direction.y = 1f;
+            Rigidbody.velocity = new Vector2(Rigidbody.velocity.x, _jumpSpeed);
         }
-
     }
 }

@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 1193145548}
   - component: {fileID: 1193145547}
   m_Layer: 15
-  m_Name: Vfx
+  m_Name: Sfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5649,6 +5649,8 @@ MonoBehaviour:
   _speed: 3
   _jumpSpeed: 15
   _damageVelocity: 10
+  _slamDownVelocity: 15
+  _stunningSlam: 0
   _groundCheck: {fileID: 517940429}
   _groundLayer:
     serializedVersion: 2
@@ -5656,7 +5658,6 @@ MonoBehaviour:
   _attackRange: {fileID: 1103343695}
   _particles: {fileID: 1599631511}
   _interactionCheck: {fileID: 2067199012}
-  _slamDownVelocity: 15
   _interactionRadius: 0.8
   _throwCooldown:
     _value: 0.8

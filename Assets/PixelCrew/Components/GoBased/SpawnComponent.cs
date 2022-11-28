@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrew.Utils;
 
 namespace PixelCrew.Components
 {
@@ -13,7 +14,7 @@ namespace PixelCrew.Components
         [ContextMenu("Spawn")]
         public void Spawn()
         {
-            var instance = Instantiate(_prefab, _target.position, Quaternion.identity);
+            var instance = SpawnUtils.Spawn(_prefab, _target.position);
             
             var scale = _target.lossyScale;
             instance.transform.localScale = scale;

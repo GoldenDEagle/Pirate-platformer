@@ -14,7 +14,6 @@ namespace PixelCrew.Creatures
     {
         [SerializeField] CheckCircleOverlap _interactionCheck;
         
-        [SerializeField] private float _slamDownVelocity;
         [SerializeField] private float _interactionRadius;
 
         [SerializeField] private Cooldown _throwCooldown;
@@ -138,17 +137,6 @@ namespace PixelCrew.Creatures
             _interactionCheck.Check();
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
-        {
-            if (other.gameObject.IsInLayer(_groundLayer))
-            {
-                var contact = other.contacts[0];
-                if (contact.relativeVelocity.y >= _slamDownVelocity)    // Относительная скорость при контакте с землей
-                {
-                    _particles.Spawn("SlamDown");
-                }
-            }
-        }
 
         public override void Attack()    // Анимация атаки
         {

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrew.Components;
+using PixelCrew.Utils;
 
 namespace PixelCrew.Creatures
 {
@@ -14,6 +15,7 @@ namespace PixelCrew.Creatures
         [SerializeField] private float _alarmDelay = 0.5f;
         [SerializeField] private float _attackCooldown = 1f;
         [SerializeField] private float _missHeroCooldown = 1f;
+        [SerializeField] private Cooldown _stunningSlamCooldown;
 
         private IEnumerator _current;
         private GameObject _target;
@@ -76,6 +78,12 @@ namespace PixelCrew.Creatures
                 else
                 {
                     SetDirectionToTarget();
+                    yield return null;
+                    if (_creature.StunningSlam && _stunningSlamCooldown.IsReady)
+                    {
+                        _stunningSlamCooldown.Reset();
+                        _creature.JumpOnTarget();
+                    }
                 }
                 yield return null;
             }
@@ -119,7 +127,6 @@ namespace PixelCrew.Creatures
             _creature.SetDirection(Vector2.zero);
             if (_current != null)
                 StopCoroutine(_current);
-                //StopCoroutine(_current);
         }
 
         private void StartState(IEnumerator coroutine)
