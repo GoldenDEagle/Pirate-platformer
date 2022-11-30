@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PixelCrew.Model
 {
@@ -11,7 +12,9 @@ namespace PixelCrew.Model
         private PlayerData _save;
 
         private void Awake()
-        {        
+        {
+            LoadHud();
+
             if (IsSessionExist())
             {
                 Destroy(gameObject);
@@ -21,7 +24,13 @@ namespace PixelCrew.Model
                 DontDestroyOnLoad(this);
             }
         }
-        
+
+        private void LoadHud()
+        {
+            SceneManager.LoadScene("Hud", LoadSceneMode.Additive);
+        }
+
+
         private bool IsSessionExist()
         {
             var sessions = FindObjectsOfType<GameSession>();

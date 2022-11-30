@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290fdee020dd0b4ebb920ed66d94201, type: 3}
-  m_Name: PlayerDef
+  m_Script: {fileID: 11500000, guid: 7875856effa588444a73cc665adce0dc, type: 3}
+  m_Name: GameSettings
   m_EditorClassIdentifier: 
-  _inventorySize: 5
-  _maxHealth: 10
+  _music:
+    _value: 0.5764213
+  _sfx:
+    _value: 0.4
