@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrew.Utils.Disposables;
 
 namespace PixelCrew.Model.Data.Properties
 {
@@ -15,6 +16,12 @@ namespace PixelCrew.Model.Data.Properties
         public delegate void OnPropertyChanged(TPropertyType newValue, TPropertyType oldValue);
 
         public event OnPropertyChanged OnChanged;
+
+        public IDisposable Subscribe(OnPropertyChanged call)
+        {
+            OnChanged += call;
+            return new ActionDisposable(() => OnChanged -= call);
+        }
 
         public PersistentProperty(TPropertyType defaultValue)
         {

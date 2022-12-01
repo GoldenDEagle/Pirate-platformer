@@ -49,6 +49,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9159393647968030862}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1646827891632920680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,5 +190,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab05551825a8c44d95944c0f1b327a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9159393647968030862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1601585180883629850, guid: 8b8e887ff1cf96242b86f959616208fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1646827891632920680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6505551831587563772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf855ed869221b4497d5eac2aff6e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -301,7 +301,8 @@ MonoBehaviour:
   _data:
     _inventory:
       _inventory: []
-    Hp: 4
+    Hp:
+      _value: 0
 --- !u!4 &98907928
 Transform:
   m_ObjectHideFlags: 0
@@ -4522,6 +4523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3373477056988364469, guid: e90cd06ca11f5184d987ad6b1e2ebeed,
+        type: 3}
+      propertyPath: _soloMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90cd06ca11f5184d987ad6b1e2ebeed, type: 3}
