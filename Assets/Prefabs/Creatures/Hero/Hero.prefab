@@ -344,7 +344,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5442,7 +5442,6 @@ MonoBehaviour:
   _megaThrowInterval: 0.2
   _hitParticles: {fileID: 1863843261}
   _throwSpawner: {fileID: 211800269985703056}
-  _session: {fileID: 0}
 --- !u!114 &8521669546337685427
 MonoBehaviour:
   m_ObjectHideFlags: 0
