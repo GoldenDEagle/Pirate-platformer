@@ -38,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "UseItem",
+                    "name": "NextItem",
                     "type": "Button",
                     "id": "7bd28e2a-2199-4073-9a51-b80057a29d50",
                     "expectedControlType": "Button",
@@ -142,7 +142,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "UseItem",
+                    "action": "NextItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,11 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEditor.Animations;
 using PixelCrew.Components;
 using PixelCrew.Utils;
 using PixelCrew.Model;
+using PixelCrew.Model.Definitions;
 
 namespace PixelCrew.Creatures
 {
@@ -29,6 +29,8 @@ namespace PixelCrew.Creatures
 
         [Space] [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
+        [SerializeField] private SpawnComponent _throwSpawner;
+
 
         private static readonly int ThrowKey = Animator.StringToHash("throw");
 
@@ -36,10 +38,25 @@ namespace PixelCrew.Creatures
         private bool _megaThrow;
 
         private HealthComponent _health;
-        public GameSession _session;
+        private GameSession _session;
 
+        private const string SwordId = "Sword";
         private int CoinCount => _session.Data.Inventory.Count("Coin");
-        private int SwordCount => _session.Data.Inventory.Count("Sword");
+        private int SwordCount => _session.Data.Inventory.Count(SwordId);
+
+        private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;
+
+        private bool CanThrow
+        {
+            get
+            {
+                if (SelectedItemId == SwordId)
+                    return SwordCount > 1;
+
+                var def = DefsFacade.I.Items.Get(SelectedItemId);
+                return def.HasTag(ItemTag.Throwable);
+            }
+        }
 
         protected override void Awake()
         {
@@ -59,7 +76,7 @@ namespace PixelCrew.Creatures
 
         private void OnInventoryChanged(string id, int value)
         {
-            if (id == "Sword")
+            if (id == SwordId)
                 UpdateHeroWeapon();
         }
 
@@ -95,15 +112,15 @@ namespace PixelCrew.Creatures
             _session.Data.Inventory.Add(id, value);
         }
 
-        public void UseItem(string id)
-        {
-            var itemCount = _session.Data.Inventory.Count(id);
-            if (itemCount > 0)
-            {
-                _session.Data.Inventory.Remove(id, 1);
-                if (id == "HealthPotion") _health.ModifyHealth(3);  // hp potion restoration value
-            }
-        }
+        //public void UseItem(string id)
+        //{
+        //    var itemCount = _session.Data.Inventory.Count(id);
+        //    if (itemCount > 0)
+        //    {
+        //        _session.Data.Inventory.Remove(id, 1);
+        //        if (id == "HealthPotion") _health.ModifyHealth(3);  // hp potion restoration value
+        //    }
+        //}
 
         public void OnHealthChanged(int currentHealth)
         {
@@ -154,8 +171,11 @@ namespace PixelCrew.Creatures
         {
             if (_megaThrow)
             {
-                var swordsToThrow = Mathf.Min(_megaThrowCount, SwordCount - 1);
-                StartCoroutine(MegaThrowRoutine(swordsToThrow));
+                var throwableCount = _session.Data.Inventory.Count(SelectedItemId);
+                var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;
+                
+                var numThrows = Mathf.Min(_megaThrowCount, possibleCount);
+                StartCoroutine(MegaThrowRoutine(numThrows));
             }
             else
             {
@@ -168,8 +188,13 @@ namespace PixelCrew.Creatures
         public void Throw()
         {
             Sounds.Play("Range");
-            _session.Data.Inventory.Remove("Sword", 1);
-            _particles.Spawn("Throw");
+
+            var throwableId = _session.QuickInventory.SelectedItem.Id;
+            var throwableDef = DefsFacade.I.Throwable.Get(throwableId);
+            _throwSpawner.SetPrefab(throwableDef.Projectile);
+
+            _session.Data.Inventory.Remove(throwableId, 1);
+            _throwSpawner.Spawn();
 
         }
 
@@ -191,7 +216,7 @@ namespace PixelCrew.Creatures
 
         public void PerformThrowing()
         {
-            if (!_throwCooldown.IsReady || SwordCount <= 1) return;
+            if (!_throwCooldown.IsReady || !CanThrow) return;
 
             if (_megaThrowCooldown.IsReady) _megaThrow = true;
 
@@ -202,6 +227,11 @@ namespace PixelCrew.Creatures
         private void OnDestroy()
         {
             _session.Data.Inventory.OnChanged -= OnInventoryChanged;
+        }
+
+        public void NextItem()
+        {
+            _session.QuickInventory.SetNextItem();
         }
     }
 }

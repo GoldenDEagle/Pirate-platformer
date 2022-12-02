@@ -21,5 +21,10 @@ namespace PixelCrew.Components
 
             instance.SetActive(true);
         }
+
+        public void SetPrefab(GameObject prefab)
+        {
+            _prefab = prefab;
+        }
     }
 }

@@ -7839,7 +7839,8 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
-    Hp: 5
+    Hp:
+      _value: 10
 --- !u!4 &1410987400
 Transform:
   m_ObjectHideFlags: 0

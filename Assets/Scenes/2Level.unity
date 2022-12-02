@@ -300,9 +300,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory: []
+      _inventory:
+      - Id: Sword
+        Value: 1
     Hp:
-      _value: 0
+      _value: 10
 --- !u!4 &98907928
 Transform:
   m_ObjectHideFlags: 0
@@ -4454,6 +4456,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 434621615}
     m_Modifications:
+    - target: {fileID: 1863830588550651505, guid: e90cd06ca11f5184d987ad6b1e2ebeed,
+        type: 3}
+      propertyPath: _shotInterval
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1863830588550651507, guid: e90cd06ca11f5184d987ad6b1e2ebeed,
         type: 3}
       propertyPath: m_RootOrder
@@ -4523,6 +4530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3373477056952760202, guid: e90cd06ca11f5184d987ad6b1e2ebeed,
+        type: 3}
+      propertyPath: _soloMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3373477056988364469, guid: e90cd06ca11f5184d987ad6b1e2ebeed,
         type: 3}

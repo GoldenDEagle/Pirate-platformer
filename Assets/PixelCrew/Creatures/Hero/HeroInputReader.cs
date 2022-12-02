@@ -46,11 +46,11 @@ namespace PixelCrew
             }
         }
 
-        public void OnUseItem(InputAction.CallbackContext context)
+        public void OnNextItem(InputAction.CallbackContext context)
         {
-            if (context.canceled)
+            if (context.performed)
             {
-                _hero.UseItem("HealthPotion");
+                _hero.NextItem();
             }
         }
 

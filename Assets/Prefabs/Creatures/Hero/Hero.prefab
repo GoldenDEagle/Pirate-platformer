@@ -5195,7 +5195,7 @@ GameObject:
   - component: {fileID: 6837441357866136219}
   - component: {fileID: 211800269985703056}
   m_Layer: 15
-  m_Name: ThrownSwordPosition
+  m_Name: ThrowSpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5441,6 +5441,7 @@ MonoBehaviour:
   _megaThrowCount: 3
   _megaThrowInterval: 0.2
   _hitParticles: {fileID: 1863843261}
+  _throwSpawner: {fileID: 211800269985703056}
   _session: {fileID: 0}
 --- !u!114 &8521669546337685427
 MonoBehaviour:
@@ -5531,7 +5532,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8521669546337685425}
-        m_MethodName: OnUseItem
+        m_MethodName: OnNextItem
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5708,7 +5709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46e64f49f2592c4b8ebc14c0986356f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 0}
   _sounds:
   - _id: Jump
     _clip: {fileID: 8300000, guid: 5bd28bac49633854980c819e33a096e6, type: 3}
