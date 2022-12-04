@@ -2,6 +2,7 @@
 using PixelCrew.Model;
 using PixelCrew.Model.Definitions;
 using PixelCrew.UI.Widgets;
+using PixelCrew.Utils;
 
 namespace PixelCrew.UI.HUD
 {
@@ -24,6 +25,11 @@ namespace PixelCrew.UI.HUD
             var maxHealth = DefsFacade.I.Player.MaxHealth;
             var value = (float) newValue / maxHealth;
             _healthBar.SetProgress(value);
+        }
+
+        public void OnPause()
+        {
+            WindowUtils.CreateWindow("UI/InGameMenuWindow");
         }
 
         private void OnDestroy()

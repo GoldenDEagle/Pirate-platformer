@@ -303,6 +303,8 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
+      - Id: Pearl
+        Value: 10
     Hp:
       _value: 10
 --- !u!4 &98907928
@@ -552,8 +554,8 @@ MonoBehaviour:
   m_RefResolutionY: 180
   m_UpscaleRT: 0
   m_PixelSnapping: 0
-  m_CropFrameX: 1
-  m_CropFrameY: 1
+  m_CropFrameX: 0
+  m_CropFrameY: 0
   m_StretchFill: 0
 --- !u!20 &438525599
 Camera:
@@ -582,7 +584,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.6
+  orthographic size: 3.67
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2044,18 +2046,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 848136524}
     m_Modifications:
-    - target: {fileID: 958605153, guid: 5c6bc67d39a9d764886b4772c56301bf, type: 3}
-      propertyPath: _required.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 958605153, guid: 5c6bc67d39a9d764886b4772c56301bf, type: 3}
-      propertyPath: _required.Array.data[0].Id
-      value: Key
-      objectReference: {fileID: 0}
-    - target: {fileID: 958605153, guid: 5c6bc67d39a9d764886b4772c56301bf, type: 3}
-      propertyPath: _required.Array.data[0].Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5262669442165016497, guid: 5c6bc67d39a9d764886b4772c56301bf,
         type: 3}
       propertyPath: m_RootOrder
@@ -2115,11 +2105,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelDoor(Exit)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262669443139973338, guid: 5c6bc67d39a9d764886b4772c56301bf,
-        type: 3}
-      propertyPath: _sceneName
-      value: Level3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6bc67d39a9d764886b4772c56301bf, type: 3}
@@ -3852,7 +3837,7 @@ MonoBehaviour:
   m_Follow: {fileID: 229122762}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 2.6
+    OrthographicSize: 3.67
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
