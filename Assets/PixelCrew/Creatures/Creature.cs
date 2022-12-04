@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using PixelCrew.Components;
 using PixelCrew.Components.Audio;
-using PixelCrew.Model;
 using PixelCrew.Utils;
 
 namespace PixelCrew.Creatures

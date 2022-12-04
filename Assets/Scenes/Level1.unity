@@ -14652,6 +14652,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelDoor(Exit)
       objectReference: {fileID: 0}
+    - target: {fileID: 5262669443139973338, guid: 5c6bc67d39a9d764886b4772c56301bf,
+        type: 3}
+      propertyPath: _sceneName
+      value: 2Level
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6bc67d39a9d764886b4772c56301bf, type: 3}
 --- !u!4 &5262669443139973337 stripped

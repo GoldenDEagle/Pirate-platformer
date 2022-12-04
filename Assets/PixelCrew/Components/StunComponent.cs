@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using PixelCrew.Utils;
 using UnityEngine.InputSystem;
 
 namespace PixelCrew.Components

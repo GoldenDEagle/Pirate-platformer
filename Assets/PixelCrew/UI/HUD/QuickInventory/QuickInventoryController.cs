@@ -2,7 +2,6 @@
 using UnityEngine;
 using PixelCrew.Utils.Disposables;
 using PixelCrew.Model;
-using PixelCrew.Model.Data;
 
 namespace PixelCrew.UI.HUD.QuickInventory
 {

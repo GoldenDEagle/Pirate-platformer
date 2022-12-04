@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using PixelCrew.Creatures;
 using PixelCrew.Model.Definitions;
 

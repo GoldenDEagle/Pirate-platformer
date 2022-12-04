@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using PixelCrew.Model.Data;
 using PixelCrew.UI.Widgets;
 

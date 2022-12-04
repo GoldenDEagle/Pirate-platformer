@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using PixelCrew.Model;
 using PixelCrew.Model.Data;
-using PixelCrew.Model.Definitions;
 
 namespace PixelCrew.Components.Interactions
 {
