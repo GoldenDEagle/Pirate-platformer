@@ -3606,23 +3606,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 434621615}
     m_Modifications:
-    - target: {fileID: 1401284184, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
-      propertyPath: _points.Array.data[0]
-      value: 
-      objectReference: {fileID: 2132061709}
-    - target: {fileID: 1401284184, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
-      propertyPath: _points.Array.data[1]
-      value: 
-      objectReference: {fileID: 1017715942}
+    - target: {fileID: 1720499228, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8521669546337685388, guid: 3568b97a263cf6e4c844581efa450d41,
         type: 3}
       propertyPath: m_Name
       value: Sharky
-      objectReference: {fileID: 0}
-    - target: {fileID: 8521669546337685388, guid: 3568b97a263cf6e4c844581efa450d41,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8521669546337685390, guid: 3568b97a263cf6e4c844581efa450d41,
         type: 3}

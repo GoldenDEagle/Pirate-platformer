@@ -15,12 +15,12 @@ namespace PixelCrew.UI.HUD
         private void Start()
         {
             _session = FindObjectOfType<GameSession>();
-            _session.Data.Hp.OnChanged += OnHealthChanged;
+            _session.Data.Hp.OnChanged += OnPlayerHealthChanged;
 
-            OnHealthChanged(_session.Data.Hp.Value, 0);
+            OnPlayerHealthChanged(_session.Data.Hp.Value, 0);
         }
 
-        private void OnHealthChanged(int newValue, int oldValue)
+        private void OnPlayerHealthChanged(int newValue, int oldValue)
         {
             var maxHealth = DefsFacade.I.Player.MaxHealth;
             var value = (float) newValue / maxHealth;
@@ -34,7 +34,7 @@ namespace PixelCrew.UI.HUD
 
         private void OnDestroy()
         {
-            _session.Data.Hp.OnChanged -= OnHealthChanged;
+            _session.Data.Hp.OnChanged -= OnPlayerHealthChanged;
         }
     }
 }

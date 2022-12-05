@@ -1073,6 +1073,7 @@ MonoBehaviour:
   _missHeroCooldown: 1
   _stunningSlamCooldown:
     _value: 3
+  _horizontalTreshold: 0.4
 --- !u!114 &7792951852922459185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,7 +1114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46e64f49f2592c4b8ebc14c0986356f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 1043177985}
   _sounds:
   - _id: Jump
     _clip: {fileID: 8300000, guid: 5bd28bac49633854980c819e33a096e6, type: 3}
@@ -1185,5 +1185,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 66304
   _isTouchingLayer: 0

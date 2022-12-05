@@ -2822,29 +2822,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1345882878}
     m_Modifications:
     - target: {fileID: 270357017, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
-      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 270357017, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
-      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 270357017, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
       propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 750642778}
-    - target: {fileID: 270357017, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
-      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 270357017, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
-      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: Switch
-      objectReference: {fileID: 0}
-    - target: {fileID: 270357017, guid: 3568b97a263cf6e4c844581efa450d41, type: 3}
-      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8521669546337685388, guid: 3568b97a263cf6e4c844581efa450d41,
         type: 3}
       propertyPath: m_Name
