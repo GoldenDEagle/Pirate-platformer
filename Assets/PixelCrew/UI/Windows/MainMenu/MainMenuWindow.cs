@@ -23,6 +23,11 @@ namespace PixelCrew.UI.MainMenu
             Close();
         }
 
+        public void OnShowLanguages()
+        {
+            WindowUtils.CreateWindow("UI/LocalizationWindow");
+        }
+
         public void OnExit()
         {
             _closeAction = () =>
