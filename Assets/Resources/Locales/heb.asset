@@ -23,4 +23,6 @@ MonoBehaviour:
   - Key: button_exit
     Value: "\u05D9\u05B0\u05E6\u05B4\u05D9\u05D0\u05B8\u05D4\r"
   - Key: selected_language
-    Value: "\u05E9\u05E4\u05D4 \u05E0\u05D1\u05D7\u05E8\u05EA: {0}"
+    Value: "\u05E9\u05E4\u05D4 \u05E0\u05D1\u05D7\u05E8\u05EA: {0}\r"
+  - Key: button_locales
+    Value: "\u05E9\u05E4\u05D5\u05EA"

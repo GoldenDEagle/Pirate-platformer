@@ -17,10 +17,12 @@ MonoBehaviour:
   - Key: menu_title
     Value: "Menu\r"
   - Key: button_start
-    Value: "start\r"
+    Value: "Start\r"
   - Key: button_option
-    Value: "options\r"
+    Value: "Options\r"
   - Key: button_exit
-    Value: "exit\r"
+    Value: "Exit\r"
   - Key: selected_language
-    Value: 'Selected language: {0}'
+    Value: "Selected language: {0}\r"
+  - Key: button_locales
+    Value: Languages

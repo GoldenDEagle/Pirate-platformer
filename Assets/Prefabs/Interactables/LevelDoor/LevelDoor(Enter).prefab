@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5262669442165016496}
   - component: {fileID: 5262669442165016498}
   - component: {fileID: 5262669442165016500}
+  - component: {fileID: 207076698}
+  - component: {fileID: 207076697}
   m_Layer: 10
   m_Name: LevelDoor(Enter)
   m_TagString: Untagged
@@ -132,3 +134,37 @@ CircleCollider2D:
   m_Offset: {x: 0.2561531, y: -0.3732522}
   serializedVersion: 2
   m_Radius: 0.24
+--- !u!114 &207076698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262669442165016511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 5262669442165016497}
+  _prefab: {fileID: 8521669546337685388, guid: ecdfa298277564e4ca03760673446fc3, type: 3}
+--- !u!114 &207076697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262669442165016511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6106848899963034ab37446aa90b52d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: level3-checkpoint1
+  _heroSpawner: {fileID: 207076698}
+  _setChecked:
+    m_PersistentCalls:
+      m_Calls: []
+  _setUnChecked:
+    m_PersistentCalls:
+      m_Calls: []

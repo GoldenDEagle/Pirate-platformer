@@ -17,10 +17,12 @@ MonoBehaviour:
   - Key: menu_title
     Value: "\u041C\u0435\u043D\u044E\r"
   - Key: button_start
-    Value: "\u043D\u0430\u0447\u0430\u0442\u044C\r"
+    Value: "\u041D\u0430\u0447\u0430\u0442\u044C\r"
   - Key: button_option
-    Value: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438\r"
+    Value: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438\r"
   - Key: button_exit
-    Value: "\u0432\u044B\u0445\u043E\u0434\r"
+    Value: "\u0412\u044B\u0445\u043E\u0434\r"
   - Key: selected_language
-    Value: "\u0412\u044B\u0431\u0440\u0430\u043D \u044F\u0437\u044B\u043A: {0}"
+    Value: "\u0412\u044B\u0431\u0440\u0430\u043D \u044F\u0437\u044B\u043A: {0}\r"
+  - Key: button_locales
+    Value: "\u042F\u0437\u044B\u043A\u0438"
