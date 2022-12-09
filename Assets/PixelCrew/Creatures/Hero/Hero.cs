@@ -213,7 +213,32 @@ namespace PixelCrew.Creatures
             _megaThrowCooldown.Reset();
         }
 
-        public void PerformThrowing()
+        public void UseInventory()
+        {
+            if (IsSelectedItem(ItemTag.Throwable))
+            {
+                PerformThrowing();
+            }
+            else if (IsSelectedItem(ItemTag.Potion))
+            {
+                UsePotion();
+            }
+        }
+
+        private bool IsSelectedItem(ItemTag tag)
+        {
+            return _session.QuickInventory.SelectedDef.HasTag(tag);
+        }
+
+        private void UsePotion()
+        {
+            var potion = DefsFacade.I.Potions.Get(SelectedItemId);
+            _session.Data.Hp.Value += (int) potion.Value;
+
+            _session.Data.Inventory.Remove(potion.Id, 1);
+        }
+
+        private void PerformThrowing()
         {
             if (!_throwCooldown.IsReady || !CanThrow) return;
 

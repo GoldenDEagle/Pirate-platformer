@@ -5,6 +5,7 @@ namespace PixelCrew.Model.Definitions
     {
         Stackable,
         Usable,
-        Throwable
+        Throwable,
+        Potion
     }
 }

@@ -9373,7 +9373,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _inventory:
-      _inventory: []
+      _inventory:
+      - Id: Pearl
+        Value: 5
+      - Id: SmallHealthPotion
+        Value: 2
+      - Id: BigHealthPotion
+        Value: 1
     Hp:
       _value: 10
   _defaultCheckpoint: level1-checkpoint1

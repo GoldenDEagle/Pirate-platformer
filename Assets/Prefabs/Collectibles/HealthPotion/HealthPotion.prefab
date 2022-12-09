@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab05551825a8c44d95944c0f1b327a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: HealthPotion
+  _id: SmallHealthPotion
   _count: 1
 --- !u!114 &3047952419044327629
 MonoBehaviour:
