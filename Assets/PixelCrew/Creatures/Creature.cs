@@ -64,7 +64,7 @@ namespace PixelCrew.Creatures
 
         private void FixedUpdate()
         {
-            xVelocity = Direction.x * _speed;   // Определение скорости x и y в каждый апдейт
+            xVelocity = CalculateXVelocity();   // Определение скорости x и y в каждый апдейт
             yVelocity = CalculateYVelocity();
             Rigidbody.velocity = new Vector2(xVelocity, yVelocity);
 
@@ -93,6 +93,16 @@ namespace PixelCrew.Creatures
                     }
                 }
             }
+        }
+
+        protected virtual float CalculateXVelocity()
+        {
+            return Direction.x * CalculateSpeed();
+        }
+
+        protected virtual float CalculateSpeed()
+        {
+            return _speed;
         }
 
         protected virtual float CalculateYVelocity()  // Рассчет вертикальной скорости

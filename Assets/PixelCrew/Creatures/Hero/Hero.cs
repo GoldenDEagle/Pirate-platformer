@@ -5,6 +5,7 @@ using PixelCrew.Components;
 using PixelCrew.Utils;
 using PixelCrew.Model;
 using PixelCrew.Model.Definitions;
+using PixelCrew.Model.Definitions.Repository;
 
 namespace PixelCrew.Creatures
 {
@@ -36,6 +37,9 @@ namespace PixelCrew.Creatures
         private bool _allowDoubleJump;
         private bool _megaThrow;
 
+        private Cooldown _speedUpCooldown = new Cooldown();
+        private float _additionalSpeed;
+
         private HealthComponent _health;
         private GameSession _session;
 
@@ -44,18 +48,6 @@ namespace PixelCrew.Creatures
         private int SwordCount => _session.Data.Inventory.Count(SwordId);
 
         private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;
-
-        private bool CanThrow
-        {
-            get
-            {
-                if (SelectedItemId == SwordId)
-                    return SwordCount > 1;
-
-                var def = DefsFacade.I.Items.Get(SelectedItemId);
-                return def.HasTag(ItemTag.Throwable);
-            }
-        }
 
         protected override void Awake()
         {
@@ -71,6 +63,18 @@ namespace PixelCrew.Creatures
 
             _health.SetHealth(_session.Data.Hp.Value);
             UpdateHeroWeapon();
+        }
+
+        private bool CanThrow
+        {
+            get
+            {
+                if (SelectedItemId == SwordId)
+                    return SwordCount > 1;
+
+                var def = DefsFacade.I.Items.Get(SelectedItemId);
+                return def.HasTag(ItemTag.Throwable);
+            }
         }
 
         private void OnInventoryChanged(string id, int value)
@@ -106,24 +110,28 @@ namespace PixelCrew.Creatures
             return base.CalculateJumpVelocity(yVelocity);
         }
 
+        protected override float CalculateSpeed()
+        {
+            if (_speedUpCooldown.IsReady)
+                _additionalSpeed = 0f;
+
+            return base.CalculateSpeed() + _additionalSpeed;
+        }
+
         public void AddToInventory(string id, int value)
         {
             _session.Data.Inventory.Add(id, value);
         }
 
-        //public void UseItem(string id)
-        //{
-        //    var itemCount = _session.Data.Inventory.Count(id);
-        //    if (itemCount > 0)
-        //    {
-        //        _session.Data.Inventory.Remove(id, 1);
-        //        if (id == "HealthPotion") _health.ModifyHealth(3);  // hp potion restoration value
-        //    }
-        //}
-
         public void OnHealthChanged(int currentHealth)
         {
             _session.Data.Hp.Value = currentHealth;
+        }
+
+        private void UpdateHealth()
+        {
+            if (_session.Data.Hp.Value > DefsFacade.I.Player.MaxHealth) _session.Data.Hp.Value = DefsFacade.I.Player.MaxHealth;
+            _health.SetHealth(_session.Data.Hp.Value);
         }
 
         public override void TakeDamage()  // Получение урона
@@ -133,6 +141,7 @@ namespace PixelCrew.Creatures
             {
                 SpawnCoins();
             }
+            UpdateHealth();
         }
 
         private void SpawnCoins()
@@ -233,7 +242,19 @@ namespace PixelCrew.Creatures
         private void UsePotion()
         {
             var potion = DefsFacade.I.Potions.Get(SelectedItemId);
-            _session.Data.Hp.Value += (int) potion.Value;
+
+            switch (potion.Effect)
+            {
+                case Effect.AddHp:
+                    _session.Data.Hp.Value += (int)potion.Value;
+                    UpdateHealth();
+                    break;
+                case Effect.SpeedUp:
+                    _speedUpCooldown.Value = _speedUpCooldown.RemainingTime + potion.Time;
+                    _additionalSpeed = Mathf.Max(potion.Value, _additionalSpeed);
+                    _speedUpCooldown.Reset();
+                    break;
+            }
 
             _session.Data.Inventory.Remove(potion.Id, 1);
         }

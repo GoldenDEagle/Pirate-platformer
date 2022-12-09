@@ -9378,8 +9378,8 @@ MonoBehaviour:
         Value: 5
       - Id: SmallHealthPotion
         Value: 2
-      - Id: BigHealthPotion
-        Value: 1
+      - Id: SpeedUpPotion
+        Value: 5
     Hp:
       _value: 10
   _defaultCheckpoint: level1-checkpoint1
