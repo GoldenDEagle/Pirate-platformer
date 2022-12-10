@@ -8533,6 +8533,7 @@ GameObject:
   - component: {fileID: 1011319378}
   - component: {fileID: 1011319379}
   - component: {fileID: 1011319380}
+  - component: {fileID: 1011319381}
   m_Layer: 10
   m_Name: Hobbit
   m_TagString: Interactable
@@ -8690,11 +8691,35 @@ MonoBehaviour:
     - Text: Sure!
       OnSelect:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1011319381}
+            m_MethodName: Show
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
     - Text: Not this time, halfling!
       OnSelect:
         m_PersistentCalls:
           m_Calls: []
+--- !u!114 &1011319381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011319374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885c3bb82757c9544b1cbe5f6babc9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _path: UI/PerksManagerWindow
 --- !u!1 &1022369099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9444,6 +9469,12 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
+      - Id: GreenGem
+        Value: 20
+    Perks:
+      _used:
+        _value: 
+      _unlocked: []
     Hp:
       _value: 10
   _defaultCheckpoint: level3-checkpoint1

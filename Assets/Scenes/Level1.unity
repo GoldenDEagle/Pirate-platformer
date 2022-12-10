@@ -9380,6 +9380,10 @@ MonoBehaviour:
         Value: 2
       - Id: SpeedUpPotion
         Value: 5
+    Perks:
+      _used:
+        _value: 
+      _unlocked: []
     Hp:
       _value: 10
   _defaultCheckpoint: level1-checkpoint1

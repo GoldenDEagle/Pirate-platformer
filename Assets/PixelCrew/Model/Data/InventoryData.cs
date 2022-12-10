@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrew.Model.Definitions;
+using PixelCrew.Model.Definitions.Repository.Items;
 
 namespace PixelCrew.Model.Data
 {
@@ -112,6 +113,27 @@ namespace PixelCrew.Model.Data
 
                 _inventory.Remove(item);
             }
+        }
+
+        public bool IsEnough(params ItemWithCount[] items)
+        {
+            var joined = new Dictionary<string,int>();
+
+            foreach (var item in items)
+            {
+                if (joined.ContainsKey(item.ItemId))
+                    joined[item.ItemId] += item.Count;
+                else
+                    joined.Add(item.ItemId, item.Count);
+            }
+
+            foreach (var it in joined)
+            {
+                var count = Count(it.Key);
+                if (count < it.Value) return false;
+            }
+
+            return true;
         }
 
         private InventoryItemData GetItem(string id)

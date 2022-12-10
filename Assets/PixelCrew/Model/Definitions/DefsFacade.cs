@@ -9,11 +9,13 @@ namespace PixelCrew.Model.Definitions
         [SerializeField] private ItemsRepository _items;
         [SerializeField] private ThrowablesRepository _throwableItems;
         [SerializeField] private PotionsRepository _potions;
+        [SerializeField] private PerksRepository _perks;
         [SerializeField] private PlayerDef _player;
 
         public ItemsRepository Items => _items;
         public ThrowablesRepository Throwable => _throwableItems;
         public PotionsRepository Potions => _potions;
+        public PerksRepository Perks => _perks;
         public PlayerDef Player => _player;
 
         private static DefsFacade _instance;
