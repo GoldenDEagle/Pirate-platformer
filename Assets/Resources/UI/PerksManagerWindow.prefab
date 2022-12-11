@@ -1134,6 +1134,7 @@ GameObject:
   - component: {fileID: 4416035432418068300}
   - component: {fileID: 4416035432418068298}
   - component: {fileID: 4416035432418068301}
+  - component: {fileID: 299890324570154219}
   m_Layer: 5
   m_Name: PriceText
   m_TagString: Untagged
@@ -1201,6 +1202,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Price:'
+--- !u!114 &299890324570154219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416035432418068303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdebfec4490a3ee45a7e93b097e33fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _key: price_label
+  _capitalize: 0
 --- !u!1 &4416035432447550787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,7 +3095,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -10, y: -4}
+  m_SizeDelta: {x: -12, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4416035433328908675
 CanvasRenderer:
@@ -4444,7 +4459,7 @@ PrefabInstance:
     - target: {fileID: 4318484595753369414, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -31.735931
+      value: -31.2
       objectReference: {fileID: 0}
     - target: {fileID: 4318484595753369414, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
@@ -4471,6 +4486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuyButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4318484596108500954, guid: dc3941fbff44ef741a7d5125eaad33a1,
+        type: 3}
+      propertyPath: _key
+      value: button_buy
+      objectReference: {fileID: 0}
     - target: {fileID: 4318484596108500955, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_Text
@@ -4479,12 +4499,17 @@ PrefabInstance:
     - target: {fileID: 4318484596108500955, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4318484596108500955, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4318484597062953342, guid: dc3941fbff44ef741a7d5125eaad33a1,
+        type: 3}
+      propertyPath: _key
+      value: button_buy
       objectReference: {fileID: 0}
     - target: {fileID: 4318484597062953343, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
@@ -4494,15 +4519,21 @@ PrefabInstance:
     - target: {fileID: 4318484597062953343, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4318484597062953343, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc3941fbff44ef741a7d5125eaad33a1, type: 3}
+--- !u!224 &4416035433708359454 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4318484595753369414, guid: dc3941fbff44ef741a7d5125eaad33a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 479279353614151768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4416035433708359452 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4318484595753369412, guid: dc3941fbff44ef741a7d5125eaad33a1,
@@ -4515,12 +4546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa10e010022d4354f937bbf3a38f9326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &4416035433708359454 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4318484595753369414, guid: dc3941fbff44ef741a7d5125eaad33a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 479279353614151768}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4416035433285439140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4571,7 +4596,7 @@ PrefabInstance:
     - target: {fileID: 4318484595753369414, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4318484595753369414, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
@@ -4643,6 +4668,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UseButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4318484596108500954, guid: dc3941fbff44ef741a7d5125eaad33a1,
+        type: 3}
+      propertyPath: _key
+      value: button_use
+      objectReference: {fileID: 0}
     - target: {fileID: 4318484596108500955, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_Text
@@ -4651,12 +4681,17 @@ PrefabInstance:
     - target: {fileID: 4318484596108500955, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4318484596108500955, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4318484597062953342, guid: dc3941fbff44ef741a7d5125eaad33a1,
+        type: 3}
+      propertyPath: _key
+      value: button_use
       objectReference: {fileID: 0}
     - target: {fileID: 4318484597062953343, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
@@ -4666,12 +4701,12 @@ PrefabInstance:
     - target: {fileID: 4318484597062953343, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4318484597062953343, guid: dc3941fbff44ef741a7d5125eaad33a1,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc3941fbff44ef741a7d5125eaad33a1, type: 3}

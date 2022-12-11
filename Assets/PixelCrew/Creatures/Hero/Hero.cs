@@ -100,7 +100,7 @@ namespace PixelCrew.Creatures
 
         protected override float CalculateJumpVelocity(float yVelocity)   // Рассчет скорости прыжка(обычный и дабл)
         {
-            if (!IsGrounded && _allowDoubleJump)
+            if (!IsGrounded && _allowDoubleJump && _session.PerksModel.IsDoubleJumpSupported)
             {
                 DoJumpVfx();
                 _allowDoubleJump = false;
@@ -177,7 +177,7 @@ namespace PixelCrew.Creatures
 
         public void OnDoThrow()
         {
-            if (_megaThrow)
+            if (_megaThrow && _session.PerksModel.IsMegaThrowSupported)
             {
                 var throwableCount = _session.Data.Inventory.Count(SelectedItemId);
                 var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;

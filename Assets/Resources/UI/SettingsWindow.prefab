@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 846670985}
   - component: {fileID: 846670987}
   - component: {fileID: 846670986}
+  - component: {fileID: 2238949950428121516}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -285,7 +286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -23.739996, y: -3.9643345}
+  m_AnchoredPosition: {x: -20, y: -3.9643345}
   m_SizeDelta: {x: 50, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &846670987
@@ -329,6 +330,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Music:'
+--- !u!114 &2238949950428121516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846670984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdebfec4490a3ee45a7e93b097e33fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _key: music
+  _capitalize: 0
 --- !u!1 &974062656
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -23.739996, y: -3.9643345}
+  m_AnchoredPosition: {x: -23, y: -3.9643345}
   m_SizeDelta: {x: 50, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1396676095
@@ -1262,6 +1277,7 @@ GameObject:
   - component: {fileID: 2583678509387766716}
   - component: {fileID: 2583678509387766718}
   - component: {fileID: 2583678509387766719}
+  - component: {fileID: 2754053002749590841}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -1329,6 +1345,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Options
+--- !u!114 &2754053002749590841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583678509387766717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdebfec4490a3ee45a7e93b097e33fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _key: button_options
+  _capitalize: 0
 --- !u!1 &2583678509627909718
 GameObject:
   m_ObjectHideFlags: 0

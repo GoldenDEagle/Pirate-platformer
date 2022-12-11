@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdebfec4490a3ee45a7e93b097e33fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_option
+  _key: button_options
   _capitalize: 1
 --- !u!1 &2614537120420235054
 GameObject:
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdebfec4490a3ee45a7e93b097e33fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: button_option
+  _key: button_options
   _capitalize: 1
 --- !u!1 &2614537121625675243
 GameObject:

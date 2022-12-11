@@ -18,11 +18,32 @@ MonoBehaviour:
     Value: "Menu\r"
   - Key: button_start
     Value: "Start\r"
-  - Key: button_option
+  - Key: button_options
     Value: "Options\r"
   - Key: button_exit
     Value: "Exit\r"
   - Key: selected_language
     Value: "Selected language: {0}\r"
   - Key: button_locales
-    Value: Languages
+    Value: "Languages\r"
+  - Key: pause_title
+    Value: "Pause\r"
+  - Key: button_use
+    Value: "Use\r"
+  - Key: button_buy
+    Value: "Buy\r"
+  - Key: button_restart
+    Value: "Restart\r"
+  - Key: music
+    Value: "Music\r"
+  - Key: price_label
+    Value: "Price:\r"
+  - Key: double_jump_info
+    Value: "Double Jump! Allows you to jump twice as high! Just press the button
+      second time to use it.\r"
+  - Key: mega_throw_info
+    Value: "Mega Sword Throw! Allows you to unleash a deadly fan of knives upon your
+      enemies! Hold \"throw\" button to use it.\r"
+  - Key: force_shield_info
+    Value: Force shield! Gives you absolute immunity for a short period of time!
+      Push the button to use it.

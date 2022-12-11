@@ -12,6 +12,9 @@ namespace PixelCrew.Model.Data
 
         public string Used => _data.Perks.Used.Value;
 
+        public bool IsMegaThrowSupported => _data.Perks.Used.Value == "mega-throw";
+        public bool IsDoubleJumpSupported => _data.Perks.Used.Value == "double-jump";
+
         public event Action OnChanged;
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();

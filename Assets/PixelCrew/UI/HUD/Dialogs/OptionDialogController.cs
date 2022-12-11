@@ -22,7 +22,7 @@ namespace PixelCrew.UI.HUD.Dialogs
 
         public void OnOptionSelected(OptionData selectedOption)
         {
-            selectedOption.OnSelect.Invoke();
+            //selectedOption.OnSelect.Invoke();
             _content.SetActive(false);
         }
 
