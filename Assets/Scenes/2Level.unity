@@ -305,6 +305,10 @@ MonoBehaviour:
         Value: 1
       - Id: Pearl
         Value: 10
+    Perks:
+      _used:
+        _value: 
+      _unlocked: []
     Hp:
       _value: 10
   _defaultCheckpoint: level2-checkpoint1
@@ -337,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 4038551713695232108, guid: 24a646dc399490f479e18dbf0c62be74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4038551713695232108, guid: 24a646dc399490f479e18dbf0c62be74,
         type: 3}
@@ -608,85 +612,6 @@ Transform:
   m_Father: {fileID: 289800294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &476354363
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1893623828}
-    m_Modifications:
-    - target: {fileID: 476354366, guid: a53a24bf45a2d78418ae0441650ed0c6, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 89d33049da48070479965b255ed009a8, type: 3}
-    - target: {fileID: 1549155493492883295, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthPotion
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a53a24bf45a2d78418ae0441650ed0c6, type: 3}
---- !u!4 &476354364 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1549155493492883297, guid: a53a24bf45a2d78418ae0441650ed0c6,
-    type: 3}
-  m_PrefabInstance: {fileID: 476354363}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &489015693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,7 +3355,7 @@ Transform:
   - {fileID: 1181759870}
   - {fileID: 1697383923}
   m_Father: {fileID: 1893623828}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378394056
 GameObject:
@@ -4148,7 +4073,6 @@ Transform:
   - {fileID: 1720024572}
   - {fileID: 212497063}
   - {fileID: 72488499}
-  - {fileID: 476354364}
   - {fileID: 1349392883}
   - {fileID: 115370545}
   m_Father: {fileID: 0}

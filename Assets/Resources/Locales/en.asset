@@ -45,5 +45,12 @@ MonoBehaviour:
     Value: "Mega Sword Throw! Allows you to unleash a deadly fan of knives upon your
       enemies! Hold \"throw\" button to use it.\r"
   - Key: force_shield_info
-    Value: Force shield! Gives you absolute immunity for a short period of time!
-      Push the button to use it.
+    Value: "Force shield! Gives you absolute immunity for a short period of time!
+      Push the button to use it.\r"
+  - Key: hobbit_perk_proposal
+    Value: "I came from Middle-earth. I can offer you some of my knowledge in exchange
+      for gems. Are you interested?\r"
+  - Key: hobbit_perk_agree
+    Value: "Sure!\r"
+  - Key: hobbit_perk_disagree
+    Value: Not this time, halfling!

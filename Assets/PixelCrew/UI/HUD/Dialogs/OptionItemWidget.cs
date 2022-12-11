@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using PixelCrew.UI.Widgets;
+using PixelCrew.Model.Definitions.Localization;
 
 namespace PixelCrew.UI.HUD.Dialogs
 {
@@ -16,7 +17,7 @@ namespace PixelCrew.UI.HUD.Dialogs
         public void SetData(OptionData data, int index)
         {
             _data = data;
-            _label.text = data.Text;
+            _label.text = LocalizationManager.I.Localize(data.Text);
         }
 
         public void OnSelect()
