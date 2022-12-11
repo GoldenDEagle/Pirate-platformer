@@ -1576,6 +1576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402968543}
   - component: {fileID: 402968544}
+  - component: {fileID: 402968545}
   m_Layer: 0
   m_Name: clouds3
   m_TagString: Untagged
@@ -1591,7 +1592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402968542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: -31, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1599932846}
@@ -1612,6 +1613,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 519420031}
   _container: {fileID: 1599932846}
+--- !u!114 &402968545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402968542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1239f29c90e2a6d4dab95551bdfd9078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectValue: 0.1
+  _followedTarget: {fileID: 519420032}
 --- !u!1 &404180928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,7 +1928,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490974624}
-  - component: {fileID: 490974625}
   m_Layer: 0
   m_Name: container
   m_TagString: Untagged
@@ -1936,20 +1950,6 @@ Transform:
   m_Father: {fileID: 1909767845}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &490974625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490974623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1239f29c90e2a6d4dab95551bdfd9078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effectValue: 0.3
-  _followedTarget: {fileID: 519420032}
 --- !u!1 &504745384
 GameObject:
   m_ObjectHideFlags: 0
@@ -8286,7 +8286,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 949688151}
-  - component: {fileID: 949688152}
   m_Layer: 0
   m_Name: container
   m_TagString: Untagged
@@ -8320,20 +8319,6 @@ Transform:
   m_Father: {fileID: 1441753564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &949688152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949688150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1239f29c90e2a6d4dab95551bdfd9078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effectValue: 0.2
-  _followedTarget: {fileID: 519420032}
 --- !u!1 &991876511
 GameObject:
   m_ObjectHideFlags: 3
@@ -10245,6 +10230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441753564}
   - component: {fileID: 1441753565}
+  - component: {fileID: 1441753566}
   m_Layer: 0
   m_Name: clouds2
   m_TagString: Untagged
@@ -10260,7 +10246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441753563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: -31, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 949688151}
@@ -10281,6 +10267,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 519420031}
   _container: {fileID: 949688151}
+--- !u!114 &1441753566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441753563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1239f29c90e2a6d4dab95551bdfd9078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectValue: 0.2
+  _followedTarget: {fileID: 519420032}
 --- !u!1001 &1456007012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10644,7 +10644,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1599932846}
-  - component: {fileID: 1599932847}
   m_Layer: 0
   m_Name: container
   m_TagString: Untagged
@@ -10680,20 +10679,6 @@ Transform:
   m_Father: {fileID: 402968543}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1599932847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599932845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1239f29c90e2a6d4dab95551bdfd9078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effectValue: 0.1
-  _followedTarget: {fileID: 519420032}
 --- !u!1001 &1619663122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15013,6 +14998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909767845}
   - component: {fileID: 1909767846}
+  - component: {fileID: 1909767847}
   m_Layer: 0
   m_Name: clouds1
   m_TagString: Untagged
@@ -15028,7 +15014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909767844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: -31, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490974624}
@@ -15049,6 +15035,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 519420031}
   _container: {fileID: 490974624}
+--- !u!114 &1909767847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909767844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1239f29c90e2a6d4dab95551bdfd9078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectValue: 0.3
+  _followedTarget: {fileID: 519420032}
 --- !u!114 &1966350981 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
