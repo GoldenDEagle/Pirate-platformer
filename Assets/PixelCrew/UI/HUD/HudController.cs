@@ -22,7 +22,7 @@ namespace PixelCrew.UI.HUD
 
         private void OnPlayerHealthChanged(int newValue, int oldValue)
         {
-            var maxHealth = DefsFacade.I.Player.MaxHealth;
+            var maxHealth = _session.StatsModel.GetValue(StatId.Hp);
             var value = (float) newValue / maxHealth;
             _healthBar.SetProgress(value);
         }
@@ -30,6 +30,11 @@ namespace PixelCrew.UI.HUD
         public void OnPause()
         {
             WindowUtils.CreateWindow("UI/InGameMenuWindow");
+        }
+
+        public void OnTest()
+        {
+            WindowUtils.CreateWindow("UI/PlayerStatsWindow");
         }
 
         private void OnDestroy()

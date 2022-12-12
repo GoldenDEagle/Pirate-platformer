@@ -9324,14 +9324,16 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 10
-      - Id: GreenGem
-        Value: 20
+      - Id: Coin
+        Value: 1000
     Perks:
       _used:
         _value: 
       _unlocked: []
     Hp:
       _value: 10
+    Levels:
+      _progress: []
   _defaultCheckpoint: level3-checkpoint1
 --- !u!4 &1410987400
 Transform:

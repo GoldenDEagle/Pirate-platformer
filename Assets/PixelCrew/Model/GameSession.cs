@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using PixelCrew.Model.Data;
 using PixelCrew.Utils.Disposables;
 using PixelCrew.Components.LevelManagment;
+using PixelCrew.Model.Definitions;
 
 namespace PixelCrew.Model
 {
@@ -21,6 +22,7 @@ namespace PixelCrew.Model
         private readonly CompositeDisposable _trash = new CompositeDisposable();
         public QuickInventoryModel QuickInventory { get; private set; }
         public PerksModel PerksModel { get; private set; }
+        public StatsModel StatsModel { get; private set; }
 
         private void Awake()
         {
@@ -69,6 +71,11 @@ namespace PixelCrew.Model
 
             PerksModel = new PerksModel(_data);
             _trash.Retain(PerksModel);
+
+            StatsModel = new StatsModel(_data);
+            _trash.Retain(StatsModel);
+
+            _data.Hp.Value = (int) StatsModel.GetValue(StatId.Hp);
         }
 
         private void LoadHud()

@@ -60,9 +60,28 @@ namespace PixelCrew.Creatures
             _health = GetComponent<HealthComponent>();
 
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
+            _session.StatsModel.OnUpgraded += OnHeroUpgraded;
 
             _health.SetHealth(_session.Data.Hp.Value);
             UpdateHeroWeapon();
+        }
+
+        protected override void Update()
+        {
+            base.Update();
+        }
+
+        private void OnHeroUpgraded(StatId statId)
+        {
+            switch (statId)
+            {
+                case StatId.Hp:
+                    var health = (int) _session.StatsModel.GetValue(statId);
+                    _session.Data.Hp.Value = health;
+                    UpdateHealth();
+                    _health.SetHealth(health);
+                    break;
+            }
         }
 
         private bool CanThrow
@@ -81,11 +100,6 @@ namespace PixelCrew.Creatures
         {
             if (id == SwordId)
                 UpdateHeroWeapon();
-        }
-
-        protected override void Update()
-        {
-            base.Update();
         }
 
         protected override float CalculateYVelocity()  // Рассчет вертикальной скорости
@@ -112,10 +126,12 @@ namespace PixelCrew.Creatures
 
         protected override float CalculateSpeed()
         {
+            var defaultSpeed = _session.StatsModel.GetValue(StatId.Speed);
+
             if (_speedUpCooldown.IsReady)
                 _additionalSpeed = 0f;
 
-            return base.CalculateSpeed() + _additionalSpeed;
+            return defaultSpeed + _additionalSpeed;
         }
 
         public void AddToInventory(string id, int value)
@@ -130,7 +146,7 @@ namespace PixelCrew.Creatures
 
         private void UpdateHealth()
         {
-            if (_session.Data.Hp.Value > DefsFacade.I.Player.MaxHealth) _session.Data.Hp.Value = DefsFacade.I.Player.MaxHealth;
+            if (_session.Data.Hp.Value > _session.StatsModel.GetValue(StatId.Hp)) _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp);
             _health.SetHealth(_session.Data.Hp.Value);
         }
 

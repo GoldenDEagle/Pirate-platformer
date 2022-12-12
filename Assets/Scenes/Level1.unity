@@ -9285,6 +9285,8 @@ MonoBehaviour:
       _unlocked: []
     Hp:
       _value: 10
+    Levels:
+      _progress: []
   _defaultCheckpoint: level1-checkpoint1
 --- !u!4 &1134383025
 Transform:
