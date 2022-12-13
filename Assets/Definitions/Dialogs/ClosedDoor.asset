@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _sentences:
-    - Door is closed!
-    - You need to find a key.
+    - _value: Door is closed..
+      _icon: {fileID: 0}
+      _side: 0
+    - _value: You need to find a key!
+      _icon: {fileID: 0}
+      _side: 0
+    _type: 0

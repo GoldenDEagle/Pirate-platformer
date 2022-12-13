@@ -18,6 +18,7 @@ namespace PixelCrew.Model
         private PlayerData _save;
 
         private readonly List<string> _checkpoints = new List<string>();
+        private readonly List<string> _removedItems = new List<string>();
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
         public QuickInventoryModel QuickInventory { get; private set; }
@@ -123,6 +124,17 @@ namespace PixelCrew.Model
                 Save();
                 _checkpoints.Add(id);
             }
+        }
+
+        public void StoreState(string itemId)
+        {
+            if (!_removedItems.Contains(itemId))
+                _removedItems.Add(itemId);
+        }
+
+        public bool RestoreState(string itemId)
+        {
+            return _removedItems.Contains(itemId);
         }
 
         private void OnDestroy()

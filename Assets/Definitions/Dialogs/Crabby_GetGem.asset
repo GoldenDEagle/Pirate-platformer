@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _sentences:
-    - I lost my favourite green gem :(
-    - Can you find it, please?
+    - _value: Give me a green gem!
+      _icon: {fileID: 0}
+      _side: 0
+    - _value: Please!
+      _icon: {fileID: 0}
+      _side: 0
+    _type: 0
