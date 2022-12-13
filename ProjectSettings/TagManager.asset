@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Interactable
   - SfxAudioSource
+  - SimpleDialog
+  - PersonalizedDialog
   layers:
   - Default
   - TransparentFX

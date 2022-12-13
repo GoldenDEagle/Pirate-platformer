@@ -1,14 +1,13 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.UI;
-using PixelCrew.Model.Data;
+﻿using PixelCrew.Model.Data;
+using PixelCrew.Model.Definitions.Localization;
 using PixelCrew.Utils;
+using System.Collections;
+using UnityEngine;
 
 namespace PixelCrew.UI.HUD.Dialogs
 {
     public class DialogBoxController : MonoBehaviour
     {
-        [SerializeField] private Text _text;
         [SerializeField] private GameObject _container;
         [SerializeField] private Animator _animator;
 
@@ -19,6 +18,8 @@ namespace PixelCrew.UI.HUD.Dialogs
         [SerializeField] private AudioClip _typing;
         [SerializeField] private AudioClip _open;
         [SerializeField] private AudioClip _close;
+        [Space]
+        [SerializeField] protected DialogContent _content;
 
         private static readonly int isOpen = Animator.StringToHash("isOpen");
 
@@ -26,6 +27,10 @@ namespace PixelCrew.UI.HUD.Dialogs
         private int _currentSentence;
         private AudioSource _sfxSource;
         private Coroutine _typingRoutine;
+
+        protected Sentence CurrentSentence => _data.Sentences[_currentSentence];
+
+        protected virtual DialogContent CurrentContent => _content;
 
         private void Start()
         {
@@ -36,7 +41,7 @@ namespace PixelCrew.UI.HUD.Dialogs
         {
             _data = data;
             _currentSentence = 0;
-            _text.text = string.Empty;
+            CurrentContent.Text.text = string.Empty;
 
             _container.SetActive(true);
             _sfxSource.PlayOneShot(_open);
@@ -45,11 +50,15 @@ namespace PixelCrew.UI.HUD.Dialogs
 
         private IEnumerator TypeDialogText()
         {
-            _text.text = string.Empty;
-            var sentence = _data.Sentences[_currentSentence];
-            foreach (var letter in sentence)
+            CurrentContent.Text.text = string.Empty;
+            var sentence = CurrentSentence;
+            CurrentContent.TrySetIcon(sentence.Icon);
+
+            var localizedSentence = LocalizationManager.I.Localize(sentence.Value);
+
+            foreach (var letter in localizedSentence)
             {
-                _text.text += letter;
+                CurrentContent.Text.text += letter;
                 _sfxSource.PlayOneShot(_typing);
                 yield return new WaitForSeconds(_textSpeed);
             }
@@ -57,7 +66,7 @@ namespace PixelCrew.UI.HUD.Dialogs
             _typingRoutine = null;
         }
 
-        private void OnStartDialogAnimation()
+        protected virtual void OnStartDialogAnimation()
         {
             _typingRoutine = StartCoroutine(TypeDialogText());
         }
@@ -67,7 +76,7 @@ namespace PixelCrew.UI.HUD.Dialogs
             if (_typingRoutine == null) return;
 
             StopTypeAnimation();
-            _text.text = _data.Sentences[_currentSentence];
+            CurrentContent.Text.text = LocalizationManager.I.Localize(_data.Sentences[_currentSentence].Value);
         }
 
         private void StopTypeAnimation()
@@ -101,7 +110,6 @@ namespace PixelCrew.UI.HUD.Dialogs
 
         private void OnCloseAnimationComplete()
         {
-
         }
     }
 }

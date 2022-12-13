@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using PixelCrew.Utils;
+﻿using UnityEngine;
 
-namespace PixelCrew
+namespace PixelCrew.Outdated
 {
-
     public class CannonBallBehavior : MonoBehaviour
     {
         [SerializeField] private float _speed;
@@ -14,7 +10,7 @@ namespace PixelCrew
 
         private void Awake()
         {
-            Destroy(this.gameObject, _lifetime);
+            Destroy(gameObject, _lifetime);
         }
 
         private void Update()

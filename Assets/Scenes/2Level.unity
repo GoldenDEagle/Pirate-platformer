@@ -311,6 +311,8 @@ MonoBehaviour:
       _unlocked: []
     Hp:
       _value: 10
+    Levels:
+      _progress: []
   _defaultCheckpoint: level2-checkpoint1
 --- !u!4 &98907928
 Transform:
@@ -1951,6 +1953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelDoor(Exit)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262669443139973338, guid: 5c6bc67d39a9d764886b4772c56301bf,
+        type: 3}
+      propertyPath: _sceneName
+      value: Level3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6bc67d39a9d764886b4772c56301bf, type: 3}
