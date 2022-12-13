@@ -53,4 +53,18 @@ MonoBehaviour:
   - Key: hobbit_perk_agree
     Value: "Sure!\r"
   - Key: hobbit_perk_disagree
-    Value: Not this time, halfling!
+    Value: "Not this time, halfling!\r"
+  - Key: door_closed
+    Value: "Door is closed..\r"
+  - Key: need_key
+    Value: "You need to find a key!\r"
+  - Key: button_continue
+    Value: "Continue..\r"
+  - Key: button_upgrade
+    Value: "Upgrade\r"
+  - Key: health_stat
+    Value: "Health\r"
+  - Key: speed_stat
+    Value: "Speed\r"
+  - Key: range_damage_stat
+    Value: Range damage

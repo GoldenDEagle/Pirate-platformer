@@ -303,8 +303,6 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
-      - Id: Pearl
-        Value: 10
     Perks:
       _used:
         _value: 
@@ -1953,11 +1951,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelDoor(Exit)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5262669443139973338, guid: 5c6bc67d39a9d764886b4772c56301bf,
-        type: 3}
-      propertyPath: _sceneName
-      value: Level3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6bc67d39a9d764886b4772c56301bf, type: 3}

@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c6f96c190326d4f90cb4777f60001f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: 2Level
+  _sceneName: Level3
 --- !u!114 &958605153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,10 +281,10 @@ MonoBehaviour:
   _mode: 0
   _bound:
     _sentences:
-    - _value: Door is closed..
+    - _value: door_closed
       _icon: {fileID: 0}
       _side: 0
-    - _value: You need to find a key!
+    - _value: need_key
       _icon: {fileID: 0}
       _side: 0
     _type: 0
