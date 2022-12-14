@@ -11,5 +11,12 @@ namespace PixelCrew.Model.Definitions.Repository.Items
 
             public string ItemId => _itemId;
             public int Count => _count;
+
+            public ItemWithCount(string id, int count)
+            {
+                _itemId = id;
+                _count = count;
+            }
+
         }
 }

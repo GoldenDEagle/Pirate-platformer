@@ -6,6 +6,7 @@ namespace PixelCrew.Model.Definitions
         Stackable,
         Usable,
         Throwable,
-        Potion
+        Potion,
+        Currency
     }
 }
