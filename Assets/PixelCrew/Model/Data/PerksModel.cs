@@ -16,6 +16,7 @@ namespace PixelCrew.Model.Data
 
         public bool IsMegaThrowSupported => _data.Perks.Used.Value == "mega-throw" && Cooldown.IsReady;
         public bool IsDoubleJumpSupported => _data.Perks.Used.Value == "double-jump" && Cooldown.IsReady;
+        public bool IsShieldSupported => _data.Perks.Used.Value == "force-shield" && Cooldown.IsReady;
 
         public event Action OnChanged;
 

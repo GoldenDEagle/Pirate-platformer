@@ -31,6 +31,7 @@ namespace PixelCrew.Model.Definitions
     {
         Hp,
         Speed,
-        RangeDamage
+        RangeDamage,
+        CritChance
     }
 }

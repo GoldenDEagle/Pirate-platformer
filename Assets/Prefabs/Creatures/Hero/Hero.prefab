@@ -5240,6 +5240,7 @@ GameObject:
   - component: {fileID: 55601150312260319}
   - component: {fileID: 6956524876968023196}
   - component: {fileID: 8931795385569856243}
+  - component: {fileID: 9084641504599765070}
   m_Layer: 9
   m_Name: Shield
   m_TagString: Untagged
@@ -5337,6 +5338,21 @@ MonoBehaviour:
     _onComplete:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &9084641504599765070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006829747147220418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d7d3291f770f04d85105fcda2439f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthComponent: {fileID: 270357017}
+  _duration:
+    _value: 3
 --- !u!1 &8521669546322667177
 GameObject:
   m_ObjectHideFlags: 0
@@ -5546,6 +5562,7 @@ MonoBehaviour:
     _value: 0.8
   _armed: {fileID: 9100000, guid: a2d4bc880d94a0b4096b22452e25cad4, type: 2}
   _disarmed: {fileID: 9100000, guid: 045ed353177f5fc4fa587d0f69eb73b9, type: 2}
+  _shield: {fileID: 9084641504599765070}
   _megaThrowCooldown:
     _value: 1
   _megaThrowCount: 3
@@ -5653,6 +5670,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7bd28e2a-2199-4073-9a51-b80057a29d50
     m_ActionName: Hero/UseItem[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8521669546337685425}
+        m_MethodName: OnUsePerk
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1b696166-c85d-4fb7-967c-32422ed1d99e
+    m_ActionName: Hero/UsePerk[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Hero
@@ -5727,6 +5759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 10
+  _immune: 0
   _onDamage:
     m_PersistentCalls:
       m_Calls:

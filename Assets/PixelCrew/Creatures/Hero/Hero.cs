@@ -9,7 +9,6 @@ using PixelCrew.Model.Definitions.Repository;
 
 namespace PixelCrew.Creatures
 {
-
     public class Hero : Creature
     {
         [SerializeField] CheckCircleOverlap _interactionCheck;
@@ -20,6 +19,8 @@ namespace PixelCrew.Creatures
 
         [SerializeField] private AnimatorController _armed;
         [SerializeField] private AnimatorController _disarmed;
+
+        [SerializeField] private ShieldComponent _shield;
 
         [Space]
         [Header("MegaThrow")]
@@ -220,8 +221,26 @@ namespace PixelCrew.Creatures
             _throwSpawner.SetPrefab(throwableDef.Projectile);
 
             _session.Data.Inventory.Remove(throwableId, 1);
-            _throwSpawner.Spawn();
+            var instance = _throwSpawner.SpawnInstance();
+            ApplyRangeDamageStat(instance);
+        }
 
+        private void ApplyRangeDamageStat(GameObject projectile)
+        {
+            projectile.TryGetComponent<HpModifierComponent>(out HpModifierComponent hpModifier);
+            var damageValue = (int) _session.StatsModel.GetValue(StatId.RangeDamage);
+            damageValue = ModifyDamageByCrit(damageValue);
+            hpModifier.SetDelta(- damageValue);
+        }
+
+        private int ModifyDamageByCrit(int damage)
+        {
+            var critChance = _session.StatsModel.GetValue(StatId.CritChance);
+            if (Random.value * 100 <= critChance)
+            {
+                return damage * 2;
+            }
+            return damage;
         }
 
         private IEnumerator MegaThrowRoutine(int swordsToThrow)
@@ -287,14 +306,23 @@ namespace PixelCrew.Creatures
             _throwCooldown.Reset();
         }
 
-        private void OnDestroy()
-        {
-            _session.Data.Inventory.OnChanged -= OnInventoryChanged;
-        }
-
         public void NextItem()
         {
             _session.QuickInventory.SetNextItem();
+        }
+
+        public void UsePerk()
+        {
+            if (_session.PerksModel.IsShieldSupported)
+            {
+                _shield.Use();
+                _session.PerksModel.Cooldown.Reset();
+            }
+        }
+
+        private void OnDestroy()
+        {
+            _session.Data.Inventory.OnChanged -= OnInventoryChanged;
         }
     }
 }
