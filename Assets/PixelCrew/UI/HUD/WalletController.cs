@@ -1,9 +1,7 @@
 ﻿using PixelCrew.Model;
-using PixelCrew.Model.Data;
 using PixelCrew.Model.Definitions;
 using PixelCrew.Model.Definitions.Repository.Items;
 using PixelCrew.UI.Widgets;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,7 +24,6 @@ public class WalletController : MonoBehaviour
         OnInventoryChanged("", 0);
     }
 
-    [ContextMenu("Update data")]
     private void OnInventoryChanged(string id, int value)
     {
         _createdItems.Clear();

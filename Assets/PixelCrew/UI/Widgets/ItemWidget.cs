@@ -1,5 +1,4 @@
-﻿using PixelCrew.Model.Data;
-using PixelCrew.Model.Definitions;
+﻿using PixelCrew.Model.Definitions;
 using PixelCrew.Model.Definitions.Repository.Items;
 using UnityEngine;
 using UnityEngine.UI;

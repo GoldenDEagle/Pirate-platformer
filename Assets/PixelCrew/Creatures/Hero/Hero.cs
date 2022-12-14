@@ -116,8 +116,9 @@ namespace PixelCrew.Creatures
         {
             if (!IsGrounded && _allowDoubleJump && _session.PerksModel.IsDoubleJumpSupported)
             {
-                DoJumpVfx();
+                _session.PerksModel.Cooldown.Reset();
                 _allowDoubleJump = false;
+                DoJumpVfx();
                 return _jumpSpeed;
             }
 
@@ -199,6 +200,7 @@ namespace PixelCrew.Creatures
                 var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;
                 
                 var numThrows = Mathf.Min(_megaThrowCount, possibleCount);
+                _session.PerksModel.Cooldown.Reset();
                 StartCoroutine(MegaThrowRoutine(numThrows));
             }
             else

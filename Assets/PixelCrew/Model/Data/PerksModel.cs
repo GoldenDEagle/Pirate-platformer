@@ -2,6 +2,7 @@
 using PixelCrew.Utils.Disposables;
 using PixelCrew.Model.Definitions;
 using PixelCrew.Model.Data.Properties;
+using PixelCrew.Utils;
 
 namespace PixelCrew.Model.Data
 {
@@ -11,9 +12,10 @@ namespace PixelCrew.Model.Data
         public readonly StringProperty InterfaceSelection = new StringProperty();
 
         public string Used => _data.Perks.Used.Value;
+        public readonly Cooldown Cooldown = new Cooldown();
 
-        public bool IsMegaThrowSupported => _data.Perks.Used.Value == "mega-throw";
-        public bool IsDoubleJumpSupported => _data.Perks.Used.Value == "double-jump";
+        public bool IsMegaThrowSupported => _data.Perks.Used.Value == "mega-throw" && Cooldown.IsReady;
+        public bool IsDoubleJumpSupported => _data.Perks.Used.Value == "double-jump" && Cooldown.IsReady;
 
         public event Action OnChanged;
 
@@ -48,8 +50,10 @@ namespace PixelCrew.Model.Data
             }
         }
 
-        public void UsePerk(string id)
+        public void SelectPerk(string id)
         {
+            var perkDef = DefsFacade.I.Perks.Get(id);
+            Cooldown.Value = perkDef.Cooldown;
             _data.Perks.Used.Value = id;
         }
 
