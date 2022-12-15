@@ -67,4 +67,6 @@ MonoBehaviour:
   - Key: speed_stat
     Value: "Speed\r"
   - Key: range_damage_stat
-    Value: Range damage
+    Value: "Range damage\r"
+  - Key: crit_chance_stat
+    Value: Crit chance

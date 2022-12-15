@@ -87,4 +87,6 @@ MonoBehaviour:
   - Key: speed_stat
     Value: "\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C\r"
   - Key: range_damage_stat
-    Value: "\u0414\u0430\u043B\u044C\u043D\u0438\u0439 \u0443\u0440\u043E\u043D"
+    Value: "\u0414\u0430\u043B\u044C\u043D\u0438\u0439 \u0443\u0440\u043E\u043D\r"
+  - Key: crit_chance_stat
+    Value: "\u0428\u0430\u043D\u0441 \u043A\u0440\u0438\u0442\u0430"
