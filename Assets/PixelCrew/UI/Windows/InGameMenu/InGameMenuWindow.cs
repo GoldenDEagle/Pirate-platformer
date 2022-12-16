@@ -22,6 +22,11 @@ namespace PixelCrew.UI.InGameMenu
             WindowUtils.CreateWindow("UI/SettingsWindow");
         }
 
+        public void OnShowLanguages()
+        {
+            WindowUtils.CreateWindow("UI/LocalizationWindow");
+        }
+
         public void OnExit()
         {
             SceneManager.LoadScene("MainMenu");

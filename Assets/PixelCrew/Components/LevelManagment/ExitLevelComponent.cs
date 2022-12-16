@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using PixelCrew.Model;
+﻿using PixelCrew.Model;
+using PixelCrew.UI;
+using UnityEngine;
 
 namespace PixelCrew.Components
 {
@@ -13,7 +13,8 @@ namespace PixelCrew.Components
         {
             var session = FindObjectOfType<GameSession>();
             session.Save();
-            SceneManager.LoadScene(_sceneName);
+            var loader = FindObjectOfType<LevelLoader>();
+            loader.LoadLevel(_sceneName);
         }
     }
 }

@@ -18,7 +18,8 @@ namespace PixelCrew.UI.MainMenu
         {
             _closeAction = () =>
             {
-                SceneManager.LoadScene("Level1");
+                var loader = FindObjectOfType<LevelLoader>();
+                loader.LoadLevel("Level1");
             };
             Close();
         }

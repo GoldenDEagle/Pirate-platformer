@@ -6,6 +6,7 @@ using PixelCrew.Utils;
 using PixelCrew.Model;
 using PixelCrew.Model.Definitions;
 using PixelCrew.Model.Definitions.Repository;
+using PixelCrew.Effects.CameraEffects;
 
 namespace PixelCrew.Creatures
 {
@@ -43,6 +44,7 @@ namespace PixelCrew.Creatures
 
         private HealthComponent _health;
         private GameSession _session;
+        private CameraShakeEffect _cameraShake;
 
         private const string SwordId = "Sword";
         private int CoinCount => _session.Data.Inventory.Count("Coin");
@@ -59,6 +61,7 @@ namespace PixelCrew.Creatures
         {
             _session = FindObjectOfType<GameSession>();
             _health = GetComponent<HealthComponent>();
+            _cameraShake = FindObjectOfType<CameraShakeEffect>() ?? null;
 
             _session.Data.Inventory.OnChanged += OnInventoryChanged;
             _session.StatsModel.OnUpgraded += OnHeroUpgraded;
@@ -155,6 +158,7 @@ namespace PixelCrew.Creatures
         public override void TakeDamage()  // Получение урона
         {
             base.TakeDamage();
+            _cameraShake?.Shake();
             if (CoinCount > 0)
             {
                 SpawnCoins();
