@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using PixelCrew.Components;
 using PixelCrew.Utils;
+using PixelCrew.Components.Audio;
 
 namespace PixelCrew.Creatures.Mobs
 {
@@ -22,12 +23,12 @@ namespace PixelCrew.Creatures.Mobs
         private static readonly int RangeKey = Animator.StringToHash("range");
 
         private Animator _animator;
-        private AudioSource _audio;
+        private PlaySfxSound _audio;
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-            _audio = GetComponent<AudioSource>();
+            _audio = GetComponent<PlaySfxSound>();
         }
 
         private void Update()
