@@ -5556,6 +5556,7 @@ MonoBehaviour:
     m_Bits: 65792
   _attackRange: {fileID: 1103343695}
   _particles: {fileID: 1599631511}
+  _meleeAttack: {fileID: 8521669545343519827}
   _interactionCheck: {fileID: 2067199012}
   _interactionRadius: 0.8
   _throwCooldown:

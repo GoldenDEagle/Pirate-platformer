@@ -11,7 +11,6 @@ namespace PixelCrew.Creatures
         [SerializeField] private bool _invertScale;
         [SerializeField] private float _speed;
         [SerializeField] protected float _jumpSpeed;
-        //[SerializeField] private int _damage;
         [SerializeField] private float _damageVelocity;
         [SerializeField] protected float _slamDownVelocity;
         [SerializeField] protected bool _stunningSlam;
@@ -21,6 +20,7 @@ namespace PixelCrew.Creatures
         [SerializeField] protected LayerMask _groundLayer;
         [SerializeField] private CheckCircleOverlap _attackRange;
         [SerializeField] protected SpawnListComponent _particles;
+        [SerializeField] protected HpModifierComponent _meleeAttack;
 
         protected Vector2 Direction;
         protected Rigidbody2D Rigidbody;

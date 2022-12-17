@@ -41,6 +41,7 @@ namespace PixelCrew.Creatures
 
         private Cooldown _speedUpCooldown = new Cooldown();
         private float _additionalSpeed;
+        private int _meleeDamage;
 
         private HealthComponent _health;
         private GameSession _session;
@@ -67,6 +68,8 @@ namespace PixelCrew.Creatures
             _session.StatsModel.OnUpgraded += OnHeroUpgraded;
 
             _health.SetHealth(_session.Data.Hp.Value);
+            _meleeDamage = (int)_session.StatsModel.GetValue(StatId.MeleeDamage);
+            _meleeAttack.SetDelta(-_meleeDamage);
             UpdateHeroWeapon();
         }
 
@@ -84,6 +87,10 @@ namespace PixelCrew.Creatures
                     _session.Data.Hp.Value = health;
                     UpdateHealth();
                     _health.SetHealth(health);
+                    break;
+                case StatId.MeleeDamage:
+                    _meleeDamage = (int)_session.StatsModel.GetValue(StatId.MeleeDamage);
+                    _meleeAttack.SetDelta(-_meleeDamage);
                     break;
             }
         }
@@ -188,6 +195,9 @@ namespace PixelCrew.Creatures
         public override void Attack()    // Анимация атаки
         {
             if (SwordCount <= 0) return;
+
+            var damageValue = ModifyDamageByCrit(_meleeDamage);
+            _meleeAttack.SetDelta(-damageValue);
 
             base.Attack();
         }

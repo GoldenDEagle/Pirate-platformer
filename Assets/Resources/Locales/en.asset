@@ -69,4 +69,8 @@ MonoBehaviour:
   - Key: range_damage_stat
     Value: "Range damage\r"
   - Key: crit_chance_stat
-    Value: Crit chance
+    Value: "Crit chance\r"
+  - Key: melee_damage_stat
+    Value: "Melee damage\r"
+  - Key: cooldown_reduction_stat
+    Value: Cooldown reduction

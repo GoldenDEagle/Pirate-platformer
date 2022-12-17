@@ -32,6 +32,8 @@ namespace PixelCrew.Model.Definitions
         Hp,
         Speed,
         RangeDamage,
-        CritChance
+        CritChance,
+        MeleeDamage,
+        CooldownReduction
     }
 }
