@@ -1,0 +1,1112 @@
+fileFormatVersion: 2
+guid: f99d26982ac254f46988353afc31e239
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1314968856963227604
+    second: Starro-emission_0
+  - first:
+      213: 1237136028960524146
+    second: Starro-emission_1
+  - first:
+      213: -319615565990110607
+    second: Starro-emission_2
+  - first:
+      213: -5656994210303011201
+    second: Starro-emission_3
+  - first:
+      213: -4773357449689045981
+    second: Starro-emission_4
+  - first:
+      213: 2531275449498652330
+    second: Starro-emission_5
+  - first:
+      213: 1814483047677930734
+    second: Starro-emission_6
+  - first:
+      213: -2710805264078448361
+    second: Starro-emission_7
+  - first:
+      213: -7556366783897126402
+    second: Starro-emission_8
+  - first:
+      213: -2566493724655161965
+    second: Starro-emission_9
+  - first:
+      213: 8609143500639758850
+    second: Starro-emission_10
+  - first:
+      213: 6528488136047347375
+    second: Starro-emission_11
+  - first:
+      213: -3303610053137180767
+    second: Starro-emission_12
+  - first:
+      213: -1179299722073306431
+    second: Starro-emission_13
+  - first:
+      213: -239387538698971564
+    second: Starro-emission_14
+  - first:
+      213: 1698704503906059663
+    second: Starro-emission_15
+  - first:
+      213: 3932527151623687481
+    second: Starro-emission_16
+  - first:
+      213: -2532824181057447104
+    second: Starro-emission_17
+  - first:
+      213: 5074810053272250204
+    second: Starro-emission_18
+  - first:
+      213: 8056741715645974592
+    second: Starro-emission_19
+  - first:
+      213: -1036731414574764944
+    second: Starro-emission_20
+  - first:
+      213: 2658093976265021774
+    second: Starro-emission_21
+  - first:
+      213: -413424485303524008
+    second: Starro-emission_22
+  - first:
+      213: -1738558608536811119
+    second: Starro-emission_23
+  - first:
+      213: -9131130306741612815
+    second: Starro-emission_24
+  - first:
+      213: 8512435351629046157
+    second: Starro-emission_25
+  - first:
+      213: -6991748958073120013
+    second: Starro-emission_26
+  - first:
+      213: -7579876430830023847
+    second: Starro-emission_27
+  - first:
+      213: 5596241285159486791
+    second: Starro-emission_28
+  - first:
+      213: -788962565977677952
+    second: Starro-emission_29
+  - first:
+      213: -3456986545571348413
+    second: Starro-emission_30
+  - first:
+      213: 2285370684480766230
+    second: Starro-emission_31
+  - first:
+      213: -6568051512874894314
+    second: Starro-emission_32
+  - first:
+      213: 8041450440871595259
+    second: Starro-emission_33
+  - first:
+      213: 563186414406298529
+    second: Starro-emission_34
+  - first:
+      213: 3257871242332688176
+    second: Starro-emission_35
+  - first:
+      213: 6055664912454905510
+    second: Starro-emission_36
+  - first:
+      213: -1827676154444754343
+    second: Starro-emission_37
+  - first:
+      213: 2888085291243501021
+    second: Starro-emission_38
+  - first:
+      213: 9166003413242659362
+    second: Starro-emission_39
+  - first:
+      213: 3563988933089082768
+    second: Starro-emission_40
+  - first:
+      213: -5836449991134906189
+    second: Starro-emission_41
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Starro-emission_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df9ef95535bf3210800000000000000
+      internalID: 1314968856963227604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 179.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2778709e9a03b2110800000000000000
+      internalID: 1237136028960524146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 179.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a597c065f709bf0800000000000000
+      internalID: -319615565990110607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 179.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76927edcb15e71b0800000000000000
+      internalID: -5656994210303011201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 179.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324e15990b0a1cdb0800000000000000
+      internalID: -4773357449689045981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 179.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaec80c2c95e02320800000000000000
+      internalID: 2531275449498652330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecafc3e7b65e2910800000000000000
+      internalID: 1814483047677930734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 150.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719585b89f8416ad0800000000000000
+      internalID: -2710805264078448361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 150.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef930450274622790800000000000000
+      internalID: -7556366783897126402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 150.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39de8a72e8bf16cd0800000000000000
+      internalID: -2566493724655161965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 150.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20aeeff8662d97770800000000000000
+      internalID: 8609143500639758850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 150.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6447dce59d99a50800000000000000
+      internalID: 6528488136047347375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a75952f8283722d0800000000000000
+      internalID: -3303610053137180767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 121.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca8a16a62942afe0800000000000000
+      internalID: -1179299722073306431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 121.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45651384d468dacf0800000000000000
+      internalID: -239387538698971564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 121.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f854da50fb2039710800000000000000
+      internalID: 1698704503906059663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 121.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dcb16eb94239630800000000000000
+      internalID: 3932527151623687481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 121.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b1d89a3d999dcd0800000000000000
+      internalID: -2532824181057447104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57afdf1bd85d6640800000000000000
+      internalID: 5074810053272250204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 92.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048462867eb4fcf60800000000000000
+      internalID: 8056741715645974592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 92.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c68c2754acc91f0800000000000000
+      internalID: -1036731414574764944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 92.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49d1e2636273e420800000000000000
+      internalID: 2658093976265021774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 92.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855e80cfe98334af0800000000000000
+      internalID: -413424485303524008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 92.14285
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19947f428266fd7e0800000000000000
+      internalID: -1738558608536811119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1feccd46d55b74180800000000000000
+      internalID: -9131130306741612815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 63.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81a35bf9de322670800000000000000
+      internalID: 8512435351629046157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 63.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa1853dd5158fe90800000000000000
+      internalID: -6991748958073120013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 63.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b450bcb8edec690800000000000000
+      internalID: -7579876430830023847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 63.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7458e477cc7d9ad40800000000000000
+      internalID: 5596241285159486791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 63.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fd1d1f9ba0d05f0800000000000000
+      internalID: -788962565977677952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3404aed7d015600d0800000000000000
+      internalID: -3456986545571348413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 34.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6114194778447bf10800000000000000
+      internalID: 2285370684480766230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 34.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cff94b2f799d4a0800000000000000
+      internalID: -6568051512874894314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 34.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc4f0f0298f89f60800000000000000
+      internalID: 8041450440871595259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 34.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab630d5f07d0d700800000000000000
+      internalID: 563186414406298529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 34.142857
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f433b42a8463d20800000000000000
+      internalID: 3257871242332688176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5.1428566
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aeeba1572b0a0450800000000000000
+      internalID: 6055664912454905510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 5.1428566
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9525ed1983ac2a6e0800000000000000
+      internalID: -1827676154444754343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 5.1428566
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd57999454a841820800000000000000
+      internalID: 2888085291243501021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 5.1428566
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222c8507a8f243f70800000000000000
+      internalID: 9166003413242659362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 5.1428566
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09db2344d05d57130800000000000000
+      internalID: 3563988933089082768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starro-emission_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 5.1428566
+        width: 32.166668
+        height: 29.857143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b87219e7a3c00fa0800000000000000
+      internalID: -5836449991134906189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
