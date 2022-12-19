@@ -5184,6 +5184,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d713f93e9af3a4f880cac5558284ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &961004028028903554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355682541521322643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568ee15604517ff4a83232d1d638d4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _consumePerSecond: 1
+  _light: {fileID: 355682541521322652}
 --- !u!1 &5774694691255513837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,6 +5481,7 @@ Transform:
   - {fileID: 1863843262}
   - {fileID: 1193145546}
   - {fileID: 55601150312260319}
+  - {fileID: 355682541521322654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5565,6 +5580,7 @@ MonoBehaviour:
   _armed: {fileID: 9100000, guid: a2d4bc880d94a0b4096b22452e25cad4, type: 2}
   _disarmed: {fileID: 9100000, guid: 045ed353177f5fc4fa587d0f69eb73b9, type: 2}
   _shield: {fileID: 9084641504599765070}
+  _flashlight: {fileID: 961004028028903554}
   _megaThrowCooldown:
     _value: 1
   _megaThrowCount: 3
@@ -5687,6 +5703,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1b696166-c85d-4fb7-967c-32422ed1d99e
     m_ActionName: Hero/UsePerk[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8521669546337685425}
+        m_MethodName: OnToggleFlashlight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3d6df33a-4a75-44dc-9710-c9994d4e0255
+    m_ActionName: Hero/ToggleFlashLight[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Hero
@@ -5886,3 +5917,106 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _immuneTime: 1
+--- !u!1001 &524281821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8521669546337685390}
+    m_Modifications:
+    - target: {fileID: 355682541368255809, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.047999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.337
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255822, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_Name
+      value: Flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 355682541368255822, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e48fafe4cb3ce6c4bb510dc706a92323, type: 3}
+--- !u!1 &355682541521322643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 355682541368255822, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+    type: 3}
+  m_PrefabInstance: {fileID: 524281821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &355682541521322654 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 355682541368255811, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+    type: 3}
+  m_PrefabInstance: {fileID: 524281821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &355682541521322652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 355682541368255809, guid: e48fafe4cb3ce6c4bb510dc706a92323,
+    type: 3}
+  m_PrefabInstance: {fileID: 524281821}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355682541521322643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

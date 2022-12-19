@@ -22,6 +22,7 @@ namespace PixelCrew.Creatures
         [SerializeField] private AnimatorController _disarmed;
 
         [SerializeField] private ShieldComponent _shield;
+        [SerializeField] private FlashlightComponent _flashlight;
 
         [Space]
         [Header("MegaThrow")]
@@ -332,6 +333,12 @@ namespace PixelCrew.Creatures
                 _shield.Use();
                 _session.PerksModel.Cooldown.Reset();
             }
+        }
+
+        public void ToggleFlashlight()
+        {
+            var isActive = _flashlight.gameObject.activeSelf;
+            _flashlight.gameObject.SetActive(!isActive);
         }
 
         private void OnDestroy()

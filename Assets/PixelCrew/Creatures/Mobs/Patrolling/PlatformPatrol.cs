@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PixelCrew.Creatures
 {
@@ -35,5 +37,10 @@ namespace PixelCrew.Creatures
             }
 
         }
+    }
+
+    [Serializable]
+    public class OnChangeDirection : UnityEvent<Vector2>
+    {
     }
 }
