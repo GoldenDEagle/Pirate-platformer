@@ -3824,6 +3824,9 @@ MonoBehaviour:
   _target: {fileID: 726936730}
   _controller: {fileID: 770723014}
   _delay: 2
+  _onDelay:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &491407126
 GameObject:
   m_ObjectHideFlags: 0
@@ -9608,6 +9611,8 @@ MonoBehaviour:
       _value: 10
     Levels:
       _progress: []
+    Fuel:
+      _value: 0
   _defaultCheckpoint: level3-checkpoint1
 --- !u!4 &1410987400
 Transform:

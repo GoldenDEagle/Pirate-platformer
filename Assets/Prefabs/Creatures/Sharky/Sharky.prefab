@@ -1065,7 +1065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 7
-  _immune: 0
   _onDamage:
     m_PersistentCalls:
       m_Calls:
@@ -1189,6 +1188,7 @@ MonoBehaviour:
     m_Bits: 256
   _attackRange: {fileID: 1103343695}
   _particles: {fileID: 1599631511}
+  _meleeAttack: {fileID: 0}
 --- !u!114 &407622793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,3 +1268,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformCheck: {fileID: 917985063}
   _obstacleCheck: {fileID: 210287473}
+  _onChangeDirection:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6859854796197674454}
+        m_MethodName: SetDirection
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

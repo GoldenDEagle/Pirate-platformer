@@ -9,13 +9,9 @@ namespace PixelCrew.Creatures
     {
         [SerializeField] private LayerCheck _platformCheck;
         [SerializeField] private LayerCheck _obstacleCheck;
-        private Creature _creature;
-        private Vector2 _direction = Vector2.one;
+        [SerializeField] private OnChangeDirection _onChangeDirection;
 
-        private void Awake()
-        {
-            _creature = GetComponent<Creature>();
-        }
+        private Vector2 _direction = Vector2.one;
 
         public override IEnumerator DoPatrol()
         {
@@ -25,12 +21,12 @@ namespace PixelCrew.Creatures
             {
                 if (_platformCheck.IsTouchingLayer && !_obstacleCheck.IsTouchingLayer)
                 {
-                    _creature.SetDirection(_direction);
+                    _onChangeDirection?.Invoke(_direction);
                 }
                 else
                 {
                     _direction *= (-1f);
-                    _creature.SetDirection(_direction);
+                    _onChangeDirection?.Invoke(_direction);
                 }
 
                 yield return null;

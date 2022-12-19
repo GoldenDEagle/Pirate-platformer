@@ -1,5 +1,4 @@
 ﻿using PixelCrew.Model;
-using System.Collections;
 using UnityEngine;
 
 namespace PixelCrew.Components.Collectables
