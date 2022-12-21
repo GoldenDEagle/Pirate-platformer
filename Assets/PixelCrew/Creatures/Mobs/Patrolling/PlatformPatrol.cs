@@ -11,11 +11,14 @@ namespace PixelCrew.Creatures
         [SerializeField] private LayerCheck _obstacleCheck;
         [SerializeField] private OnChangeDirection _onChangeDirection;
 
-        private Vector2 _direction = Vector2.one;
+        private Vector2 _direction;
 
         public override IEnumerator DoPatrol()
         {
-            _direction.y = 0f;
+            if (UnityEngine.Random.value < 0.5f)
+                _direction = Vector2.right;
+            else
+                _direction = Vector2.left;
 
             while (enabled)
             {

@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Collectables
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 57c3bdbce5f828348829689606e51d86, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 97ad6d00dce6df74c990d3f922be6307, type: 3}
+  - {fileID: 21300000, guid: 1c3e5c111704aa7439d89da398463442, type: 3}
+  - {fileID: 21300000, guid: e02925628d2bb8b4893345679acd69cc, type: 3}
+  - {fileID: 21300000, guid: 1185b4e28c1eb4545a7468af1983ae4c, type: 3}
+  - {fileID: 21300000, guid: 7725af03d585344448ca89dfbf3476c0, type: 3}
+  - {fileID: 7169267357523271611, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: 2280115057347858601, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -3158540903589798737, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -1868697851134581415, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: 2512648997399747585, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -8646302099248395833, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -9054866390690767207, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: 2271373999398222149, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -4180039516846402663, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: 1930839287912332762, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -1189264683318500452, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -7550446514286331383, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -129344682377229948, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: 5489425550423852611, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: -8609163736557127468, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: 4706147864203298530, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+  - {fileID: 21300000, guid: 625b62b346eaba440a678a81f405b09b, type: 3}
+  - {fileID: 21300000, guid: 26b710c3eb2e5bd458c14a267b5168b2, type: 3}
+  - {fileID: 21300000, guid: 88e7e9c31a2b5e747a96c6beb24b3b65, type: 3}
+  - {fileID: 21300000, guid: 38612d24371a7a4439b7dc1b37f475f7, type: 3}
+  - {fileID: 21300000, guid: c7d3b5a6b13f7074aa89a952305d935f, type: 3}
+  - {fileID: 21300000, guid: d19392b6b72fed745bc624bb39139774, type: 3}
+  - {fileID: 21300000, guid: aeba3a870fbf42846ac2094b276ecf5d, type: 3}
+  - {fileID: -6288512792030432889, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: 7609282858266732271, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: 8793606821965667882, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: 3444832735345940322, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: 6582046967323461550, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: 1942777921290549423, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: -6323751108524238166, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: 2722280177590742205, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: -2322180950842035098, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: -4893972260818282012, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: -4986890610287934012, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: 6143208460787649835, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+  - {fileID: -6202940564662568092, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -8747976068718324687, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 8618505411793156745, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -1972361127685065434, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -5226445311955339714, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 3714227102187029162, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 1185527514606905908, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -1061600653231999548, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -3065595510956808684, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 6997616985800771554, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 950379908824699032, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -7587008787810219046, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -8438763151253471919, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 2011574832808370117, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 1089735312403315716, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -5249288142952506341, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -860807820763296739, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 7142050841817600938, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 8167133005111728920, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 2014349484240403859, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -7481350877133238684, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 8745225756722806956, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 6040734443530017722, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: -512142692958456438, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 6326803469982491369, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 6519628818910804322, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+  - {fileID: 21300000, guid: f93f1c599d0ed484a898921f7cd8683d, type: 3}
+  - {fileID: 21300000, guid: 7f46ac796dff3444f8f38e451ab88eab, type: 3}
+  - {fileID: 21300000, guid: 5d167f79d05fd1f499b2bf350b6db361, type: 3}
+  - {fileID: 21300000, guid: f5f2e1d9a93440d4b81fb1d7346266b1, type: 3}
+  - {fileID: 21300000, guid: f89646ba3e19a7e43a89e81a19aaa1c9, type: 3}
+  - {fileID: 21300000, guid: 2290b06becf77f94c96369178e7313c2, type: 3}
+  - {fileID: 21300000, guid: ecc9f8db3be796a4d8bbe5ef2bab72cd, type: 3}
+  - {fileID: 21300000, guid: 8c0947af0e73cbb4fad7f610ef9b103c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Sword Idle 06
+  - Sword Idle 01
+  - Sword Idle 03
+  - 3
+  - Sword Idle 07
+  - Diamonds_10
+  - Diamonds_11
+  - Diamonds_12
+  - Diamonds_13
+  - Diamonds_14
+  - Diamonds_15
+  - Diamonds_9
+  - Diamonds_8
+  - Diamonds_1
+  - Diamonds_0
+  - Diamonds_3
+  - Diamonds_2
+  - Diamonds_5
+  - Diamonds_4
+  - Diamonds_7
+  - Diamonds_6
+  - 1
+  - 2
+  - 5
+  - 3
+  - 4
+  - 2
+  - 6
+  - Coins_11
+  - Coins_10
+  - Coins_6
+  - Coins_7
+  - Coins_4
+  - Coins_5
+  - Coins_2
+  - Coins_3
+  - Coins_0
+  - Coins_1
+  - Coins_8
+  - Coins_9
+  - Potions_8
+  - Potions_9
+  - Potions_4
+  - Potions_5
+  - Potions_6
+  - Potions_7
+  - Potions_0
+  - Potions_1
+  - Potions_2
+  - Potions_3
+  - Potions_17
+  - Potions_16
+  - Potions_15
+  - Potions_14
+  - Potions_13
+  - Potions_12
+  - Potions_11
+  - Potions_10
+  - Potions_22
+  - Potions_23
+  - Potions_20
+  - Potions_19
+  - Potions_21
+  - Potions_18
+  - Potions_24
+  - Potions_25
+  - Sword Idle 05
+  - Sword Idle 08
+  - Sword Idle 02
+  - Sword Idle 04
+  - 4
+  - 7
+  - 8
+  - 1
+  m_Tag: Collectables
+  m_IsVariant: 0

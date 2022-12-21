@@ -9,11 +9,26 @@ namespace PixelCrew.Creatures.Bosses
         [ColorUsage(true, true)]
         [SerializeField] private Color _color;
 
+        private Color _defaultColor;
+
+        private void Start()
+        {
+            _defaultColor = _lights[0].color;
+        }
+
         public void SetColor()
         {
             foreach (var light2D in _lights)
             {
                 light2D.color = _color;
+            }
+        }
+
+        public void ResetColor()
+        {
+            foreach (var light2D in _lights)
+            {
+                light2D.color = _defaultColor;
             }
         }
     }

@@ -908,6 +908,9 @@ MonoBehaviour:
   _target: {fileID: 1889150353}
   _controller: {fileID: 1509048072}
   _delay: 2
+  _onDelay:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &272833187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9488,6 +9491,8 @@ MonoBehaviour:
       _value: 10
     Levels:
       _progress: []
+    Fuel:
+      _value: 0
   _defaultCheckpoint: level1-checkpoint1
 --- !u!4 &1134383025
 Transform:
