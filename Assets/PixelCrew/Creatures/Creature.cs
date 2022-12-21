@@ -2,6 +2,7 @@
 using PixelCrew.Components;
 using PixelCrew.Components.Audio;
 using PixelCrew.Utils;
+using UnityEngine.Profiling;
 
 namespace PixelCrew.Creatures
 {

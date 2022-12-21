@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using PixelCrew.Utils;
 using System.Collections;
+using PixelCrew.Utils.ObjectPool;
 
 namespace PixelCrew.Components
 {
 
     public class SpawnComponent : MonoBehaviour
     {
+        [SerializeField] private bool _usePool = false;
         [SerializeField] private Transform _target;
         [SerializeField] private GameObject _prefab;
         [Space][Header("MultipleSpawn")]
@@ -34,7 +36,9 @@ namespace PixelCrew.Components
             var xPosition = Random.Range(_target.position.x - _xScatter, _target.position.x + _xScatter);
             Vector3 position = new Vector3(xPosition, _target.position.y, _target.position.z);
 
-            var instance = SpawnUtils.Spawn(_prefab, position);
+            var instance = _usePool
+                ? Pool.Instance.Get(_prefab, position)
+                : SpawnUtils.Spawn(_prefab, position);
 
             var scale = _target.lossyScale;
             instance.transform.localScale = scale;
@@ -42,7 +46,7 @@ namespace PixelCrew.Components
             instance.SetActive(true);
             return instance;
         }
-
+        
         private IEnumerator SpawnRoutine(int count, float interval)
         {
             for (int i = 0; i < count; i++)
