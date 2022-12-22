@@ -14,6 +14,8 @@ namespace PixelCrew.Model
         [SerializeField] private PlayerData _data;
         [SerializeField] private string _defaultCheckpoint;
 
+        public static GameSession Instance { get; private set; }
+
         public PlayerData Data => _data;
         private PlayerData _save;
 
@@ -39,6 +41,7 @@ namespace PixelCrew.Model
                 InitModels();
 
                 DontDestroyOnLoad(this);
+                Instance = this;
                 StartSession(_defaultCheckpoint);
             }
         }
@@ -139,6 +142,8 @@ namespace PixelCrew.Model
 
         private void OnDestroy()
         {
+            if (Instance == this)
+                Instance = null;
             _trash.Dispose();
         }
     }

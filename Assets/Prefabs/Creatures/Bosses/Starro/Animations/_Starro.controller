@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348bc69641c7fcf418158da646a4d0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stageColor: {r: 1.7207954, g: 0.1621692, b: 0.1621692, a: 1}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
