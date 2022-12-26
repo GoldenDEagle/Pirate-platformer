@@ -2,6 +2,7 @@
 using PixelCrew.Utils;
 using System.Collections;
 using PixelCrew.Utils.ObjectPool;
+using UnityEngine.Events;
 
 namespace PixelCrew.Components
 {
@@ -15,6 +16,7 @@ namespace PixelCrew.Components
         [SerializeField] public int _numberToSpawn = 1;
         [SerializeField] private float _xScatter = 0;
         [SerializeField] private float _interval = 0.1f;
+        [SerializeField] private UnityEvent _onSpawnCompleted;
 
         private Coroutine _coroutine;
 
@@ -54,6 +56,8 @@ namespace PixelCrew.Components
                 SpawnInstance();
                 yield return new WaitForSeconds(interval);
             }
+
+            _onSpawnCompleted?.Invoke();
         }
 
         public void SetPrefab(GameObject prefab)

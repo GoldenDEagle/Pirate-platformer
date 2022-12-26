@@ -1,4 +1,5 @@
 ﻿using PixelCrew.Model;
+using PixelCrew.Model.Definitions;
 using UnityEngine;
 
 namespace PixelCrew.Components.Collectables
@@ -14,7 +15,7 @@ namespace PixelCrew.Components.Collectables
 
         public void Refill()
         {
-            _session.Data.Fuel.Value = 100;
+            _session.Data.Fuel.Value = _session.StatsModel.GetValue(StatId.Fuel);
         }
     }
 }

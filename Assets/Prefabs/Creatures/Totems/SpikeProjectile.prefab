@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2771030417738158363}
   - component: {fileID: 2771030417738158362}
   - component: {fileID: 2075481042002572216}
-  - component: {fileID: 6040029349882822677}
+  - component: {fileID: 8926976246037613570}
   m_Layer: 13
   m_Name: SpikeProjectile
   m_TagString: Enemy
@@ -153,7 +153,7 @@ MonoBehaviour:
   _tag: 
   _layer:
     serializedVersion: 2
-    m_Bits: 4865
+    m_Bits: 4864
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -168,8 +168,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6040029349882822677}
-        m_MethodName: DestroyObject
+      - m_Target: {fileID: 8926976246037613570}
+        m_MethodName: Release
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpChange: -1
---- !u!114 &6040029349882822677
+--- !u!114 &8926976246037613570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,8 +201,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2771030417738158364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c659bcdf4b9be3b49833683f62fa7a9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 96a75ab4edc7b764a980b91618671cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectToDestroy: {fileID: 2771030417738158364}
-  _state: {fileID: 0}
+  _onRestart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2771030417738158363}
+        m_MethodName: Launch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

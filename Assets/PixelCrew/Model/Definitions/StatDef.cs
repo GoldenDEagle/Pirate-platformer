@@ -34,6 +34,7 @@ namespace PixelCrew.Model.Definitions
         RangeDamage,
         CritChance,
         MeleeDamage,
+        Fuel,
         CooldownReduction
     }
 }

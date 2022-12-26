@@ -12,6 +12,10 @@ namespace PixelCrew
         {
             var direction = context.ReadValue<Vector2>();
             _hero.SetDirection(direction);
+            if (direction.y < 0)
+                _hero.IsCrawling = true;
+            else
+                _hero.IsCrawling = false;
         }
 
         public void OnInteract(InputAction.CallbackContext context)

@@ -8,6 +8,11 @@ namespace PixelCrew.Creatures.Weapons
         {
             base.Start();
 
+            Launch();
+        }
+
+        public void Launch()
+        {
             var force = new Vector2(Direction * Speed, 0);        // Движение для dynamic rigidbody
             Rigidbody.AddForce(force, ForceMode2D.Impulse);
         }

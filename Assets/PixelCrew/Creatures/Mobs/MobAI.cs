@@ -110,6 +110,7 @@ namespace PixelCrew.Creatures
         {
             var direction = _target.transform.position - transform.position;
             direction.y = 0;
+            direction.z = 0;
             return direction.normalized;
         }
 

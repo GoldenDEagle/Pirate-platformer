@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Coin
-  _count: 5
+  _count: 10
 --- !u!114 &-1601585180883629850
 MonoBehaviour:
   m_ObjectHideFlags: 0

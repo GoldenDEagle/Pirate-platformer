@@ -19,7 +19,7 @@ namespace PixelCrew.UI.MainMenu
             _closeAction = () =>
             {
                 var loader = FindObjectOfType<LevelLoader>();
-                loader.LoadLevel("Level1");
+                loader.LoadLevel("TutorialLevel");
             };
             Close();
         }

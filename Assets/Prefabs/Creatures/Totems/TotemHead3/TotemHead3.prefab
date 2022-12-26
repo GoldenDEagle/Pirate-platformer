@@ -248,8 +248,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 1
   _target: {fileID: 4529021976501301178}
   _prefab: {fileID: 2771030417738158364, guid: 4f71be894bb647d468e38e6b542a3532, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4529021976600679573
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
-  _immune: 0
   _onDamage:
     m_PersistentCalls:
       m_Calls:
@@ -467,8 +473,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 0
   _target: {fileID: 4529021976600679574}
   _prefab: {fileID: 6751199777911669241, guid: 06c2267e1fdf15e4e9bde2f2eaf90706, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1038130095
 Rigidbody2D:
   serializedVersion: 4

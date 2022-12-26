@@ -39,17 +39,16 @@ MonoBehaviour:
   - Key: price_label
     Value: "Price:\r"
   - Key: double_jump_info
-    Value: "Double Jump! Allows you to jump twice as high! Just press the button
-      second time to use it.\r"
+    Value: "Double Jump! Allows you to jump twice as high! Just press the \"jump\"
+      twice to use it.\r"
   - Key: mega_throw_info
     Value: "Mega Sword Throw! Allows you to unleash a deadly fan of knives upon your
       enemies! Hold \"throw\" button to use it.\r"
   - Key: force_shield_info
     Value: "Force shield! Gives you absolute immunity for a short period of time!
-      Push the button to use it.\r"
+      Push the \"R\" button to use it.\r"
   - Key: hobbit_perk_proposal
-    Value: "I came from Middle-earth. I can offer you some of my knowledge in exchange
-      for gems. Are you interested?\r"
+    Value: "Do you want to learn something new?\r"
   - Key: hobbit_perk_agree
     Value: "Sure!\r"
   - Key: hobbit_perk_disagree
@@ -70,7 +69,32 @@ MonoBehaviour:
     Value: "Range damage\r"
   - Key: crit_chance_stat
     Value: "Crit chance\r"
+  - Key: fuel_stat
+    Value: "Fuel\r"
   - Key: melee_damage_stat
     Value: "Melee damage\r"
   - Key: cooldown_reduction_stat
-    Value: Cooldown reduction
+    Value: "Cooldown reduction\r"
+  - Key: frog_stats_proposal
+    Value: "Want to become STRONGER?\r"
+  - Key: frog_stats_agree
+    Value: "Oh YEAH!\r"
+  - Key: frog_stats_disagree
+    Value: "No, I'm fine.\r"
+  - Key: crab_encounter_1c
+    Value: "Hi, Captain!\r"
+  - Key: crab_encounter_2h
+    Value: "Hello, Crab!\r"
+  - Key: crab_encounter_3c
+    Value: "I could really use your help..\r"
+  - Key: crab_encounter_4c
+    Value: "My brother went to the cave yesterday and didn\"t come back. Can you
+      find him?\r"
+  - Key: crab_encounter_5h
+    Value: "Of course! I'll go search for him immediately!\r"
+  - Key: crab_completed_1c
+    Value: "What a fight! Who are you?\r"
+  - Key: crab_completed_2h
+    Value: "I'm Captain. Your brother sent me here.\r"
+  - Key: crab_completed_3c
+    Value: My dear brother! Thanks to you I can return to him now!

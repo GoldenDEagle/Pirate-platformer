@@ -220,8 +220,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 1
   _target: {fileID: 8422397315550990107}
   _prefab: {fileID: 7183939287946443237, guid: 56fcb353c70cb2e4f98c743335d031ac, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2602811288243843318
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,8 +518,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 1
   _target: {fileID: 2602811289150828090}
   _prefab: {fileID: 6031921785385853019, guid: b2d7916ecbd727e4d901bcf4c3bd280d, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2602811289508598969
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,8 +649,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 1
   _target: {fileID: 2602811289999438943}
   _prefab: {fileID: 4318522078369227976, guid: ba86c029699cbd8489581b744adaca6b, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2602811290057423424
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,8 +824,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 1
   _target: {fileID: 6371575134634979587}
   _prefab: {fileID: 4318522078369227976, guid: cad7261245dcbc842acfae350a78c9d6, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3612881689688750728
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,8 +965,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 1
   _target: {fileID: 1569119431439536454}
   _prefab: {fileID: 4318522078369227976, guid: f46b69a82e8a7fd4a9d0fd90d3e3e521, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5934625412213362133
 GameObject:
   m_ObjectHideFlags: 0

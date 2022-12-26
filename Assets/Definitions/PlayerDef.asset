@@ -114,8 +114,29 @@ MonoBehaviour:
       _price:
         _itemId: Coin
         _count: 150
-  - _name: cooldown_reduction_stat
+  - _name: fuel_stat
     _id: 5
+    _icon: {fileID: -8429010806563232019, guid: a9b2293bae58a524582e7d60d08c882a,
+      type: 3}
+    _levels:
+    - _value: 50
+      _price:
+        _itemId: Coin
+        _count: 0
+    - _value: 75
+      _price:
+        _itemId: Coin
+        _count: 25
+    - _value: 100
+      _price:
+        _itemId: Coin
+        _count: 50
+    - _value: 125
+      _price:
+        _itemId: Coin
+        _count: 100
+  - _name: cooldown_reduction_stat
+    _id: 6
     _icon: {fileID: 21300000, guid: 385191ae56679bd4b8bedcf047c9900d, type: 3}
     _levels:
     - _value: 0

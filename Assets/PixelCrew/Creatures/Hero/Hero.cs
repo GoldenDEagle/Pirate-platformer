@@ -32,6 +32,7 @@ namespace PixelCrew.Creatures
 
         [Space] [Header("Particles")]
         [SerializeField] private ParticleSystem _hitParticles;
+        [SerializeField] private int _coinsDropped;
         [SerializeField] private SpawnComponent _throwSpawner;
 
 
@@ -47,6 +48,8 @@ namespace PixelCrew.Creatures
         private HealthComponent _health;
         private GameSession _session;
         private CameraShakeEffect _cameraShake;
+
+        public bool IsCrawling;
 
         private const string SwordId = "Sword";
         private int CoinCount => _session.Data.Inventory.Count("Coin");
@@ -72,6 +75,7 @@ namespace PixelCrew.Creatures
             _meleeDamage = (int)_session.StatsModel.GetValue(StatId.MeleeDamage);
             _meleeAttack.SetDelta(-_meleeDamage);
             UpdateHeroWeapon();
+            _session.Data.Fuel.Value = _session.StatsModel.GetValue(StatId.Fuel);
         }
 
         protected override void Update()
@@ -90,8 +94,11 @@ namespace PixelCrew.Creatures
                     _health.SetHealth(health);
                     break;
                 case StatId.MeleeDamage:
-                    _meleeDamage = (int)_session.StatsModel.GetValue(StatId.MeleeDamage);
+                    _meleeDamage = (int)_session.StatsModel.GetValue(statId);
                     _meleeAttack.SetDelta(-_meleeDamage);
+                    break;
+                case StatId.Fuel:
+                    _session.Data.Fuel.Value = _session.StatsModel.GetValue(statId);
                     break;
             }
         }
@@ -176,7 +183,7 @@ namespace PixelCrew.Creatures
 
         private void SpawnCoins()
         {
-            var coinsToDispose = Mathf.Min(CoinCount, 5);
+            var coinsToDispose = Mathf.Min(CoinCount, _coinsDropped);
             _session.Data.Inventory.Remove("Coin", coinsToDispose);
 
             var burst = _hitParticles.emission.GetBurst(0);
@@ -339,6 +346,18 @@ namespace PixelCrew.Creatures
         {
             var isActive = _flashlight.gameObject.activeSelf;
             _flashlight.gameObject.SetActive(!isActive);
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.gameObject.TryGetComponent(out TempColliderDisable colliderDisable))
+            {
+                var contact = collision.GetContact(0);
+                if (IsCrawling)
+                {
+                    colliderDisable.DisableCollider();
+                }
+            }
         }
 
         private void OnDestroy()
