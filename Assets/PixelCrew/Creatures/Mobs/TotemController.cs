@@ -12,6 +12,8 @@ namespace PixelCrew.Creatures.Mobs
         [SerializeField] private Cooldown _attackCooldown;
 
         private ShootingTrapAi[] _traps;
+        private Coroutine _coroutine;
+        private int _destroyed;
 
         private void Awake()
         {
@@ -20,16 +22,31 @@ namespace PixelCrew.Creatures.Mobs
 
         private void Update()
         {
-            if (_traps.All(x => x == null))
+            DestructionCheck();
+
+            if (_coroutine == null)
+            {
+                if (_vision.IsTouchingLayer && _attackCooldown.IsReady)
+                {
+                    _coroutine = StartCoroutine(AttackSequence());
+                }
+            }
+        }
+
+        private void DestructionCheck()
+        {
+            foreach (var trap in _traps)
+            {
+                if (trap == null)
+                    _destroyed++;
+            }
+
+            if (_destroyed == _traps.Length)
             {
                 enabled = false;
                 Destroy(gameObject, 1f);
             }
-
-            if (_vision.IsTouchingLayer && _attackCooldown.IsReady)
-            {
-                StartCoroutine(AttackSequence());
-            }
+            else _destroyed = 0;
         }
 
         private IEnumerator AttackSequence()
@@ -44,6 +61,8 @@ namespace PixelCrew.Creatures.Mobs
                     yield return new WaitForSeconds(_shotInterval);
                 }
             }
+
+            _coroutine = null;
         }
     }
 }

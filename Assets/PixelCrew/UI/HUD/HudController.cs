@@ -49,10 +49,10 @@ namespace PixelCrew.UI.HUD
             WindowUtils.CreateWindow("UI/InGameMenuWindow");
         }
 
-        public void OnTest()
-        {
-            WindowUtils.CreateWindow("UI/PlayerStatsWindow");
-        }
+        //public void OnTest()
+        //{
+        //    WindowUtils.CreateWindow("UI/PlayerStatsWindow");
+        //}
 
         private void OnDestroy()
         {

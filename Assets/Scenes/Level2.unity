@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3555,6 +3555,9 @@ MonoBehaviour:
   _numberToSpawn: 1
   _xScatter: 0
   _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1181759870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,

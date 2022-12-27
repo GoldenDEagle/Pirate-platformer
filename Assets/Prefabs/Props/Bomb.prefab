@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5977157893471435923}
   - component: {fileID: 5977157893471435934}
   - component: {fileID: 5977157893471435935}
+  - component: {fileID: 5942344152285279736}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -169,6 +170,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5942344152285279736}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5942344152285279736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977157893471435922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf855ed869221b4497d5eac2aff6e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: a123579574454ae48b9fb8f6b06a6b8c, type: 3}
 --- !u!1 &5977157894847933699
 GameObject:
   m_ObjectHideFlags: 0

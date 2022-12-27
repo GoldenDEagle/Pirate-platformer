@@ -20,6 +20,7 @@ namespace PixelCrew.UI.Perks
         private PredifinedDataGroup<PerkDef, PerkWidget> _dataGroup;
         private readonly CompositeDisposable _trash = new CompositeDisposable();
         private GameSession _session;
+        private float _defaultTimeScale;
 
         protected override void Start()
         {
@@ -33,6 +34,9 @@ namespace PixelCrew.UI.Perks
             _trash.Retain(_useButton.onClick.Subscribe(OnUse));
 
             OnPerksChanged();
+
+            _defaultTimeScale = Time.timeScale;
+            Time.timeScale = 0;
         }
 
         private void OnPerksChanged()
@@ -68,6 +72,7 @@ namespace PixelCrew.UI.Perks
         private void OnDestroy()
         {
             _trash.Dispose();
+            Time.timeScale = _defaultTimeScale;
         }
     }
 }

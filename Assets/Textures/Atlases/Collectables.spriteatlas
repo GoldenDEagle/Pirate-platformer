@@ -42,7 +42,14 @@ SpriteAtlas:
       enableTightPacking: 1
     variantMultiplier: 1
     packables:
-    - {fileID: 102900000, guid: 57c3bdbce5f828348829689606e51d86, type: 3}
+    - {fileID: 102900000, guid: b8028c1cb52140c4087e1e246bd0b9bd, type: 3}
+    - {fileID: 102900000, guid: 866086d10455bb1429e68ccdaa08ce5b, type: 3}
+    - {fileID: 2800000, guid: 33ac2d87dbfa29b4d864684f6f1a8b84, type: 3}
+    - {fileID: 2800000, guid: b675318881e76c340bc4bbf141c9b938, type: 3}
+    - {fileID: 5489425550423852611, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+    - {fileID: -8609163736557127468, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+    - {fileID: -129344682377229948, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
+    - {fileID: 4706147864203298530, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -51,18 +58,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e02925628d2bb8b4893345679acd69cc, type: 3}
   - {fileID: 21300000, guid: 1185b4e28c1eb4545a7468af1983ae4c, type: 3}
   - {fileID: 21300000, guid: 7725af03d585344448ca89dfbf3476c0, type: 3}
-  - {fileID: 7169267357523271611, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: 2280115057347858601, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: -3158540903589798737, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: -1868697851134581415, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: 2512648997399747585, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: -8646302099248395833, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: -9054866390690767207, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: 2271373999398222149, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: -4180039516846402663, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: 1930839287912332762, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: -1189264683318500452, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
-  - {fileID: -7550446514286331383, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
   - {fileID: -129344682377229948, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
   - {fileID: 5489425550423852611, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
   - {fileID: -8609163736557127468, guid: 0eee5743e4e83ca4b98c30292a0d4a3b, type: 3}
@@ -126,18 +121,6 @@ SpriteAtlas:
   - Sword Idle 03
   - 3
   - Sword Idle 07
-  - Diamonds_10
-  - Diamonds_11
-  - Diamonds_12
-  - Diamonds_13
-  - Diamonds_14
-  - Diamonds_15
-  - Diamonds_9
-  - Diamonds_8
-  - Diamonds_1
-  - Diamonds_0
-  - Diamonds_3
-  - Diamonds_2
   - Diamonds_5
   - Diamonds_4
   - Diamonds_7

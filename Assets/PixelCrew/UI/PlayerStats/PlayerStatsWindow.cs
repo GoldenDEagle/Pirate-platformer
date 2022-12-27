@@ -17,6 +17,7 @@ namespace PixelCrew.UI.PlayerStats
 
         private DataGroup<StatDef, StatWidget> _dataGroup;
         private GameSession _session;
+        private float _defaultTimeScale;
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
@@ -33,6 +34,9 @@ namespace PixelCrew.UI.PlayerStats
             _trash.Retain(_upgradeButton.onClick.Subscribe(OnUpgrade));
 
             OnStatsChanged();
+
+            _defaultTimeScale = Time.timeScale;
+            Time.timeScale = 0;
         }
 
         private void OnUpgrade()
@@ -58,6 +62,7 @@ namespace PixelCrew.UI.PlayerStats
         private void OnDestroy()
         {
             _trash.Dispose();
+            Time.timeScale = _defaultTimeScale;
         }
     }
 }

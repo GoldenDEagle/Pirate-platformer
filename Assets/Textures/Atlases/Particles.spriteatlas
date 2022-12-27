@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Particles
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 8f72a72d814c5374a8b027c22352ed59, type: 3}
+    - {fileID: 2800000, guid: 44b5d4b394fe6ef47ab94d764f10c849, type: 3}
+    - {fileID: 2800000, guid: b12fbf525165d544d978e29a44f78d30, type: 3}
+    - {fileID: 2800000, guid: 050804694dc08d84a95c2094d87aa0b1, type: 3}
+    - {fileID: 2800000, guid: 1130860c45c6f044fbe71cc41adffdae, type: 3}
+    - {fileID: 2800000, guid: b2244daefa634cc448ebc94d0958ad5b, type: 3}
+    - {fileID: 2800000, guid: 2c74fc39c5e267746aeb2bc51e26ee7d, type: 3}
+    - {fileID: 2800000, guid: d820ebc08d125764abd4fb2d78270dd8, type: 3}
+    - {fileID: 2800000, guid: 8a5441631b9a70b4cb661ee548d96960, type: 3}
+    - {fileID: 2800000, guid: 9fde6ac3664fd9e4ab76cba95b4e5c26, type: 3}
+    - {fileID: 2800000, guid: c8ef4801877a667418af661dbab5124b, type: 3}
+    - {fileID: 2800000, guid: 3d845c6c9b1282842beeb07b1abb241e, type: 3}
+    - {fileID: 2800000, guid: 1c3f9f00a37a8614298944ec628e710b, type: 3}
+    - {fileID: 2800000, guid: b20662ea46ce098449f312ac3bdb4827, type: 3}
+    - {fileID: 2800000, guid: fabc72b31cd20db47a9dc48b8bc30ee2, type: 3}
+    - {fileID: 2800000, guid: 969bf0e2c1791f94098adbcead213116, type: 3}
+    - {fileID: 2800000, guid: df413055cffe7bf4297facff8c06a0aa, type: 3}
+    - {fileID: 2800000, guid: 2d281267ec035e748b9b0cc351d6e5a0, type: 3}
+    - {fileID: 2800000, guid: c813535a8cabf054a9d3ed161bf02730, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 1c3f9f00a37a8614298944ec628e710b, type: 3}
+  - {fileID: 21300000, guid: d820ebc08d125764abd4fb2d78270dd8, type: 3}
+  - {fileID: 21300000, guid: c8ef4801877a667418af661dbab5124b, type: 3}
+  - {fileID: 21300000, guid: b12fbf525165d544d978e29a44f78d30, type: 3}
+  - {fileID: 21300000, guid: 969bf0e2c1791f94098adbcead213116, type: 3}
+  - {fileID: 21300000, guid: 8a5441631b9a70b4cb661ee548d96960, type: 3}
+  - {fileID: 21300000, guid: fabc72b31cd20db47a9dc48b8bc30ee2, type: 3}
+  - {fileID: 21300000, guid: 44b5d4b394fe6ef47ab94d764f10c849, type: 3}
+  - {fileID: 21300000, guid: 9fde6ac3664fd9e4ab76cba95b4e5c26, type: 3}
+  - {fileID: 21300000, guid: df413055cffe7bf4297facff8c06a0aa, type: 3}
+  - {fileID: 21300000, guid: 2d281267ec035e748b9b0cc351d6e5a0, type: 3}
+  - {fileID: 21300000, guid: 2c74fc39c5e267746aeb2bc51e26ee7d, type: 3}
+  - {fileID: 21300000, guid: 050804694dc08d84a95c2094d87aa0b1, type: 3}
+  - {fileID: 21300000, guid: c813535a8cabf054a9d3ed161bf02730, type: 3}
+  - {fileID: 21300000, guid: b20662ea46ce098449f312ac3bdb4827, type: 3}
+  - {fileID: 21300000, guid: 1130860c45c6f044fbe71cc41adffdae, type: 3}
+  - {fileID: 21300000, guid: 3d845c6c9b1282842beeb07b1abb241e, type: 3}
+  - {fileID: 21300000, guid: 8f72a72d814c5374a8b027c22352ed59, type: 3}
+  - {fileID: 21300000, guid: b2244daefa634cc448ebc94d0958ad5b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Run 02
+  - Jump 03
+  - Jump 06
+  - Fall 03
+  - Run 05
+  - Jump 04
+  - Run 04
+  - Fall 02
+  - Jump 05
+  - Attack 1 01
+  - Attack 1 02
+  - Jump 02
+  - Fall 04
+  - Attack 1 03
+  - Run 03
+  - Fall 05
+  - Run 01
+  - Fall 01
+  - Jump 01
+  m_Tag: Particles
+  m_IsVariant: 0
