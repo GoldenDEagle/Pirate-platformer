@@ -39,7 +39,7 @@ namespace PixelCrew.Components.LevelManagment
                 var position = _rigidbody.position;
                 position.x += _speed;
                 _rigidbody.MovePosition(position);
-                hero.transform.position = new Vector2(position.x, position.y + 0.7f);
+                hero.transform.position = new Vector2(position.x - 0.5f, position.y + 0.7f);    // Magic numbers for hero positioning onboard
                 yield return null;
             }
         }

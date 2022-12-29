@@ -368,7 +368,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &226089416999529224
 MonoBehaviour:
@@ -414,6 +414,7 @@ MonoBehaviour:
   _direction: {x: 1, y: 0}
   _rigidbody: {fileID: 226089416999529226}
   _patrol: {fileID: 226089416999529224}
+  _lifetime: 10
 --- !u!114 &226089416999529223
 MonoBehaviour:
   m_ObjectHideFlags: 0

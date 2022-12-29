@@ -8,10 +8,12 @@ namespace PixelCrew.Creatures.Bosses
         [SerializeField] private Vector2 _direction;
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private Patrol _patrol;
+        [SerializeField] private float _lifetime = 5;
 
         private void Start()
         {
             StartCoroutine(_patrol.DoPatrol());
+            Destroy(gameObject, _lifetime);
         }
 
         public void SetDirection(Vector2 direction)

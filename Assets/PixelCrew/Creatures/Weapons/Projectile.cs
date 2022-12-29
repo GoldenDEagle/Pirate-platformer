@@ -17,6 +17,11 @@ namespace PixelCrew.Creatures.Weapons
             Rigidbody.AddForce(force, ForceMode2D.Impulse);
         }
 
+        public void SetXDirection(int direction)
+        {
+            Direction = direction;
+        }
+
         //private void FixedUpdate()
         //{
         //    var position = _rigidbody.position;       // Движение для kinematic rigidbody

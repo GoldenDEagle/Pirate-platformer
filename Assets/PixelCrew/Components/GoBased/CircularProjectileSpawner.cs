@@ -8,7 +8,7 @@ namespace PixelCrew.Components.GoBased
 {
     public class CircularProjectileSpawner : MonoBehaviour
     {
-        [SerializeField] SpawnSequence[] _sequences;
+        [SerializeField] SpawnSequence[] _stages;
 
         public int Stage { get; set; }
 
@@ -20,7 +20,7 @@ namespace PixelCrew.Components.GoBased
 
         private IEnumerator SpawnProjectiles()
         {
-            var sequence = _sequences[Stage];
+            var sequence = _stages[Stage];
             foreach (var setting in sequence.Sequence)
             {
                 var sectorStep = 2 * Mathf.PI / setting.BurstCount;

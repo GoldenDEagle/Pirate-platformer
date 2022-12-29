@@ -97,4 +97,31 @@ MonoBehaviour:
   - Key: crab_completed_2h
     Value: "I'm Captain. Your brother sent me here.\r"
   - Key: crab_completed_3c
-    Value: My dear brother! Thanks to you I can return to him now!
+    Value: "My dear brother! Thanks to you I can return to him now!\r"
+  - Key: crab_filler
+    Value: "Please find my brother!\r"
+  - Key: starro_welcome
+    Value: "AAARGH!!!\r"
+  - Key: hero_on_starro
+    Value: "I have a bad feeling about this..\r"
+  - Key: starro_die
+    Value: "Ouch..\r"
+  - Key: hero_starro_win
+    Value: "GG WP!\r"
+  - Key: hobbit_meeting_1h
+    Value: "Hey, Captain! Thanks for clearing the mess in my house!\r"
+  - Key: hobbit_meeting_2c
+    Value: "Not a problem!\r"
+  - Key: hobbit_meeting_3h
+    Value: "As a reward I can teach you some new skills. Are you interested?\r"
+  - Key: hobbit_meeting_4c
+    Value: "Sure! Learning is my passion.\r"
+  - Key: frog_meeting_1f
+    Value: "Greetings. I've seen you in action and I think you can do better.\r"
+  - Key: frog_meeting_2c
+    Value: "What are you talking about? Who are you?\r"
+  - Key: frog_meeting_3f
+    Value: "This is a dangerous island. You surely need some training before going
+      further..\r"
+  - Key: ending_titles
+    Value: Farewell, Captain!

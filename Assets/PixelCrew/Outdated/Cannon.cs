@@ -17,16 +17,16 @@ namespace PixelCrew
 
         private void FixedUpdate()
         {
-            if (_fireCountDown > 0f)
-            {
-                _fireCountDown -= Time.deltaTime;
-            }
-            else if (_fireCountDown <= 0f)
-            {
-                _animator.SetTrigger(Fire);
-                _fireCountDown = _fireInterval;
-            }
-    }
+                if (_fireCountDown > 0f)
+                {
+                    _fireCountDown -= Time.deltaTime;
+                }
+                else if (_fireCountDown <= 0f)
+                {
+                    _animator.SetTrigger(Fire);
+                    _fireCountDown = _fireInterval;
+                }
+        }
 
         public void SpawnCannonBall()
         {
