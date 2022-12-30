@@ -13,9 +13,6 @@ namespace PixelCrew.Components
         [SerializeField] private bool _usePool = false;
         [SerializeField] private Transform _target;
         [SerializeField] private GameObject _prefab;
-        [Space][Header("Projectile")]
-        [SerializeField] private bool _controlDirection = false;
-        [SerializeField] private int _xDirection;
         [Space][Header("MultipleSpawn")]
         [SerializeField] public int _numberToSpawn = 1;
         [SerializeField] private float _xScatter = 0;
@@ -45,9 +42,6 @@ namespace PixelCrew.Components
             var instance = _usePool
                 ? Pool.Instance.Get(_prefab, position)
                 : SpawnUtils.Spawn(_prefab, position);
-
-            if (instance.TryGetComponent(out Projectile projectile) && _controlDirection)
-                projectile.SetXDirection(_xDirection);
 
             var scale = _target.lossyScale;
             instance.transform.localScale = scale;

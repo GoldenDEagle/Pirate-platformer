@@ -31,6 +31,8 @@ namespace PixelCrew.Utils.ObjectPool
                 var pooledItem = queue.Dequeue();
                 pooledItem.transform.position = position;
                 pooledItem.gameObject.SetActive(true);
+                //if (pooledItem.TryGetComponent(out Projectile projectile))
+                //    projectile.SetXDirection((int) - projectile.transform.localScale.x);
                 pooledItem.Restart();
                 return pooledItem.gameObject;
             }

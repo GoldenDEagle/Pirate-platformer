@@ -100,6 +100,13 @@ namespace PixelCrew.Creatures
                 case StatId.Fuel:
                     _session.Data.Fuel.Value = _session.StatsModel.GetValue(statId);
                     break;
+                case StatId.CooldownReduction:
+                    var usedPerk = _session.PerksModel.Used;
+                    if (usedPerk == null) break;
+                    var defaultCooldown = _session.PerksModel.GetPerkCooldown(usedPerk);
+                    var cooldownReduction = _session.StatsModel.GetValue(StatId.CooldownReduction);
+                    _session.PerksModel.Cooldown.Value = (1 - cooldownReduction / 100) * defaultCooldown;
+                    break;
             }
         }
 
@@ -352,7 +359,6 @@ namespace PixelCrew.Creatures
         {
             if (collision.gameObject.TryGetComponent(out TempColliderDisable colliderDisable))
             {
-                var contact = collision.GetContact(0);
                 if (IsCrawling)
                 {
                     colliderDisable.DisableCollider();

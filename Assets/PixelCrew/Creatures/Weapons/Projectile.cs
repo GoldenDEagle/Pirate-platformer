@@ -7,7 +7,6 @@ namespace PixelCrew.Creatures.Weapons
         protected override void Start()
         {
             base.Start();
-
             Launch();
         }
 
@@ -15,11 +14,6 @@ namespace PixelCrew.Creatures.Weapons
         {
             var force = new Vector2(Direction * Speed, 0);        // Движение для dynamic rigidbody
             Rigidbody.AddForce(force, ForceMode2D.Impulse);
-        }
-
-        public void SetXDirection(int direction)
-        {
-            Direction = direction;
         }
 
         //private void FixedUpdate()

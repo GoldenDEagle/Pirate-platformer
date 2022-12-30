@@ -54,8 +54,15 @@ namespace PixelCrew.Model.Data
         public void SelectPerk(string id)
         {
             var perkDef = DefsFacade.I.Perks.Get(id);
-            Cooldown.Value = perkDef.Cooldown;
+            var cooldownReduction = GameSession.Instance.StatsModel.GetValue(StatId.CooldownReduction);
+            Cooldown.Value = (1 - cooldownReduction / 100) * perkDef.Cooldown;
             _data.Perks.Used.Value = id;
+        }
+
+        public float GetPerkCooldown(string perkId)
+        {
+            var perkDef = DefsFacade.I.Perks.Get(perkId);
+            return perkDef.Cooldown;
         }
 
         public bool IsUsed(string perkId)
