@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using PixelCrew.Components.Audio;
+using UnityEngine;
 
 namespace PixelCrew.Creatures.Bosses
 {
@@ -8,6 +9,8 @@ namespace PixelCrew.Creatures.Bosses
         {
             animator.TryGetComponent(out FloodController floodController);
             floodController.StartFlooding();
+            animator.TryGetComponent(out PlaySoundsComponent sounds);
+            sounds.Play("Aggro");
         }
     }
 }

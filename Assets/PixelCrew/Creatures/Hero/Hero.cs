@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEditor.Animations;
-using PixelCrew.Components;
-using PixelCrew.Utils;
+﻿using PixelCrew.Components;
+using PixelCrew.Effects.CameraEffects;
 using PixelCrew.Model;
 using PixelCrew.Model.Definitions;
 using PixelCrew.Model.Definitions.Repository;
-using PixelCrew.Effects.CameraEffects;
+using PixelCrew.Utils;
+using System.Collections;
+using UnityEngine;
 
 namespace PixelCrew.Creatures
 {
@@ -16,13 +15,10 @@ namespace PixelCrew.Creatures
         
         [SerializeField] private float _interactionRadius;
 
-        [SerializeField] private Cooldown _throwCooldown;
-
-        [SerializeField] private AnimatorController _armed;
-        [SerializeField] private AnimatorController _disarmed;
-
+        [Header("Abilities")]
         [SerializeField] private ShieldComponent _shield;
         [SerializeField] private FlashlightComponent _flashlight;
+        [SerializeField] private Cooldown _throwCooldown;
 
         [Space]
         [Header("MegaThrow")]
@@ -35,6 +31,8 @@ namespace PixelCrew.Creatures
         [SerializeField] private int _coinsDropped;
         [SerializeField] private SpawnComponent _throwSpawner;
 
+        [SerializeField] private RuntimeAnimatorController _armed;
+        [SerializeField] private RuntimeAnimatorController _disarmed;
 
         private static readonly int ThrowKey = Animator.StringToHash("throw");
 
@@ -49,10 +47,11 @@ namespace PixelCrew.Creatures
         private GameSession _session;
         private CameraShakeEffect _cameraShake;
 
-        public bool IsCrawling;
+        [HideInInspector] public bool IsCrawling;
 
         private const string SwordId = "Sword";
-        private int CoinCount => _session.Data.Inventory.Count("Coin");
+        private const string CoinId = "Coin";
+        private int CoinCount => _session.Data.Inventory.Count(CoinId);
         private int SwordCount => _session.Data.Inventory.Count(SwordId);
 
         private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;

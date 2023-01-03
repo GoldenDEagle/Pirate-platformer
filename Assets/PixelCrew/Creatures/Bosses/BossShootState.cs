@@ -1,4 +1,5 @@
-﻿using PixelCrew.Components.GoBased;
+﻿using PixelCrew.Components.Audio;
+using PixelCrew.Components.GoBased;
 using UnityEngine;
 
 namespace PixelCrew.Creatures.Bosses
@@ -8,6 +9,8 @@ namespace PixelCrew.Creatures.Bosses
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            animator.TryGetComponent(out PlaySoundsComponent sounds);
+            sounds.Play("Shot");
             animator.TryGetComponent(out CircularProjectileSpawner spawner);
             spawner.LaunchProjectiles();
         }

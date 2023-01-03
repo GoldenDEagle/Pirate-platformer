@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace PixelCrew.UI.HUD.Dialogs
@@ -7,6 +8,7 @@ namespace PixelCrew.UI.HUD.Dialogs
     {
         [SerializeField] private Text _text;
         [SerializeField] private Image _icon;
+        [SerializeField] private Button _continue;
 
         public Text Text => _text;
 
@@ -15,5 +17,11 @@ namespace PixelCrew.UI.HUD.Dialogs
             if (_icon != null)
                 _icon.sprite = icon;
         }
+
+        //private void Update()
+        //{
+        //    if (Keyboard.current.anyKey.wasReleasedThisFrame)
+        //        _continue.onClick?.Invoke();
+        //}
     }
 }

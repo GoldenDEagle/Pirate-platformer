@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using PixelCrew.Creatures;
+using PixelCrew.Utils;
 
 namespace PixelCrew
 {
@@ -68,6 +69,14 @@ namespace PixelCrew
             if (context.performed)
             {
                 _hero.ToggleFlashlight();
+            }
+        }
+
+        public void OnPausePressed(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                WindowUtils.CreateWindow("UI/InGameMenuWindow");
             }
         }
     }

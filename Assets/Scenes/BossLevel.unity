@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1216,6 +1216,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 410320881}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!58 &410320881 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7522432162629953637, guid: c7cc9bfcabbf1f247aada6b87bccba2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 410320875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &414014701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1735227510617403571, guid: 740144a40e7286c4dab9104a0eed5ece,
@@ -1467,6 +1484,7 @@ GameObject:
   - component: {fileID: 481927279}
   - component: {fileID: 481927280}
   - component: {fileID: 481927281}
+  - component: {fileID: 481927282}
   m_Layer: 16
   m_Name: Starro
   m_TagString: Enemy
@@ -1492,7 +1510,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 48a2c8dec8a9f244ab059c333c94ff44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1730,7 +1748,7 @@ MonoBehaviour:
   - {fileID: 947945693}
   - {fileID: 1112518508}
   - {fileID: 612349866}
-  _color: {r: 1.7207954, g: 0.1621692, b: 0.1621692, a: 1}
+  _color: {r: 0.5, g: 0.48235294, b: 0.34705883, a: 1}
 --- !u!114 &481927280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1766,6 +1784,23 @@ MonoBehaviour:
   _onSpawnCompleted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &481927282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481927270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46e64f49f2592c4b8ebc14c0986356f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - _id: Aggro
+    _clip: {fileID: 8300000, guid: b76247fd4ea150646ab1ab04592a2a0d, type: 3}
+  - _id: Shot
+    _clip: {fileID: 8300000, guid: 3f85c8a1e03fbdc48b4f3266a98b0238, type: 3}
 --- !u!1 &489015693
 GameObject:
   m_ObjectHideFlags: 0
@@ -11510,7 +11545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2225c2f7632cb4f97d25265a9cf6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _profile: {fileID: 11400000, guid: e19280090ccf3a44387c83a0fc1b369c, type: 2}
+  _profile: {fileID: 11400000, guid: 7b824ca02f365bd41bfac8eedc08bb33, type: 2}
 --- !u!1 &1328577320
 GameObject:
   m_ObjectHideFlags: 0
@@ -13750,7 +13785,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: e19280090ccf3a44387c83a0fc1b369c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 7b824ca02f365bd41bfac8eedc08bb33, type: 2}
 --- !u!4 &1766821146
 Transform:
   m_ObjectHideFlags: 0

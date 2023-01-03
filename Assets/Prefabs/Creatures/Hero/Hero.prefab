@@ -5314,10 +5314,10 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.96276957, b: 0.6933962, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000004d8761e0175251047d36317e0b371540d52e137271fe1ad4
+  m_ApplyToSortingLayers: 000000004d8761e0175251047d36317e0b371540d52e137271fe1ad4d9be3adb
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
-  m_LightOrder: 0
+  m_LightOrder: 10
   m_AlphaBlendOnOverlap: 1
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
@@ -5581,7 +5581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8521669546322667177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.009, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8521669546337685390}
@@ -5757,18 +5757,16 @@ MonoBehaviour:
   _groundCheck: {fileID: 517940429}
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 65792
+    m_Bits: 73984
   _attackRange: {fileID: 1103343695}
   _particles: {fileID: 1599631511}
   _meleeAttack: {fileID: 8521669545343519827}
   _interactionCheck: {fileID: 2067199012}
   _interactionRadius: 0.8
-  _throwCooldown:
-    _value: 0.8
-  _armed: {fileID: 9100000, guid: a2d4bc880d94a0b4096b22452e25cad4, type: 2}
-  _disarmed: {fileID: 9100000, guid: 045ed353177f5fc4fa587d0f69eb73b9, type: 2}
   _shield: {fileID: 9084641504599765070}
   _flashlight: {fileID: 961004028028903554}
+  _throwCooldown:
+    _value: 0.8
   _megaThrowCooldown:
     _value: 1
   _megaThrowCount: 3
@@ -5776,6 +5774,8 @@ MonoBehaviour:
   _hitParticles: {fileID: 1863843261}
   _coinsDropped: 3
   _throwSpawner: {fileID: 211800269985703056}
+  _armed: {fileID: 9100000, guid: a2d4bc880d94a0b4096b22452e25cad4, type: 2}
+  _disarmed: {fileID: 9100000, guid: 045ed353177f5fc4fa587d0f69eb73b9, type: 2}
   IsCrawling: 0
 --- !u!114 &8521669546337685427
 MonoBehaviour:
@@ -5908,6 +5908,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3d6df33a-4a75-44dc-9710-c9994d4e0255
     m_ActionName: Hero/ToggleFlashLight[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8521669546337685425}
+        m_MethodName: OnPausePressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e998ac3b-6fdb-49f2-b76c-5181fe72b272
+    m_ActionName: Hero/PauseGame[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Hero
