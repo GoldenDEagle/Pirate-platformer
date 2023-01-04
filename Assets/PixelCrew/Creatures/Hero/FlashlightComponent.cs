@@ -30,7 +30,7 @@ namespace PixelCrew.Creatures
             _session.Data.Fuel.Value = newValue;
             var dimTreshold = _session.StatsModel.GetValue(StatId.Fuel) * _dimTreshold;
 
-            var progress = Mathf.Clamp(newValue / dimTreshold, 0, 1);
+            var progress = Mathf.Clamp(newValue / dimTreshold, 0.3f, 1);
             _light.intensity = _defaultIntensity * progress;
         }
     }

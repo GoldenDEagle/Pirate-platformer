@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -303,6 +303,8 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
+      - Id: GreenGem
+        Value: 100
     Perks:
       _used:
         _value: 
@@ -2353,6 +2355,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!1001 &860310304
@@ -2426,6 +2433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
@@ -3850,6 +3862,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!1 &1283558706
@@ -4726,6 +4743,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!4 &1602482992 stripped
@@ -4858,6 +4880,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem0
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -5163,6 +5190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
@@ -5541,6 +5573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}

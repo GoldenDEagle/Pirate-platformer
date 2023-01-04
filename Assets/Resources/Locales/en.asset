@@ -52,7 +52,7 @@ MonoBehaviour:
   - Key: hobbit_perk_agree
     Value: "Sure!\r"
   - Key: hobbit_perk_disagree
-    Value: "Not this time, halfling!\r"
+    Value: "Not this time.\r"
   - Key: door_closed
     Value: "Door is closed..\r"
   - Key: need_key

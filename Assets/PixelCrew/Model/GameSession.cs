@@ -22,6 +22,7 @@ namespace PixelCrew.Model
 
         private readonly List<string> _checkpoints = new List<string>();
         private readonly List<string> _removedItems = new List<string>();
+        private readonly Dictionary<string, bool> _switchesStates = new Dictionary<string, bool>();
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
         public QuickInventoryModel QuickInventory { get; private set; }
@@ -136,15 +137,38 @@ namespace PixelCrew.Model
             }
         }
 
-        public void StoreState(string itemId)
+        public void StoreDestructionState(string itemId)
         {
             if (!_removedItems.Contains(itemId))
                 _removedItems.Add(itemId);
         }
 
-        public bool RestoreState(string itemId)
+        public bool RestoreDestructionState(string itemId)
         {
             return _removedItems.Contains(itemId);
+        }
+
+        public void StoreSwitchState(string itemId, bool state)
+        {
+            if (!_switchesStates.ContainsKey(itemId))
+                _switchesStates.Add(itemId, state);
+            else
+                _switchesStates[itemId] = state;
+        }
+
+        public bool WasSwitched(string itemId) => _switchesStates.ContainsKey(itemId);
+
+        public bool RestoreSwitchState(string itemId)
+        {
+            if (_switchesStates.ContainsKey(itemId))
+                return _switchesStates[itemId];
+            else throw new System.ArgumentException("No such door!");
+        }
+
+        public void ClearStates()
+        {
+            _switchesStates.Clear();
+            _removedItems.Clear();
         }
 
         private void OnDestroy()

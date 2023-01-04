@@ -12,6 +12,7 @@ namespace PixelCrew.Components
         public void Exit()
         {
             var session = FindObjectOfType<GameSession>();
+            session.ClearStates();
             session.Save();
             var loader = FindObjectOfType<LevelLoader>();
             loader.LoadLevel(_sceneName);

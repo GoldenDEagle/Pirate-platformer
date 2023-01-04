@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4627521741994327399}
   - component: {fileID: 4627521741994327398}
   - component: {fileID: 4627521741994327393}
+  - component: {fileID: 1893489413274003138}
   m_Layer: 14
   m_Name: HealthPotionBig
   m_TagString: Untagged
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 4627521741994327396}
-  _state: {fileID: 0}
+  _state: {fileID: 1893489413274003138}
 --- !u!114 &4627521741994327391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,3 +298,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1893489413274003138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4627521741994327396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72272082339481c41ae66e602c5a2da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: bigHealth

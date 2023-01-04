@@ -14,7 +14,7 @@ namespace PixelCrew.Effects
             _startX = transform.position.x;
         }
 
-        private void LateUpdate()
+        private void FixedUpdate()
         {
             var currentPosition = transform.position;
             var deltaX = _followedTarget.position.x * _effectValue;

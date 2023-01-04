@@ -7289,7 +7289,7 @@ PrefabInstance:
     - target: {fileID: 5517729580482785438, guid: 8b8e887ff1cf96242b86f959616208fb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5517729580482785438, guid: 8b8e887ff1cf96242b86f959616208fb,
         type: 3}
@@ -8299,7 +8299,7 @@ PrefabInstance:
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
@@ -9084,6 +9084,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 229826370}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem0
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -11755,6 +11760,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 229826370}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem1
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -12031,7 +12041,7 @@ Transform:
   m_GameObject: {fileID: 975976515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -28.94, y: -4.25, z: 0}
-  m_LocalScale: {x: 2.58, y: 2.5, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 0}
   m_Children: []
   m_Father: {fileID: 388455863}
   m_RootOrder: 0
@@ -13079,6 +13089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
@@ -15266,6 +15281,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1022369100}
     m_Modifications:
+    - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
+        type: 3}
+      propertyPath: _id
+      value: door0
+      objectReference: {fileID: 0}
     - target: {fileID: 8996333212202159549, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
         type: 3}
       propertyPath: m_RootOrder
@@ -15793,7 +15813,7 @@ PrefabInstance:
     - target: {fileID: 5418347829675071372, guid: 85aa3b593a1db854b841b55c753ec2c7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5418347829675071372, guid: 85aa3b593a1db854b841b55c753ec2c7,
         type: 3}
@@ -15849,6 +15869,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}

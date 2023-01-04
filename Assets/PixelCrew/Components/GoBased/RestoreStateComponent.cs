@@ -9,13 +9,9 @@ namespace PixelCrew.Components.GoBased
         [SerializeField] private string _id;
         public string Id => _id;
 
-        private GameSession _session;
-
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
-
-            var isDestroyed = _session.RestoreState(Id);
+            var isDestroyed = GameSession.Instance.RestoreDestructionState(Id);
             if (isDestroyed)
                 Destroy(gameObject);
         }

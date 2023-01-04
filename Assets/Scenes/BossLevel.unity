@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -140,6 +140,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 645848704}
     m_Modifications:
+    - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
+        type: 3}
+      propertyPath: _id
+      value: door1
+      objectReference: {fileID: 0}
     - target: {fileID: 8996333212202159549, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
         type: 3}
       propertyPath: m_RootOrder
@@ -490,6 +495,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 645848704}
     m_Modifications:
+    - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
+        type: 3}
+      propertyPath: _id
+      value: door0
+      objectReference: {fileID: 0}
     - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
         type: 3}
       propertyPath: _state
@@ -8712,7 +8722,6 @@ GameObject:
   m_Component:
   - component: {fileID: 777190348}
   - component: {fileID: 777190353}
-  - component: {fileID: 777190352}
   - component: {fileID: 777190351}
   - component: {fileID: 777190350}
   - component: {fileID: 777190349}
@@ -8822,35 +8831,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &777190352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777190347}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8562003a16dbb4db6df99fc4716ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputTimeToLive: 2
-  _cheats:
-  - Name: reset
-    Action:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: Reload
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!20 &777190353
 Camera:
   m_ObjectHideFlags: 0

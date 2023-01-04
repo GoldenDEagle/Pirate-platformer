@@ -67,7 +67,7 @@ MonoBehaviour:
   - Key: hobbit_perk_agree
     Value: "\u041A\u043E\u043D\u0435\u0447\u043D\u043E!\r"
   - Key: hobbit_perk_disagree
-    Value: "\u041D\u0435 \u0432 \u044D\u0442\u043E\u0442 \u0440\u0430\u0437, \u043F\u043E\u043B\u0443\u0440\u043E\u0441\u043B\u0438\u043A!\r"
+    Value: "\u041D\u0435 \u0432 \u044D\u0442\u043E\u0442 \u0440\u0430\u0437.\r"
   - Key: door_closed
     Value: "\u0414\u0432\u0435\u0440\u044C \u0437\u0430\u043F\u0435\u0440\u0442\u0430..\r"
   - Key: need_key

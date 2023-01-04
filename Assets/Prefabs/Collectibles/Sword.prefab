@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5418347829675071371}
   - component: {fileID: 6396885633717731789}
   - component: {fileID: 1156296566}
+  - component: {fileID: 7948235968488857462}
   m_Layer: 14
   m_Name: Sword
   m_TagString: Untagged
@@ -197,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectToDestroy: {fileID: 5418347829675071378}
-  _state: {fileID: 0}
+  _state: {fileID: 7948235968488857462}
 --- !u!114 &6396885633717731789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,3 +226,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clip: {fileID: 8300000, guid: e949bd75c9709da42b8130ef085bcf33, type: 3}
+--- !u!114 &7948235968488857462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5418347829675071378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72272082339481c41ae66e602c5a2da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: sword

@@ -296,6 +296,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem3
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -892,6 +897,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &84802523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1283558707}
+    m_Modifications:
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825360040622666219, guid: 49c0d549556051648847e606b1de5de6,
+        type: 3}
+      propertyPath: m_Name
+      value: CandleAnimated (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49c0d549556051648847e606b1de5de6, type: 3}
+--- !u!4 &84802524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
+    type: 3}
+  m_PrefabInstance: {fileID: 84802523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &85987330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1125,6 +1205,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem7
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -1467,6 +1552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!4 &113671160 stripped
@@ -1790,6 +1880,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem5
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -2404,6 +2499,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 645848704}
     m_Modifications:
+    - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
+        type: 3}
+      propertyPath: _id
+      value: door2
+      objectReference: {fileID: 0}
     - target: {fileID: 8996333212202159549, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
         type: 3}
       propertyPath: m_RootOrder
@@ -2947,6 +3047,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem9
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -3348,6 +3453,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 1590921051089692540, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
+        type: 3}
+      propertyPath: _id
+      value: smallHealth1
+      objectReference: {fileID: 0}
     - target: {fileID: 2574089309648186455, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
         type: 3}
       propertyPath: m_Name
@@ -33504,6 +33614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!4 &537184594 stripped
@@ -35025,7 +35140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 777190348}
   - component: {fileID: 777190353}
-  - component: {fileID: 777190352}
   - component: {fileID: 777190351}
   - component: {fileID: 777190350}
   - component: {fileID: 777190349}
@@ -35135,35 +35249,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &777190352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777190347}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8562003a16dbb4db6df99fc4716ff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputTimeToLive: 2
-  _cheats:
-  - Name: reset
-    Action:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: Reload
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!20 &777190353
 Camera:
   m_ObjectHideFlags: 0
@@ -35473,6 +35558,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem8
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -36275,6 +36365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!4 &891636196 stripped
@@ -36355,6 +36450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
@@ -36799,7 +36899,18 @@ MonoBehaviour:
   _delay: 2
   _onDelay:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 939030401}
+        m_MethodName: SetInput
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &939030400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36839,6 +36950,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 939030401}
+          m_MethodName: SetInput
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - Delay: 1
     OnTimesUp:
       m_PersistentCalls:
@@ -36854,6 +36976,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &939030401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939030398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168eef60769d77a448080cd5ca8183fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &947819945
 GameObject:
   m_ObjectHideFlags: 0
@@ -37532,6 +37666,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
         type: 3}
+      propertyPath: _id
+      value: door3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
+        type: 3}
       propertyPath: _state
       value: 1
       objectReference: {fileID: 0}
@@ -37901,6 +38040,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 645848704}
     m_Modifications:
+    - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
+        type: 3}
+      propertyPath: _id
+      value: door0
+      objectReference: {fileID: 0}
     - target: {fileID: 8996333212202159549, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
         type: 3}
       propertyPath: m_RootOrder
@@ -38074,6 +38218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem4
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -43724,7 +43873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098582786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -2.5, z: -83}
+  m_LocalPosition: {x: 0, y: -2.5, z: -83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 848136524}
@@ -45402,6 +45551,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!4 &1278516453 stripped
@@ -45456,6 +45610,7 @@ Transform:
   - {fileID: 688319045}
   - {fileID: 491491939}
   - {fileID: 974555017}
+  - {fileID: 84802524}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45706,6 +45861,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 1893489413274003138, guid: dcdc3163feba8f349a72da8b12ee828d,
+        type: 3}
+      propertyPath: _id
+      value: bigHealth0
+      objectReference: {fileID: 0}
     - target: {fileID: 4627521741994327386, guid: dcdc3163feba8f349a72da8b12ee828d,
         type: 3}
       propertyPath: m_RootOrder
@@ -46131,6 +46291,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem0
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -55929,6 +56094,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1699197246}
+          m_MethodName: SetInput
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - Delay: 1
     OnTimesUp:
       m_PersistentCalls:
@@ -55961,7 +56137,30 @@ MonoBehaviour:
   _delay: 2
   _onDelay:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1699197246}
+        m_MethodName: SetInput
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1699197246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699197243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168eef60769d77a448080cd5ca8183fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1721764336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56044,6 +56243,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem1
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -56483,6 +56687,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 1590921051089692540, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
+        type: 3}
+      propertyPath: _id
+      value: smallHealth0
+      objectReference: {fileID: 0}
     - target: {fileID: 2574089309648186455, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
         type: 3}
       propertyPath: m_Name
@@ -56627,6 +56836,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 645848704}
     m_Modifications:
+    - target: {fileID: 8919882841818927048, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
+        type: 3}
+      propertyPath: _id
+      value: door1
+      objectReference: {fileID: 0}
     - target: {fileID: 8996333212202159549, guid: 41f49f5dd7a7b1b429d36a4daf31fbdc,
         type: 3}
       propertyPath: m_RootOrder
@@ -56872,12 +57086,12 @@ PrefabInstance:
     - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4825360040622666215, guid: 49c0d549556051648847e606b1de5de6,
         type: 3}
@@ -57570,6 +57784,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!4 &1873575627 stripped
@@ -57691,7 +57910,18 @@ MonoBehaviour:
   _delay: 2
   _onDelay:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1874184672}
+        m_MethodName: SetInput
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1874184671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57731,6 +57961,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1874184672}
+          m_MethodName: SetInput
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - Delay: 1
     OnTimesUp:
       m_PersistentCalls:
@@ -57746,6 +57987,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1874184672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874184669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168eef60769d77a448080cd5ca8183fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1875127403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57812,6 +58065,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
@@ -58409,6 +58667,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7948235968488857462, guid: 85aa3b593a1db854b841b55c753ec2c7,
+        type: 3}
+      propertyPath: _id
+      value: sword3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aa3b593a1db854b841b55c753ec2c7, type: 3}
 --- !u!4 &1939429523 stripped
@@ -58802,6 +59065,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem10
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -60005,6 +60273,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 176300677526295613, guid: f55e066ff04a370458194ee5d6444448,
+        type: 3}
+      propertyPath: _id
+      value: gem2
+      objectReference: {fileID: 0}
     - target: {fileID: 513451421628856008, guid: f55e066ff04a370458194ee5d6444448,
         type: 3}
       propertyPath: m_Name
@@ -60080,6 +60353,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1893623828}
     m_Modifications:
+    - target: {fileID: 1590921051089692540, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
+        type: 3}
+      propertyPath: _id
+      value: smallHealth2
+      objectReference: {fileID: 0}
     - target: {fileID: 2574089309648186455, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
         type: 3}
       propertyPath: m_Name
