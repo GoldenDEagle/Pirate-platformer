@@ -124,8 +124,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 0
   _target: {fileID: 928628641}
   _prefab: {fileID: 276308203}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1584824424497131077
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 2
-  _immune: 0
   _onDamage:
     m_PersistentCalls:
       m_Calls:
@@ -396,7 +402,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1584824424497131067
 BoxCollider2D:
@@ -436,8 +442,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 0
   _target: {fileID: 1584824424497131079}
   _prefab: {fileID: 8385432714456352025, guid: cd94653934ee38f429da0727accffad4, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &765478465
 MonoBehaviour:
   m_ObjectHideFlags: 0

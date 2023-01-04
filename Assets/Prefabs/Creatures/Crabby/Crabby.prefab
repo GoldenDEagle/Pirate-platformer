@@ -994,6 +994,7 @@ GameObject:
   - component: {fileID: 7792951852922459185}
   - component: {fileID: 980046372}
   - component: {fileID: 267896103}
+  - component: {fileID: 7427841948067514475}
   m_Layer: 13
   m_Name: Crabby
   m_TagString: Enemy
@@ -1317,11 +1318,24 @@ MonoBehaviour:
   - _id: Jump
     _clip: {fileID: 8300000, guid: 5bd28bac49633854980c819e33a096e6, type: 3}
   - _id: Melee
-    _clip: {fileID: 8300000, guid: 8013fefdf4138ec429ba66097b450c8e, type: 3}
+    _clip: {fileID: 8300000, guid: ce72f76e730cab7459d5743c735e0de3, type: 3}
   - _id: Slam
     _clip: {fileID: 8300000, guid: ac578edee997a404490920b3d73c4b6d, type: 3}
   - _id: Hurt
     _clip: {fileID: 8300000, guid: 4d573714e93c0fe4d8e392c5ef39ab9c, type: 3}
+--- !u!114 &7427841948067514475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934625412213362133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436e43efe2190aa419f130d81bbbdbe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _immuneTime: 0.5
 --- !u!1 &5934625412223116528
 GameObject:
   m_ObjectHideFlags: 0

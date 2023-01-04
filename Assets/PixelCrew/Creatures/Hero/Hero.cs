@@ -15,6 +15,8 @@ namespace PixelCrew.Creatures
         
         [SerializeField] private float _interactionRadius;
 
+        [SerializeField] private Cooldown _meleeCooldown;
+
         [Header("Abilities")]
         [SerializeField] private ShieldComponent _shield;
         [SerializeField] private FlashlightComponent _flashlight;
@@ -208,11 +210,12 @@ namespace PixelCrew.Creatures
 
         public override void Attack()    // Анимация атаки
         {
-            if (SwordCount <= 0) return;
+            if ((SwordCount <= 0) || (!_meleeCooldown.IsReady)) return;
 
             var damageValue = ModifyDamageByCrit(_meleeDamage);
             _meleeAttack.SetDelta(-damageValue);
 
+            _meleeCooldown.Reset();
             base.Attack();
         }
 

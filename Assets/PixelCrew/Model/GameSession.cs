@@ -6,6 +6,7 @@ using PixelCrew.Model.Data;
 using PixelCrew.Utils.Disposables;
 using PixelCrew.Components.LevelManagment;
 using PixelCrew.Model.Definitions;
+using System.Diagnostics;
 
 namespace PixelCrew.Model
 {
@@ -50,7 +51,7 @@ namespace PixelCrew.Model
         {
             SetChecked(defaultCheckpoint);
 
-            LoadHud();
+            LoadUIs();
             SpawnHero();
         }
 
@@ -82,11 +83,17 @@ namespace PixelCrew.Model
             _data.Hp.Value = (int) StatsModel.GetValue(StatId.Hp);
         }
 
-        private void LoadHud()
+        private void LoadUIs()
         {
             SceneManager.LoadScene("Hud", LoadSceneMode.Additive);
+            LoadControls();
         }
 
+        [Conditional("MOBILE_BUILD")]
+        private void LoadControls()
+        {
+            SceneManager.LoadScene("OnScreenControls", LoadSceneMode.Additive);
+        }
 
         private GameSession GetExistingSession()
         {

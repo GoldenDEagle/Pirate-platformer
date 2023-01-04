@@ -30,7 +30,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Throw",
+                    "name": "UseItem",
                     "type": "Button",
                     "id": "7dc21808-f1d8-4c69-b622-4cf0a585aeeb",
                     "expectedControlType": "Button",
@@ -128,8 +128,30 @@
                 },
                 {
                     "name": "",
+                    "id": "b54bbc31-429c-401a-bd62-321b00a3c3b1",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "StickDeadzone(min=0.3)",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4e0a71b9-b374-464a-864f-4209e7d82118",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91b2dfc1-d9b4-461d-bc7b-e2f3e9b06a8e",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -150,12 +172,34 @@
                 },
                 {
                     "name": "",
+                    "id": "2d425a48-ce3d-43a3-88bf-ce14d6e7f409",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "277c2fbc-ba2c-4e73-b4dc-6e0f3f8a5f82",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Throw",
+                    "action": "UseItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0616605-df53-4f46-86c7-bbfd0859f044",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -163,6 +207,17 @@
                     "name": "",
                     "id": "cd893aa8-945e-4d76-bf8b-adbbc583d5f4",
                     "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67d1d323-dd28-4d28-9d0b-4f7fbf360697",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -183,8 +238,30 @@
                 },
                 {
                     "name": "",
+                    "id": "9a0c78c8-e6a0-4682-9ae8-2297b7384c17",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UsePerk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "01206513-9822-412c-807d-4305abf64da6",
                     "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleFlashLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca887f61-ccf3-4cb7-bb68-b7d76d751dfc",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

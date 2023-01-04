@@ -20,7 +20,9 @@ namespace PixelCrew.Components
         {
             var sprite = target.GetComponent<SpriteRenderer>();
             var input = target.GetComponent<PlayerInput>();
+            var rigidbody = target.GetComponent<Rigidbody2D>();
             SetLockInput(input, true);
+            rigidbody.simulated = false;
 
             yield return AlphaAnimation(sprite, 0f);
 
@@ -33,6 +35,7 @@ namespace PixelCrew.Components
             yield return AlphaAnimation(sprite, 1f);
 
             SetLockInput(input, false);
+            rigidbody.simulated = true;
         }
 
         private void SetLockInput(PlayerInput input, bool isLocked)

@@ -2438,7 +2438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2527,7 +2527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2822,6 +2822,7 @@ GameObject:
   - component: {fileID: 1525596141}
   - component: {fileID: 1525596140}
   - component: {fileID: 1525596139}
+  - component: {fileID: 1525596142}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -2899,6 +2900,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525596137}
   m_CullTransparentMesh: 0
+--- !u!114 &1525596142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525596137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/rightTrigger
 --- !u!1 &1526325892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,6 +3512,7 @@ GameObject:
   - component: {fileID: 2020640978}
   - component: {fileID: 2020640977}
   - component: {fileID: 2020640979}
+  - component: {fileID: 2020640980}
   m_Layer: 5
   m_Name: QuickInventory
   m_TagString: Untagged
@@ -3576,6 +3591,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 1675499437}
   _prefab: {fileID: 1437889467}
+--- !u!114 &2020640980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020640975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/leftTrigger
 --- !u!114 &5369921214746658696
 MonoBehaviour:
   m_ObjectHideFlags: 0

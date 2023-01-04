@@ -239,6 +239,26 @@ PrefabInstance:
       propertyPath: _drop.Array.data[1].Probability
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1584824424497131064, guid: 35e05a4e7752707459864ee52ca1b3e1,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584824424497131064, guid: 35e05a4e7752707459864ee52ca1b3e1,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 847682856}
+    - target: {fileID: 1584824424497131064, guid: 35e05a4e7752707459864ee52ca1b3e1,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ShowElement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584824424497131064, guid: 35e05a4e7752707459864ee52ca1b3e1,
+        type: 3}
+      propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: interact
+      objectReference: {fileID: 0}
     - target: {fileID: 1584824424497131077, guid: 35e05a4e7752707459864ee52ca1b3e1,
         type: 3}
       propertyPath: m_Name

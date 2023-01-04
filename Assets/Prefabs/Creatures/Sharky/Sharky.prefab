@@ -943,6 +943,7 @@ GameObject:
   - component: {fileID: 5024731799893439902}
   - component: {fileID: 779439154}
   - component: {fileID: 1550913776}
+  - component: {fileID: 2533695110844147115}
   m_Layer: 13
   m_Name: Sharky
   m_TagString: Enemy
@@ -1310,3 +1311,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2533695110844147115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521669546337685388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436e43efe2190aa419f130d81bbbdbe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _immuneTime: 0.5

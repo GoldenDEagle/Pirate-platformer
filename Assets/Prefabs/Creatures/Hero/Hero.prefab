@@ -5763,6 +5763,8 @@ MonoBehaviour:
   _meleeAttack: {fileID: 8521669545343519827}
   _interactionCheck: {fileID: 2067199012}
   _interactionRadius: 0.8
+  _meleeCooldown:
+    _value: 0.7
   _shield: {fileID: 9084641504599765070}
   _flashlight: {fileID: 961004028028903554}
   _throwCooldown:

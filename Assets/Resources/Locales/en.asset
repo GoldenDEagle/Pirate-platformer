@@ -88,10 +88,15 @@ MonoBehaviour:
   - Key: crab_encounter_3c
     Value: "I could really use your help..\r"
   - Key: crab_encounter_4c
-    Value: "My brother went to the cave yesterday and didn\"t come back. Can you
-      find him?\r"
+    Value: "My brother went to the Pesherka cave yesterday and didn\"t come back.
+      Can you find him?\r"
   - Key: crab_encounter_5h
     Value: "Of course! I'll go search for him immediately!\r"
+  - Key: crab_encounter_6c
+    Value: "Thanks! And I have to warn you - it's really dark in there.\r"
+  - Key: crab_encounter_7c
+    Value: "You can press \"F\" to light up your candle. But use it wisely, you only
+      have limited amount of fuel!\r"
   - Key: crab_completed_1c
     Value: "What a fight! Who are you?\r"
   - Key: crab_completed_2h
