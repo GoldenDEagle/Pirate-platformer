@@ -47,6 +47,9 @@ MonoBehaviour:
   - Key: force_shield_info
     Value: "Force shield! Gives you absolute immunity for a short period of time!
       Push the \"R\" button to use it.\r"
+  - Key: force_shield_info_mobile
+    Value: "Force shield! Gives you absolute immunity for a short period of time!
+      Tap the perk icon to use it.\r"
   - Key: hobbit_perk_proposal
     Value: "Do you want to learn something new?\r"
   - Key: hobbit_perk_agree
@@ -97,6 +100,9 @@ MonoBehaviour:
   - Key: crab_encounter_7c
     Value: "You can press \"F\" to light up your candle. But use it wisely, you only
       have limited amount of fuel!\r"
+  - Key: crab_encounter_7c_mobile
+    Value: "You can press \"A\" to light up your candle. But use it wisely, you only
+      have limited amount of fuel!\r"
   - Key: crab_completed_1c
     Value: "What a fight! Who are you?\r"
   - Key: crab_completed_2h
@@ -129,4 +135,6 @@ MonoBehaviour:
     Value: "This is a dangerous island. You surely need some training before going
       further..\r"
   - Key: ending_titles
-    Value: Farewell, Captain!
+    Value: "Farewell, Captain!\r"
+  - Key: button_gotit
+    Value: Got it!

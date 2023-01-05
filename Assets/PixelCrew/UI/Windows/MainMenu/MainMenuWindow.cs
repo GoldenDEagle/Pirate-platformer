@@ -19,7 +19,11 @@ namespace PixelCrew.UI.MainMenu
             _closeAction = () =>
             {
                 var loader = FindObjectOfType<LevelLoader>();
+#if MOBILE_BUILD
+                loader.LoadLevel("TutorialLevelMobile");
+#else
                 loader.LoadLevel("TutorialLevel");
+#endif
             };
             Close();
         }

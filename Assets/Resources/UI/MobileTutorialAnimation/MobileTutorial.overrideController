@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MobileTutorial
+  m_Controller: {fileID: 9100000, guid: 0aa60e8215178894696d638f874608d5, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dd5fcc35822780949a92f7ea65faa0bd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dd5fcc35822780949a92f7ea65faa0bd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: efbba42bfacf5074888220240a6d5cf4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 86636138c91eabd4eba1d8ad81b89592, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f892ee26aa44b7c42a25f9def5dd8dbf, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 91db924566ea6514d8ef69b6d1e4662d, type: 2}
