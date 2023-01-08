@@ -53,7 +53,7 @@ namespace PixelCrew.Model.Definitions.Localization
             {
                 var data = _request.downloadHandler.text;
                 ParseData(data);
-            }
+            }   
         }
 
         private void ParseData(string data)

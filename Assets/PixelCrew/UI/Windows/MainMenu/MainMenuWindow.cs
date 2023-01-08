@@ -2,12 +2,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using PixelCrew.Utils;
+using PixelCrew.Model;
 
 namespace PixelCrew.UI.MainMenu
 {
     public class MainMenuWindow : AnimatedWindow
     {
         private Action _closeAction;
+
+        protected override void Start()
+        {
+            base.Start();
+            if (GameSession.Instance != null)
+                Destroy(GameSession.Instance.gameObject);
+        }
 
         public void OnShowSettings()
         {

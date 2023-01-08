@@ -53,6 +53,7 @@ namespace PixelCrew.UI.Perks
             var def = DefsFacade.I.Perks.Get(selected);
             _price.SetData(def.Price);
 
+            _info.LocalizeFont();
             _info.text = LocalizationManager.I.Localize(def.Info);
         }
 

@@ -18,6 +18,7 @@ namespace PixelCrew.UI.HUD.Dialogs
         public void SetData(OptionData data, int index)
         {
             _data = data;
+            _label.LocalizeFont();
             _label.text = LocalizationManager.I.Localize(data.Text);
         }
 

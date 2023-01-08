@@ -30,8 +30,6 @@ namespace PixelCrew.UI.InGameMenu
         public void OnExit()
         {
             SceneManager.LoadScene("MainMenu");
-
-            Destroy(GameSession.Instance.gameObject);
         }
 
         private void OnDestroy()

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: efaba3377c1031840acf93d31bbc0a2a
+guid: 7e4ef43cb37e32e489b4b9abdc66e003
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: X_Stanger Cursive
+  fontName: Choco
   fontNames:
-  - X_Stanger Cursive
+  - Choco
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

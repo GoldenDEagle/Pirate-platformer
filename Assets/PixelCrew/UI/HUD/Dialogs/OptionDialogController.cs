@@ -30,6 +30,7 @@ namespace PixelCrew.UI.HUD.Dialogs
 
         public void Show(OptionDialogData data)
         {
+            _contentText.LocalizeFont();
             _content.SetActive(true);
             _contentText.text = LocalizationManager.I.Localize(data.DialogText);
 

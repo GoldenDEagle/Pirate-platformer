@@ -13,6 +13,7 @@ namespace PixelCrew.Components
         {
             GameSession.Instance.ClearStates();
             GameSession.Instance.Save();
+
             var loader = FindObjectOfType<LevelLoader>();
             loader.LoadLevel(_sceneName);
         }

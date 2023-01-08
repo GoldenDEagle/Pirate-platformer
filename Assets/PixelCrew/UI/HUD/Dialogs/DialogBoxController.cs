@@ -46,7 +46,6 @@ namespace PixelCrew.UI.HUD.Dialogs
             _data = data;
             _currentSentence = 0;
             CurrentContent.Text.text = string.Empty;
-            CurrentContent.Text.LocalizeFont();
 
             _container.SetActive(true);
             _sfxSource.PlayOneShot(_open);
@@ -59,7 +58,18 @@ namespace PixelCrew.UI.HUD.Dialogs
             var sentence = CurrentSentence;
             CurrentContent.TrySetIcon(sentence.Icon);
 
+            CurrentContent.Text.LocalizeFont();
             var localizedSentence = LocalizationManager.I.Localize(sentence.Value);
+
+            if (LocalizationManager.I.LocaleKey == "heb")
+            {
+                for (int i = localizedSentence.Length - 1; i >= 0; i--)
+                {
+                    CurrentContent.Text.text += localizedSentence[i];
+                    _sfxSource.PlayOneShot(_typing);
+                    yield return new WaitForSeconds(_textSpeed);
+                }
+            }
 
             foreach (var letter in localizedSentence)
             {

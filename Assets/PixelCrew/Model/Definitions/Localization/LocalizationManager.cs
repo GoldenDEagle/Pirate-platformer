@@ -47,7 +47,7 @@ namespace PixelCrew.Model.Definitions.Localization
             LoadLocale(localeKey);
         }
 
-        private static string Reverse(string s)
+        public static string Reverse(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);

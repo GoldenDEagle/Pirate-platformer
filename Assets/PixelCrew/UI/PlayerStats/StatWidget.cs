@@ -37,6 +37,7 @@ namespace PixelCrew.UI.PlayerStats
             var statsModel = GameSession.Instance.StatsModel;
 
             _icon.sprite = _data.Icon;
+            _name.LocalizeFont();
             _name.text = LocalizationManager.I.Localize(_data.Name);
 
             _currentValue.text = statsModel.GetValue(_data.Id).ToString(CultureInfo.InvariantCulture);

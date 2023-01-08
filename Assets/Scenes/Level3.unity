@@ -6706,7 +6706,7 @@ MonoBehaviour:
     - _value: crab_encounter_6c
       _icon: {fileID: 21300000, guid: 6f42397607fa2db4f9b4a646e09b1c6f, type: 3}
       _side: 1
-    - _value: crab_encounter_7c_mobile
+    - _value: crab_encounter_7c
       _icon: {fileID: 21300000, guid: 6f42397607fa2db4f9b4a646e09b1c6f, type: 3}
       _side: 1
     _type: 1
