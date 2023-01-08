@@ -137,4 +137,22 @@ MonoBehaviour:
   - Key: ending_titles
     Value: "Farewell, Captain!\r"
   - Key: button_gotit
-    Value: Got it!
+    Value: "Got it!\r"
+  - Key: effects
+    Value: "Effects\r"
+  - Key: button_levels
+    Value: "Levels\r"
+  - Key: button_back
+    Value: "Back\r"
+  - Key: button_tutorial
+    Value: "Tutorial\r"
+  - Key: button_level1
+    Value: "Level 1\r"
+  - Key: button_level2
+    Value: "Level 2\r"
+  - Key: button_level3
+    Value: "Level 3\r"
+  - Key: button_level4
+    Value: "Level 4\r"
+  - Key: button_level5
+    Value: Level 5

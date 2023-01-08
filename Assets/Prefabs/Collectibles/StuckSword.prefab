@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4483195014263565630}
   - component: {fileID: 8434098415701938336}
   - component: {fileID: 4655403255572504696}
+  - component: {fileID: 617588317106848642}
   m_Layer: 14
   m_Name: StuckSword
   m_TagString: Untagged
@@ -204,6 +205,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 617588317106848642}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4655403255572504696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,3 +230,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: Sword
   _count: 1
+--- !u!114 &617588317106848642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183939287946443237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf855ed869221b4497d5eac2aff6e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: e949bd75c9709da42b8130ef085bcf33, type: 3}

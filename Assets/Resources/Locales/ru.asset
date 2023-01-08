@@ -192,4 +192,22 @@ MonoBehaviour:
     Value: "\u041F\u0440\u043E\u0449\u0430\u0439\u0442\u0435, \u0442\u043E\u0432\u0430\u0440\u0438\u0449
       \u041A\u0430\u043F\u0438\u0442\u0430\u043D!\r"
   - Key: button_gotit
-    Value: "\u041F\u0440\u0438\u043D\u044F\u0442\u043E!"
+    Value: "\u041F\u0440\u0438\u043D\u044F\u0442\u043E!\r"
+  - Key: effects
+    Value: "\u042D\u0444\u0444\u0435\u043A\u0442\u044B\r"
+  - Key: button_levels
+    Value: "\u0423\u0440\u043E\u0432\u043D\u0438\r"
+  - Key: button_back
+    Value: "\u041D\u0430\u0437\u0430\u0434\r"
+  - Key: button_tutorial
+    Value: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435\r"
+  - Key: button_level1
+    Value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 1\r"
+  - Key: button_level2
+    Value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 2\r"
+  - Key: button_level3
+    Value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 3\r"
+  - Key: button_level4
+    Value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 4\r"
+  - Key: button_level5
+    Value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 5"

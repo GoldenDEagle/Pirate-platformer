@@ -17,6 +17,11 @@ namespace PixelCrew.UI.MainMenu
                 Destroy(GameSession.Instance.gameObject);
         }
 
+        public void OnShowLevels()
+        {
+            WindowUtils.CreateWindow("UI/LevelSelectionWindow");
+        }
+
         public void OnShowSettings()
         {
             WindowUtils.CreateWindow("UI/SettingsWindow");

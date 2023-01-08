@@ -43,8 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7870f3914013be4a8b0314cad241198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePool: 0
   _target: {fileID: 574308298770205719}
   _prefab: {fileID: 7183939287946443237, guid: 69b6e59e6f2ad6845a581f197ba025d3, type: 3}
+  _numberToSpawn: 1
+  _xScatter: 0
+  _interval: 0.1
+  _onSpawnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7183939287946443237
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +70,7 @@ GameObject:
   - component: {fileID: 43485053400137734}
   - component: {fileID: 2624183874303815132}
   - component: {fileID: 8434098415701938336}
+  - component: {fileID: 9072511463427194066}
   m_Layer: 0
   m_Name: SwordProjectile
   m_TagString: Untagged
@@ -294,7 +302,7 @@ MonoBehaviour:
   _tag: Untagged
   _layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4352
   _action:
     m_PersistentCalls:
       m_Calls:
@@ -320,3 +328,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9072511463427194066}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9072511463427194066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183939287946443237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf855ed869221b4497d5eac2aff6e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: 06e0fc2a1f204f747b1fb55d2e002535, type: 3}

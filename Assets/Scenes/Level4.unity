@@ -1312,10 +1312,6 @@ MonoBehaviour:
       _inventory:
       - Id: Sword
         Value: 1
-      - Id: GreenGem
-        Value: 20
-      - Id: Coin
-        Value: 350
     Perks:
       _used:
         _value: 
