@@ -31,8 +31,7 @@ namespace PixelCrew.UI.InGameMenu
         {
             SceneManager.LoadScene("MainMenu");
 
-            var session = FindObjectOfType<GameSession>();
-            Destroy(session.gameObject);
+            Destroy(GameSession.Instance.gameObject);
         }
 
         private void OnDestroy()

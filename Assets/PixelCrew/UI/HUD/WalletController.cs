@@ -11,15 +11,13 @@ public class WalletController : MonoBehaviour
     [SerializeField] private Transform _container;
 
     private DataGroup<ItemWithCount, ItemWidget> _dataGroup;
-    private GameSession _session;
 
     private List<ItemWithCount> _createdItems = new List<ItemWithCount>();
 
     private void Start()
     {
-        _session = FindObjectOfType<GameSession>();
         _dataGroup = new DataGroup<ItemWithCount, ItemWidget>(_prefab, _container);
-        _session.Data.Inventory.OnChanged += OnInventoryChanged;
+        GameSession.Instance.Data.Inventory.OnChanged += OnInventoryChanged;
 
         OnInventoryChanged("", 0);
     }
@@ -31,13 +29,13 @@ public class WalletController : MonoBehaviour
         foreach (var item in items)
         {
             if (item.HasTag(ItemTag.Currency))
-                _createdItems.Add(new ItemWithCount(item.Id, _session.Data.Inventory.Count(item.Id)));
+                _createdItems.Add(new ItemWithCount(item.Id, GameSession.Instance.Data.Inventory.Count(item.Id)));
         }
         _dataGroup.SetData(_createdItems);
     }
 
     private void OnDestroy()
     {
-        _session.Data.Inventory.OnChanged -= OnInventoryChanged;
+        GameSession.Instance.Data.Inventory.OnChanged -= OnInventoryChanged;
     }
 }

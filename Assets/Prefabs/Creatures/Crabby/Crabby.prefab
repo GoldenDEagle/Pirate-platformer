@@ -766,7 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -894,7 +894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1319,7 +1319,7 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: 5bd28bac49633854980c819e33a096e6, type: 3}
   - _id: Melee
     _clip: {fileID: 8300000, guid: ce72f76e730cab7459d5743c735e0de3, type: 3}
-  - _id: Slam
+  - _id: SlamDown
     _clip: {fileID: 8300000, guid: ac578edee997a404490920b3d73c4b6d, type: 3}
   - _id: Hurt
     _clip: {fileID: 8300000, guid: 4d573714e93c0fe4d8e392c5ef39ab9c, type: 3}

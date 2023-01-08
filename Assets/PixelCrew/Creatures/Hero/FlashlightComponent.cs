@@ -12,23 +12,21 @@ namespace PixelCrew.Creatures
         [SerializeField] private float _dimTreshold;
         [SerializeField] private Light2D _light;
 
-        private GameSession _session;
         private float _defaultIntensity;
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
             _defaultIntensity = _light.intensity;
         }
 
         private void Update()
         {
             var consumed = Time.deltaTime * _consumePerSecond;
-            var currentValue = _session.Data.Fuel.Value;
+            var currentValue = GameSession.Instance.Data.Fuel.Value;
             var newValue = currentValue - consumed;
             newValue = Mathf.Max(newValue, 0);
-            _session.Data.Fuel.Value = newValue;
-            var dimTreshold = _session.StatsModel.GetValue(StatId.Fuel) * _dimTreshold;
+            GameSession.Instance.Data.Fuel.Value = newValue;
+            var dimTreshold = GameSession.Instance.StatsModel.GetValue(StatId.Fuel) * _dimTreshold;
 
             var progress = Mathf.Clamp(newValue / dimTreshold, 0.3f, 1);
             _light.intensity = _defaultIntensity * progress;

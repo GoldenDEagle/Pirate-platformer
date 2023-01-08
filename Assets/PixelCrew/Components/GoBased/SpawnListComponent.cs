@@ -8,6 +8,8 @@ namespace PixelCrew.Components
     {
         [SerializeField] private SpawnData[] _spawners;
 
+        private const string RunId = "Run";
+
         public void SpawnAll()
         {
             foreach (var spawnData in _spawners)
@@ -22,6 +24,16 @@ namespace PixelCrew.Components
             //spawner?.Component.Spawn();
             foreach (var data in _spawners)
                 if (data.Id == id)
+                {
+                    data.Component.Spawn();
+                    break;
+                }
+        }
+
+        public void SpawnRunParticles()
+        {
+            foreach (var data in _spawners)
+                if (data.Id == RunId)
                 {
                     data.Component.Spawn();
                     break;

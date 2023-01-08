@@ -12,28 +12,26 @@ namespace PixelCrew.UI.HUD
         [SerializeField] private ProgressBarWidget _healthBar;
         [SerializeField] private CurrentPerkWidget _currentPerk;
 
-        private GameSession _session;
         private readonly CompositeDisposable _trash = new CompositeDisposable();
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
-            _trash.Retain(_session.Data.Hp.SubscribeAndInvoke(OnPlayerHealthChanged));
-            _trash.Retain(_session.PerksModel.Subscribe(OnPerkChanged));
+            _trash.Retain(GameSession.Instance.Data.Hp.SubscribeAndInvoke(OnPlayerHealthChanged));
+            _trash.Retain(GameSession.Instance.PerksModel.Subscribe(OnPerkChanged));
 
             OnPerkChanged();
         }
 
         private void OnPlayerHealthChanged(int newValue, int oldValue)
         {
-            var maxHealth = _session.StatsModel.GetValue(StatId.Hp);
+            var maxHealth = GameSession.Instance.StatsModel.GetValue(StatId.Hp);
             var value = (float) newValue / maxHealth;
             _healthBar.SetProgress(value);
         }
 
         private void OnPerkChanged()
         {
-            var usedPerkId = _session.PerksModel.Used;
+            var usedPerkId = GameSession.Instance.PerksModel.Used;
             var hasPerk = !string.IsNullOrEmpty(usedPerkId);
             if (hasPerk)
             {

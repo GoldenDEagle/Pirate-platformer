@@ -2,6 +2,7 @@
 using PixelCrew.Model.Definitions.Localization;
 using PixelCrew.Utils;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -45,6 +46,7 @@ namespace PixelCrew.UI.HUD.Dialogs
             _data = data;
             _currentSentence = 0;
             CurrentContent.Text.text = string.Empty;
+            CurrentContent.Text.LocalizeFont();
 
             _container.SetActive(true);
             _sfxSource.PlayOneShot(_open);

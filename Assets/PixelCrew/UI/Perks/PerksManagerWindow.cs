@@ -6,6 +6,7 @@ using PixelCrew.UI.Widgets;
 using PixelCrew.Utils.Disposables;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrew.Utils;
 
 namespace PixelCrew.UI.Perks
 {
@@ -19,17 +20,15 @@ namespace PixelCrew.UI.Perks
 
         private PredifinedDataGroup<PerkDef, PerkWidget> _dataGroup;
         private readonly CompositeDisposable _trash = new CompositeDisposable();
-        private GameSession _session;
         private float _defaultTimeScale;
 
         protected override void Start()
         {
             base.Start();
 
-            _session = FindObjectOfType<GameSession>();
             _dataGroup = new PredifinedDataGroup<PerkDef, PerkWidget>(_perksContainer);
 
-            _trash.Retain(_session.PerksModel.Subscribe(OnPerksChanged));
+            _trash.Retain(GameSession.Instance.PerksModel.Subscribe(OnPerksChanged));
             _trash.Retain(_buyButton.onClick.Subscribe(OnBuy));
             _trash.Retain(_useButton.onClick.Subscribe(OnUse));
 
@@ -43,13 +42,13 @@ namespace PixelCrew.UI.Perks
         {
             _dataGroup.SetData(DefsFacade.I.Perks.All);
 
-            var selected = _session.PerksModel.InterfaceSelection.Value;
+            var selected = GameSession.Instance.PerksModel.InterfaceSelection.Value;
 
-            _useButton.gameObject.SetActive(_session.PerksModel.IsUnlocked(selected));
-            _useButton.interactable = _session.PerksModel.Used != selected;
+            _useButton.gameObject.SetActive(GameSession.Instance.PerksModel.IsUnlocked(selected));
+            _useButton.interactable = GameSession.Instance.PerksModel.Used != selected;
 
-            _buyButton.gameObject.SetActive(!_session.PerksModel.IsUnlocked(selected));
-            _buyButton.interactable = _session.PerksModel.CanBuy(selected);
+            _buyButton.gameObject.SetActive(!GameSession.Instance.PerksModel.IsUnlocked(selected));
+            _buyButton.interactable = GameSession.Instance.PerksModel.CanBuy(selected);
 
             var def = DefsFacade.I.Perks.Get(selected);
             _price.SetData(def.Price);
@@ -59,14 +58,14 @@ namespace PixelCrew.UI.Perks
 
         private void OnBuy()
         {
-            var selected = _session.PerksModel.InterfaceSelection.Value;
-            _session.PerksModel.Unlock(selected);
+            var selected = GameSession.Instance.PerksModel.InterfaceSelection.Value;
+            GameSession.Instance.PerksModel.Unlock(selected);
         }
 
         private void OnUse()
         {
-            var selected = _session.PerksModel.InterfaceSelection.Value;
-            _session.PerksModel.SelectPerk(selected);
+            var selected = GameSession.Instance.PerksModel.InterfaceSelection.Value;
+            GameSession.Instance.PerksModel.SelectPerk(selected);
         }
 
         private void OnDestroy()

@@ -16,7 +16,7 @@ namespace PixelCrew.UI.PlayerStats
         [SerializeField] private ItemWidget _price;
 
         private DataGroup<StatDef, StatWidget> _dataGroup;
-        private GameSession _session;
+
         private float _defaultTimeScale;
 
         private readonly CompositeDisposable _trash = new CompositeDisposable();
@@ -27,10 +27,9 @@ namespace PixelCrew.UI.PlayerStats
 
             _dataGroup = new DataGroup<StatDef, StatWidget>(_prefab, _statsContainer);
 
-            _session = FindObjectOfType<GameSession>();
-            _session.StatsModel.InterfaceSelectedStat.Value = DefsFacade.I.Player.Stats[0].Id;
+            GameSession.Instance.StatsModel.InterfaceSelectedStat.Value = DefsFacade.I.Player.Stats[0].Id;
             
-            _trash.Retain(_session.StatsModel.Subscribe(OnStatsChanged));
+            _trash.Retain(GameSession.Instance.StatsModel.Subscribe(OnStatsChanged));
             _trash.Retain(_upgradeButton.onClick.Subscribe(OnUpgrade));
 
             OnStatsChanged();
@@ -41,8 +40,8 @@ namespace PixelCrew.UI.PlayerStats
 
         private void OnUpgrade()
         {
-            var selected = _session.StatsModel.InterfaceSelectedStat.Value;
-            _session.StatsModel.LevelUp(selected);
+            var selected = GameSession.Instance.StatsModel.InterfaceSelectedStat.Value;
+            GameSession.Instance.StatsModel.LevelUp(selected);
         }
 
         private void OnStatsChanged()
@@ -50,9 +49,9 @@ namespace PixelCrew.UI.PlayerStats
             var stats = DefsFacade.I.Player.Stats;
             _dataGroup.SetData(stats);
 
-            var selected = _session.StatsModel.InterfaceSelectedStat.Value;
-            var nextLevel = _session.StatsModel.GetCurrentLevel(selected) + 1;
-            var def = _session.StatsModel.GetLevelDef(selected, nextLevel);
+            var selected = GameSession.Instance.StatsModel.InterfaceSelectedStat.Value;
+            var nextLevel = GameSession.Instance.StatsModel.GetCurrentLevel(selected) + 1;
+            var def = GameSession.Instance.StatsModel.GetLevelDef(selected, nextLevel);
             _price.SetData(def.Price);
 
             _price.gameObject.SetActive(def.Price.Count != 0);

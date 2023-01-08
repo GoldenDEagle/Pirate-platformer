@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using PixelCrew.Model.Definitions.Localization;
+using PixelCrew.Utils;
 
 namespace PixelCrew.UI.Localization
 {
@@ -22,6 +23,7 @@ namespace PixelCrew.UI.Localization
         protected override void Localize()
         {
             var localized = LocalizationManager.I.Localize(_key);
+            _text.LocalizeFont();
             _text.text = _capitalize ? localized.ToUpper() : localized;
         }
     }

@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1735227510617403570}
   - component: {fileID: 1735227510617403572}
   - component: {fileID: 1735227510617403573}
-  - component: {fileID: 1146753792}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: PlatformPiercableSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,16 +121,3 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &1146753792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735227510617403569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e680cebb642dca14dbbb9b224e728963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _disableTime: 0.3

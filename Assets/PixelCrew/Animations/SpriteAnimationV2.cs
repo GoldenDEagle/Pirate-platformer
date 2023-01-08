@@ -8,7 +8,6 @@ namespace PixelCrew
     public class SpriteAnimationV2 : MonoBehaviour
     {
         [SerializeField] [Range(1, 30)] private int _frameRate = 10;
-        [SerializeField] private UnityEvent<string> _onComplete;
         [SerializeField] private AnimationClip[] _clips;
 
         private SpriteRenderer _renderer;
@@ -80,7 +79,6 @@ namespace PixelCrew
                 {
                     enabled = _isPlaying = clip.AllowNextClip;
                     clip.OnComplete?.Invoke();
-                    _onComplete?.Invoke(clip.Name);
                     if (clip.AllowNextClip)
                     {
                         _currentFrame = 0;

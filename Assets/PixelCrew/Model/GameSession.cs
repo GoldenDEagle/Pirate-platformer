@@ -82,6 +82,7 @@ namespace PixelCrew.Model
             _trash.Retain(StatsModel);
 
             _data.Hp.Value = (int) StatsModel.GetValue(StatId.Hp);
+            _data.Fuel.Value = StatsModel.GetValue(StatId.Fuel);
         }
 
         private void LoadUIs()

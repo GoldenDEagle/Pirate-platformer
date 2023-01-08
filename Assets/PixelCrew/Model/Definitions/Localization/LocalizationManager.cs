@@ -36,12 +36,22 @@ namespace PixelCrew.Model.Definitions.Localization
 
         public string Localize(string key)
         {
-            return _localization.TryGetValue(key, out var value) ? value : $"%%%{key}%%%";
+            var localized = _localization.TryGetValue(key, out var value) ? value : $"%%%{key}%%%";
+            if (_localeKey.Value == "heb")
+                localized = Reverse(localized);
+            return localized;
         }
 
         public void SetLocale(string localeKey)
         {
             LoadLocale(localeKey);
+        }
+
+        private static string Reverse(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
         }
     }
 }

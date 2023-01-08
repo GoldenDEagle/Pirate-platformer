@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using PixelCrew.UI.Widgets;
 using PixelCrew.Model.Definitions.Localization;
+using PixelCrew.Utils;
 
 namespace PixelCrew.UI.HUD.Dialogs
 {

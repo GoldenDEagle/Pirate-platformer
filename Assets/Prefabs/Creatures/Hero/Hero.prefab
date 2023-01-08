@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1309582956}
   - component: {fileID: 1309582957}
   m_Layer: 9
-  m_Name: Attack1Particles
+  m_Name: MeleeParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5379,6 +5379,70 @@ MonoBehaviour:
   _consumePerSecond: 1
   _dimTreshold: 0.2
   _light: {fileID: 355682541521322652}
+--- !u!1 &5668967575267063677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7959063612317790375}
+  - component: {fileID: 1426668288780402148}
+  - component: {fileID: 4114205761286091419}
+  m_Layer: 15
+  m_Name: PiercablePlatformCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7959063612317790375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668967575267063677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.009, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8521669546337685390}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1426668288780402148
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668967575267063677}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000207901, y: -0.25}
+  serializedVersion: 2
+  m_Radius: 0.2
+--- !u!114 &4114205761286091419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668967575267063677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f091c7e1e49364eba014a6b0221efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 131072
+  _isTouchingLayer: 0
 --- !u!1 &5774694691255513837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,7 +5681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layer:
     serializedVersion: 2
-    m_Bits: 73984
+    m_Bits: 205056
   _isTouchingLayer: 0
 --- !u!1 &8521669546337685388
 GameObject:
@@ -5640,6 +5704,7 @@ GameObject:
   - component: {fileID: 1187171695}
   - component: {fileID: 3619960877020069514}
   - component: {fileID: -7373638754061771340}
+  - component: {fileID: 9007463178302073261}
   m_Layer: 9
   m_Name: Hero
   m_TagString: Player
@@ -5670,6 +5735,7 @@ Transform:
   - {fileID: 1193145546}
   - {fileID: 55601150312260319}
   - {fileID: 355682541521322654}
+  - {fileID: 7959063612317790375}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5761,6 +5827,7 @@ MonoBehaviour:
   _attackRange: {fileID: 1103343695}
   _particles: {fileID: 1599631511}
   _meleeAttack: {fileID: 8521669545343519827}
+  _piercablePlatformCheck: {fileID: 4114205761286091419}
   _interactionCheck: {fileID: 2067199012}
   _interactionRadius: 0.8
   _meleeCooldown:
@@ -6074,7 +6141,7 @@ MonoBehaviour:
     Component: {fileID: 512357895}
   - Id: SlamDown
     Component: {fileID: 613564704}
-  - Id: Attack1
+  - Id: Melee
     Component: {fileID: 1309582957}
   - Id: Throw
     Component: {fileID: 211800269985703056}
@@ -6124,3 +6191,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _immuneTime: 1
+--- !u!114 &9007463178302073261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521669546337685388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e680cebb642dca14dbbb9b224e728963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _disableTime: 0.05

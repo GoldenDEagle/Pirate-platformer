@@ -2786,7 +2786,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2846,7 +2846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -4324,7 +4324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &851504171
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -13014,12 +13014,12 @@ PrefabInstance:
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.96
+      value: -5.96
       objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.02
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 8962595241807959828, guid: 58d340b2af402664a8df95043bbc2c46,
         type: 3}
@@ -14463,7 +14463,7 @@ PrefabInstance:
     - target: {fileID: 2574089309648186473, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.021677
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 2574089309648186473, guid: ee2a8bec0c5e8e449a96eb5dc7640ce2,
         type: 3}

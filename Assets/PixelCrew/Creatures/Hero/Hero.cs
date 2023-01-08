@@ -11,6 +11,8 @@ namespace PixelCrew.Creatures
 {
     public class Hero : Creature
     {
+        [SerializeField] private ColliderCheck _piercablePlatformCheck;
+
         [SerializeField] CheckCircleOverlap _interactionCheck;
         
         [SerializeField] private float _interactionRadius;
@@ -46,17 +48,18 @@ namespace PixelCrew.Creatures
         private int _meleeDamage;
 
         private HealthComponent _health;
-        private GameSession _session;
         private CameraShakeEffect _cameraShake;
+        private TempColliderDisable _colliderDisabler;
 
         [HideInInspector] public bool IsCrawling;
 
         private const string SwordId = "Sword";
         private const string CoinId = "Coin";
-        private int CoinCount => _session.Data.Inventory.Count(CoinId);
-        private int SwordCount => _session.Data.Inventory.Count(SwordId);
+        private const string RangeId = "Range";
+        private int CoinCount => GameSession.Instance.Data.Inventory.Count(CoinId);
+        private int SwordCount => GameSession.Instance.Data.Inventory.Count(SwordId);
 
-        private string SelectedItemId => _session.QuickInventory.SelectedItem.Id;
+        private string SelectedItemId => GameSession.Instance.QuickInventory.SelectedItem.Id;
 
         protected override void Awake()
         {
@@ -65,23 +68,24 @@ namespace PixelCrew.Creatures
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
+            _colliderDisabler = GetComponent<TempColliderDisable>();
             _health = GetComponent<HealthComponent>();
             _cameraShake = FindObjectOfType<CameraShakeEffect>() ?? null;
 
-            _session.Data.Inventory.OnChanged += OnInventoryChanged;
-            _session.StatsModel.OnUpgraded += OnHeroUpgraded;
+            GameSession.Instance.Data.Inventory.OnChanged += OnInventoryChanged;
+            GameSession.Instance.StatsModel.OnUpgraded += OnHeroUpgraded;
 
-            _health.SetHealth(_session.Data.Hp.Value);
-            _meleeDamage = (int)_session.StatsModel.GetValue(StatId.MeleeDamage);
+            _health.SetHealth(GameSession.Instance.Data.Hp.Value);
+            _meleeDamage = (int) GameSession.Instance.StatsModel.GetValue(StatId.MeleeDamage);
             _meleeAttack.SetDelta(-_meleeDamage);
             UpdateHeroWeapon();
-            _session.Data.Fuel.Value = _session.StatsModel.GetValue(StatId.Fuel);
         }
 
         protected override void Update()
         {
             base.Update();
+            if (_piercablePlatformCheck.IsTouchingLayer && IsCrawling)
+                _colliderDisabler.DisableCollider();
         }
 
         private void OnHeroUpgraded(StatId statId)
@@ -89,24 +93,24 @@ namespace PixelCrew.Creatures
             switch (statId)
             {
                 case StatId.Hp:
-                    var health = (int) _session.StatsModel.GetValue(statId);
-                    _session.Data.Hp.Value = health;
+                    var health = (int)GameSession.Instance.StatsModel.GetValue(statId);
+                    GameSession.Instance.Data.Hp.Value = health;
                     UpdateHealth();
                     _health.SetHealth(health);
                     break;
                 case StatId.MeleeDamage:
-                    _meleeDamage = (int)_session.StatsModel.GetValue(statId);
+                    _meleeDamage = (int) GameSession.Instance.StatsModel.GetValue(statId);
                     _meleeAttack.SetDelta(-_meleeDamage);
                     break;
                 case StatId.Fuel:
-                    _session.Data.Fuel.Value = _session.StatsModel.GetValue(statId);
+                    GameSession.Instance.Data.Fuel.Value = GameSession.Instance.StatsModel.GetValue(statId);
                     break;
                 case StatId.CooldownReduction:
-                    var usedPerk = _session.PerksModel.Used;
+                    var usedPerk = GameSession.Instance.PerksModel.Used;
                     if (usedPerk == null) break;
-                    var defaultCooldown = _session.PerksModel.GetPerkCooldown(usedPerk);
-                    var cooldownReduction = _session.StatsModel.GetValue(StatId.CooldownReduction);
-                    _session.PerksModel.Cooldown.Value = (1 - cooldownReduction / 100) * defaultCooldown;
+                    var defaultCooldown = GameSession.Instance.PerksModel.GetPerkCooldown(usedPerk);
+                    var cooldownReduction = GameSession.Instance.StatsModel.GetValue(StatId.CooldownReduction);
+                    GameSession.Instance.PerksModel.Cooldown.Value = (1 - cooldownReduction / 100) * defaultCooldown;
                     break;
             }
         }
@@ -141,9 +145,9 @@ namespace PixelCrew.Creatures
 
         protected override float CalculateJumpVelocity(float yVelocity)   // Рассчет скорости прыжка(обычный и дабл)
         {
-            if (!IsGrounded && _allowDoubleJump && _session.PerksModel.IsDoubleJumpSupported)
+            if (!IsGrounded && _allowDoubleJump && GameSession.Instance.PerksModel.IsDoubleJumpSupported)
             {
-                _session.PerksModel.Cooldown.Reset();
+                GameSession.Instance.PerksModel.Cooldown.Reset();
                 _allowDoubleJump = false;
                 DoJumpVfx();
                 return _jumpSpeed;
@@ -154,7 +158,7 @@ namespace PixelCrew.Creatures
 
         protected override float CalculateSpeed()
         {
-            var defaultSpeed = _session.StatsModel.GetValue(StatId.Speed);
+            var defaultSpeed = GameSession.Instance.StatsModel.GetValue(StatId.Speed);
 
             if (_speedUpCooldown.IsReady)
                 _additionalSpeed = 0f;
@@ -164,18 +168,18 @@ namespace PixelCrew.Creatures
 
         public void AddToInventory(string id, int value)
         {
-            _session.Data.Inventory.Add(id, value);
+            GameSession.Instance.Data.Inventory.Add(id, value);
         }
 
         public void OnHealthChanged(int currentHealth)
         {
-            _session.Data.Hp.Value = currentHealth;
+            GameSession.Instance.Data.Hp.Value = currentHealth;
         }
 
         private void UpdateHealth()
         {
-            if (_session.Data.Hp.Value > _session.StatsModel.GetValue(StatId.Hp)) _session.Data.Hp.Value = (int)_session.StatsModel.GetValue(StatId.Hp);
-            _health.SetHealth(_session.Data.Hp.Value);
+            if (GameSession.Instance.Data.Hp.Value > GameSession.Instance.StatsModel.GetValue(StatId.Hp)) GameSession.Instance.Data.Hp.Value = (int) GameSession.Instance.StatsModel.GetValue(StatId.Hp);
+            _health.SetHealth(GameSession.Instance.Data.Hp.Value);
         }
 
         public override void TakeDamage()  // Получение урона
@@ -192,7 +196,7 @@ namespace PixelCrew.Creatures
         private void SpawnCoins()
         {
             var coinsToDispose = Mathf.Min(CoinCount, _coinsDropped);
-            _session.Data.Inventory.Remove("Coin", coinsToDispose);
+            GameSession.Instance.Data.Inventory.Remove(CoinId, coinsToDispose);
 
             var burst = _hitParticles.emission.GetBurst(0);
             burst.count = coinsToDispose;
@@ -226,13 +230,13 @@ namespace PixelCrew.Creatures
 
         public void OnDoThrow()
         {
-            if (_megaThrow && _session.PerksModel.IsMegaThrowSupported)
+            if (_megaThrow && GameSession.Instance.PerksModel.IsMegaThrowSupported)
             {
-                var throwableCount = _session.Data.Inventory.Count(SelectedItemId);
+                var throwableCount = GameSession.Instance.Data.Inventory.Count(SelectedItemId);
                 var possibleCount = SelectedItemId == SwordId ? throwableCount - 1 : throwableCount;
                 
                 var numThrows = Mathf.Min(_megaThrowCount, possibleCount);
-                _session.PerksModel.Cooldown.Reset();
+                GameSession.Instance.PerksModel.Cooldown.Reset();
                 StartCoroutine(MegaThrowRoutine(numThrows));
             }
             else
@@ -245,13 +249,13 @@ namespace PixelCrew.Creatures
         
         public void Throw()
         {
-            Sounds.Play("Range");
+            Sounds.Play(RangeId);
 
-            var throwableId = _session.QuickInventory.SelectedItem.Id;
+            var throwableId = GameSession.Instance.QuickInventory.SelectedItem.Id;
             var throwableDef = DefsFacade.I.Throwable.Get(throwableId);
             _throwSpawner.SetPrefab(throwableDef.Projectile);
 
-            _session.Data.Inventory.Remove(throwableId, 1);
+            GameSession.Instance.Data.Inventory.Remove(throwableId, 1);
             var instance = _throwSpawner.SpawnInstance();
             ApplyRangeDamageStat(instance);
         }
@@ -259,14 +263,14 @@ namespace PixelCrew.Creatures
         private void ApplyRangeDamageStat(GameObject projectile)
         {
             projectile.TryGetComponent<HpModifierComponent>(out HpModifierComponent hpModifier);
-            var damageValue = (int) _session.StatsModel.GetValue(StatId.RangeDamage);
+            var damageValue = (int)GameSession.Instance.StatsModel.GetValue(StatId.RangeDamage);
             damageValue = ModifyDamageByCrit(damageValue);
             hpModifier.SetDelta(- damageValue);
         }
 
         private int ModifyDamageByCrit(int damage)
         {
-            var critChance = _session.StatsModel.GetValue(StatId.CritChance);
+            var critChance = GameSession.Instance.StatsModel.GetValue(StatId.CritChance);
             if (Random.value * 100 <= critChance)
             {
                 return damage * 2;
@@ -304,7 +308,7 @@ namespace PixelCrew.Creatures
 
         private bool IsSelectedItem(ItemTag tag)
         {
-            return _session.QuickInventory.SelectedDef.HasTag(tag);
+            return GameSession.Instance.QuickInventory.SelectedDef.HasTag(tag);
         }
 
         private void UsePotion()
@@ -314,7 +318,7 @@ namespace PixelCrew.Creatures
             switch (potion.Effect)
             {
                 case Effect.AddHp:
-                    _session.Data.Hp.Value += (int)potion.Value;
+                    GameSession.Instance.Data.Hp.Value += (int)potion.Value;
                     UpdateHealth();
                     break;
                 case Effect.SpeedUp:
@@ -324,7 +328,7 @@ namespace PixelCrew.Creatures
                     break;
             }
 
-            _session.Data.Inventory.Remove(potion.Id, 1);
+            GameSession.Instance.Data.Inventory.Remove(potion.Id, 1);
         }
 
         private void PerformThrowing()
@@ -339,15 +343,15 @@ namespace PixelCrew.Creatures
 
         public void NextItem()
         {
-            _session.QuickInventory.SetNextItem();
+            GameSession.Instance.QuickInventory.SetNextItem();
         }
 
         public void UsePerk()
         {
-            if (_session.PerksModel.IsShieldSupported)
+            if (GameSession.Instance.PerksModel.IsShieldSupported)
             {
                 _shield.Use();
-                _session.PerksModel.Cooldown.Reset();
+                GameSession.Instance.PerksModel.Cooldown.Reset();
             }
         }
 
@@ -357,20 +361,10 @@ namespace PixelCrew.Creatures
             _flashlight.gameObject.SetActive(!isActive);
         }
 
-        private void OnCollisionStay2D(Collision2D collision)
-        {
-            if (collision.gameObject.TryGetComponent(out TempColliderDisable colliderDisable))
-            {
-                if (IsCrawling)
-                {
-                    colliderDisable.DisableCollider();
-                }
-            }
-        }
-
         private void OnDestroy()
         {
-            _session.Data.Inventory.OnChanged -= OnInventoryChanged;
+            GameSession.Instance.Data.Inventory.OnChanged -= OnInventoryChanged;
+            GameSession.Instance.StatsModel.OnUpgraded -= OnHeroUpgraded;
         }
     }
 }

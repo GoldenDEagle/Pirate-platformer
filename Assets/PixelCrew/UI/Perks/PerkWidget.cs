@@ -13,12 +13,10 @@ namespace PixelCrew.UI.Perks
         [SerializeField] private GameObject _isSelected;
         [SerializeField] private GameObject _isUsed;
 
-        private GameSession _session;
         private PerkDef _data;
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
             UpdateView();
         }
 
@@ -26,21 +24,21 @@ namespace PixelCrew.UI.Perks
         {
             _data = data;
 
-            if (_session != null)
+            if (GameSession.Instance != null)
                 UpdateView();
         }
 
         public void OnSelect()
         {
-            _session.PerksModel.InterfaceSelection.Value = _data.Id;
+            GameSession.Instance.PerksModel.InterfaceSelection.Value = _data.Id;
         }
 
         private void UpdateView()
         {
             _icon.sprite = _data.Icon;
-            _isUsed.SetActive(_session.PerksModel.IsUsed(_data.Id));
-            _isSelected.SetActive(_session.PerksModel.InterfaceSelection.Value == _data.Id);
-            _isLocked.SetActive(!_session.PerksModel.IsUnlocked(_data.Id));
+            _isUsed.SetActive(GameSession.Instance.PerksModel.IsUsed(_data.Id));
+            _isSelected.SetActive(GameSession.Instance.PerksModel.InterfaceSelection.Value == _data.Id);
+            _isLocked.SetActive(!GameSession.Instance.PerksModel.IsUnlocked(_data.Id));
         }
     }
 }

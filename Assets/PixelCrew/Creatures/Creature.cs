@@ -37,6 +37,9 @@ namespace PixelCrew.Creatures
         public bool StunningSlam => _stunningSlam;
         public float Speed => _speed;
 
+        private const string SlamDownId = "SlamDown";
+        private const string JumpId = "Jump";
+        private const string MeleeId = "Melee";
 
         private static readonly int IsGroundKey = Animator.StringToHash("is-ground");
         private static readonly int IsRunning = Animator.StringToHash("is-running");                // Переменные для навигации по анимациям
@@ -85,12 +88,12 @@ namespace PixelCrew.Creatures
                 if (contact.relativeVelocity.y >= _slamDownVelocity)    // Относительная скорость при контакте с землей
                 {
                     Animator.SetTrigger(SlamdownKey);
-                    _particles.Spawn("SlamDown"); 
+                    _particles.Spawn(SlamDownId); 
 
                     if (_stunningSlam && _isStunning)
                     {
                         Stunner.StunInArea();
-                        Sounds.Play("Slam");
+                        Sounds.Play(SlamDownId);
                     }
                 }
             }
@@ -144,8 +147,8 @@ namespace PixelCrew.Creatures
 
         protected void DoJumpVfx()
         {
-            _particles.Spawn("Jump");
-            Sounds.Play("Jump");
+            _particles.Spawn(JumpId);
+            Sounds.Play(JumpId);
         }
 
         public void UpdateSpriteDirection(Vector2 direction)   // Функция смены направления спрайта
@@ -176,8 +179,8 @@ namespace PixelCrew.Creatures
         public void OnDoAttack()    // Нанесение урона
         {
             _attackRange.Check();
-            _particles.Spawn("Attack1");
-            Sounds.Play("Melee");
+            _particles.Spawn(MeleeId);
+            Sounds.Play(MeleeId);
         }
 
         public void JumpOnTarget()

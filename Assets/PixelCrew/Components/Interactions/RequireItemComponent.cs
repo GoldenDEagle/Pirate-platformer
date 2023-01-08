@@ -15,11 +15,10 @@ namespace PixelCrew.Components.Interactions
 
         public void Check()
         {
-            var session = FindObjectOfType<GameSession>();
             var areAlRequirementsMet = true;
             foreach (var item in _required)
             {
-                var numItems = session.Data.Inventory.Count(item.Id);
+                var numItems = GameSession.Instance.Data.Inventory.Count(item.Id);
                 if (numItems < item.Value)
                     areAlRequirementsMet = false;
             }
@@ -30,7 +29,7 @@ namespace PixelCrew.Components.Interactions
                 {
                     foreach (var item in _required)
                     {
-                        session.Data.Inventory.Remove(item.Id, item.Value);
+                        GameSession.Instance.Data.Inventory.Remove(item.Id, item.Value);
                     }
                 }
 

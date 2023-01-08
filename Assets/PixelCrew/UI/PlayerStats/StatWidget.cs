@@ -5,6 +5,7 @@ using PixelCrew.UI.Widgets;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrew.Utils;
 
 namespace PixelCrew.UI.PlayerStats
 {
@@ -17,25 +18,23 @@ namespace PixelCrew.UI.PlayerStats
         [SerializeField] private ProgressBarWidget _progress;
         [SerializeField] private GameObject _selector;
 
-        private GameSession _session;
         private StatDef _data;
 
         private void Start()
         {
-            _session = FindObjectOfType<GameSession>();
             UpdateView();
         }
 
         public void SetData(StatDef data, int index)
         {
             _data = data;
-            if (_session != null)
+            if (GameSession.Instance != null)
                 UpdateView();
         }
 
         private void UpdateView()
         {
-            var statsModel = _session.StatsModel;
+            var statsModel = GameSession.Instance.StatsModel;
 
             _icon.sprite = _data.Icon;
             _name.text = LocalizationManager.I.Localize(_data.Name);
@@ -56,7 +55,7 @@ namespace PixelCrew.UI.PlayerStats
 
         public void OnSelect()
         {
-            _session.StatsModel.InterfaceSelectedStat.Value = _data.Id;
+            GameSession.Instance.StatsModel.InterfaceSelectedStat.Value = _data.Id;
         }
     }
 }
