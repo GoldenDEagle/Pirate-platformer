@@ -114,6 +114,10 @@ namespace PixelCrew.Creatures
             var yVelocity = Rigidbody.velocity.y;
             var isJumpPressing = Direction.y > 0;
 
+#if MOBILE_BUILD
+            isJumpPressing = Direction.y > 0.5f;   // Mobile jump treshold
+#endif
+
             if (IsGrounded)
             {
                 _isJumping = false;

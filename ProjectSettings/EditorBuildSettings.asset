@@ -14,13 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hud.unity
     guid: 190aeaf8efc23c647817a468e8bdddf5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/OnScreenControls.unity
     guid: c4487272d992a474eb853e62ed95cf65
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TutorialLevel.unity
     guid: fd611fbf975b9db4ebfab6ece56ee514
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialLevelMobile.unity
     guid: 0ebae5ed8a5631645bcd9b7eb3d00696
   - enabled: 1
